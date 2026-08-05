@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Oposição semântica de base — Chapeuzinho Vermelho</title>
+<script>
+/* =========================================================================
+   ÚNICA PARTE A SER EDITADA. Substitua pelos dados da análise.
+   ========================================================================= */
+const DADOS = {
+  titulo: "Chapeuzinho Vermelho — versão infantil com o caçador",
+  entrada: "Conto integral. A mãe interdita o caminho da floresta e a conversa com desconhecidos; a menina promete ir pela estradinha, distrai-se, encontra o lobo e aceita o \u201ccaminho das flores\u201d; o lobo devora a avó e a menina; o caçador abre a barriga do lobo e as retira; a menina promete nunca mais entrar sozinha na floresta nem dar ouvidos a estranhos.",
+  centro: {
+    termo: "o desvio para a floresta",
+    definicao: "Figura central do texto: a menina abandona a estradinha prescrita e \u201cquando se deu conta, estava no meio da floresta\u201d; em seguida troca o caminho combinado pelo caminho das flores indicado pelo lobo.",
+    fonte: "descrição figurativa do material",
+    nota: "O conto abre com uma interdição (\u201cnão vá pela floresta nem converse com desconhecidos\u201d) e fecha com sua reiteração pela própria menina. O núcleo tensivo não é a floresta, nem o lobo, nem a devoração: é o limite traçado e a sua ultrapassagem. Tudo o mais (a sanção, o resgate, a promessa) é consequência narrativa desse desvio."
+  },
+  percursos: [
+    {
+      polo: "A",
+      rotulo: "o limite ultrapassado",
+      niveis: [
+        {
+          termo: "desobediência",
+          definicao: "Ato ou efeito de desobedecer; falta de cumprimento de ordem, mandado ou preceito de quem tem autoridade.",
+          fonte: "definição lexicográfica (sem consulta on-line)",
+          justificativa: "\u201cDesvio\u201d define-se como afastamento do rumo estabelecido. Como o rumo, aqui, foi estabelecido por uma ordem materna, o gênero próximo do desvio é o não-cumprimento dessa ordem — perdem-se o espaço (floresta) e o trajeto (estradinha), permanece a relação com quem prescreveu.",
+          alternativas: [
+            { termo: "distração", definicao: "Falta de atenção; alheamento daquilo que se deveria observar.", fonte: "definição lexicográfica (sem consulta on-line)", motivo: "desloca para o eixo cognitivo (atenção × desatenção) — explica a causa do desvio, não o seu gênero" },
+            { termo: "curiosidade", definicao: "Desejo de ver, saber ou conhecer o que não se conhece.", fonte: "definição lexicográfica (sem consulta on-line)", motivo: "é a motivação do sujeito, hipônimo lateral, não hiperônimo do ato" },
+            { termo: "floresta", definicao: "Formação vegetal extensa e densa, de árvores de grande porte.", fonte: "definição lexicográfica (sem consulta on-line)", motivo: "figurativo demais: retém espaço concreto do mundo natural" }
+          ]
+        },
+        {
+          termo: "infração",
+          definicao: "Ato de infringir; violação ou descumprimento de norma, lei ou preceito estabelecido.",
+          fonte: "definição lexicográfica (sem consulta on-line)",
+          justificativa: "A definição de desobediência remete a \u201cordem ou preceito\u201d. Retido o preceito e abandonado o ator que ordena, o gênero se despersonaliza: a mãe cai do quadro, a norma permanece. É o primeiro nível em que o conto já não precisa da personagem para significar.",
+          alternativas: [
+            { termo: "rebeldia", definicao: "Disposição de quem se insurge contra a autoridade estabelecida.", fonte: "definição lexicográfica (sem consulta on-line)", motivo: "introduz intencionalidade e traço patêmico ausentes — a menina não se insurge, distrai-se" },
+            { termo: "erro", definicao: "Juízo ou ato desconforme com a verdade ou com o acerto.", fonte: "definição lexicográfica (sem consulta on-line)", motivo: "desloca para o eixo veridictório (verdadeiro × falso)" }
+          ]
+        },
+        {
+          termo: "TRANSGRESSÃO",
+          definicao: "Ação de transgredir, de infringir, de ultrapassar o limite de alguma coisa; violação, infração.",
+          fonte: "Dicio — Dicionário Online de Português (cf. Aulete: transgredir, \u201catravessar, passar além de\u201d)",
+          justificativa: "Infração supõe norma positiva; transgressão retém apenas \u201cultrapassar o limite\u201d — de qualquer ordem: jurídica, moral ou espacial. É por isso hiperônimo, e não sinônimo: num só traço reabsorve tanto a ordem materna descumprida quanto a linha da estrada abandonada. Termo categorial: só se define pelo limite que pressupõe, e não admite hiperônimo sem cair em \u201cação\u201d.",
+          alternativas: [
+            { termo: "violação", definicao: "Ato ou efeito de violar; infração, transgressão.", fonte: "Dicionário Criativo", motivo: "sinônimo de infração, não hiperônimo — lateralidade, não abstração" },
+            { termo: "pecado", definicao: "Transgressão de preceito religioso; ofensa a lei divina.", fonte: "definição lexicográfica (sem consulta on-line)", motivo: "hipônimo especializado e axiologizado: acrescenta domínio (o sagrado) em vez de retirar traços" }
+          ]
+        }
+      ]
+    },
+    {
+      polo: "B",
+      rotulo: "o limite respeitado",
+      niveis: [
+        {
+          termo: "obediência",
+          definicao: "Ato de cumprir o que é ordenado; sujeição a ordem, regra ou preceito de quem tem autoridade.",
+          fonte: "definição lexicográfica (sem consulta on-line)",
+          justificativa: "Polo manifestado em três figuras do próprio texto: a interdição materna, a promessa de ir pela estradinha e a promessa final (\u201cnunca mais entrarei sozinha na floresta\u201d). O gênero próximo comum às três é o cumprimento da ordem.",
+          alternativas: [
+            { termo: "medo", definicao: "Sentimento de inquietação ante a ideia de perigo real ou imaginário.", fonte: "definição lexicográfica (sem consulta on-line)", motivo: "patêmico: seria a paixão que motiva o acatamento, não o acatamento" },
+            { termo: "estradinha", definicao: "Via de comunicação, geralmente rural, que liga dois pontos.", fonte: "definição lexicográfica (sem consulta on-line)", motivo: "figurativo: espaço concreto, simétrico da floresta descartada no polo A" },
+            { termo: "cuidado", definicao: "Atenção e precaução com que se faz alguma coisa.", fonte: "definição lexicográfica (sem consulta on-line)", motivo: "traço cognitivo (vigilância); é condição do acatamento, não seu gênero" }
+          ]
+        },
+        {
+          termo: "observância",
+          definicao: "Cumprimento de lei, regra ou ordem — por oposição a inobservância, \u201cfalta de observância; falta de cumprimento: da lei, da regra, da ordem\u201d.",
+          fonte: "Aulete Digital (verbete inobservância)",
+          justificativa: "A definição de obediência retém \u201cordem ou preceito\u201d; retirado o ator a quem se obedece, o gênero é o cumprimento da regra em si. Espelha exatamente o passo do polo A: desobediência → infração.",
+          alternativas: [
+            { termo: "submissão", definicao: "Ato de sujeitar-se à vontade ou à autoridade de outrem.", fonte: "definição lexicográfica (sem consulta on-line)", motivo: "mantém o ator a quem se obedece e carrega juízo de valor — não abstrai" },
+            { termo: "fidelidade", definicao: "Qualidade de quem é leal a alguém ou a um compromisso assumido.", fonte: "definição lexicográfica (sem consulta on-line)", motivo: "desloca para o eixo do vínculo afetivo entre sujeitos" }
+          ]
+        },
+        {
+          termo: "CONFORMIDADE",
+          definicao: "Qualidade do que é conforme; sujeição ao que está estabelecido; estado do que está de acordo com uma regra, um modelo ou um limite.",
+          fonte: "Aulete Digital / Dicio",
+          justificativa: "Observância supõe uma regra positiva a cumprir; conformidade retém apenas o estar-de-acordo com um limite qualquer. Termo categorial e recíproco de transgressão — os próprios verbetes registram um como antônimo do outro (conformidade e observância figuram entre os antônimos de transgressão e de inobservância).",
+          alternativas: [
+            { termo: "acatamento", definicao: "Ato de acatar; aceitação respeitosa de ordem ou determinação.", fonte: "definição lexicográfica (sem consulta on-line)", motivo: "sinônimo de obediência: volta um nível atrás em vez de abstrair" },
+            { termo: "segurança", definicao: "Estado do que está livre de perigo, risco ou dano.", fonte: "definição lexicográfica (sem consulta on-line)", motivo: "sai do eixo: é o efeito eufórico da conformidade, não sua categoria" }
+          ]
+        }
+      ]
+    }
+  ],
+  oposicao: {
+    termo_a: "TRANSGRESSÃO",
+    termo_b: "CONFORMIDADE",
+    eixo: "a relação do sujeito com o limite instituído",
+    justificativa: "O conto é integralmente organizado por essa categoria: abre com a instituição de um limite (a interdição materna), narra sua ultrapassagem (sair da estrada, entrar na floresta, dar ouvidos ao desconhecido, abrir a porta da casa da avó), aplica a sanção correspondente (a devoração, isto é, o desaparecimento do sujeito dentro do corpo do outro) e restaura a conformidade por dois gestos simétricos — o caçador costura de novo o corpo violado do lobo e a menina reitera verbalmente a interdição. Note que a barriga fechada com pedras é a figura acabada do limite reinstituído: o que fora aberto volta a ser um dentro inviolável. Foram consideradas e descartadas três categorias concorrentes: natureza × cultura (floresta × casa) é de catálogo e não dá conta da moldura interditiva; vida × morte é pertinente, mas subordinada — a morte aqui é a sanção da transgressão, não o que organiza o texto; ser × parecer sustenta apenas o episódio do disfarce (a voz fingida, a touca, o diálogo das orelhas e da boca) e opera no nível narrativo, não no fundamental."
+  },
+  validacao: [
+    "Simetria de abstração: os dois polos são substantivos abstratos obtidos em três passos de hiperonímia, com níveis intermediários que se espelham (desobediência/obediência, infração/observância).",
+    "Eixo comum: a relação do sujeito com o limite instituído — nomeável sem coordenar dois eixos com \u201ce\u201d.",
+    "Não-figuratividade: nenhum dos polos evoca ator, tempo ou espaço; floresta e estradinha foram descartadas ainda no nível 1, e a mãe (o ator que ordena) cai no nível 2.",
+    "Reversibilidade: transgressão define-se como ultrapassagem de um limite; conformidade, como acordo com o mesmo limite. Os dicionários consultados registram um termo entre os antônimos do outro.",
+    "Pertinência ao texto: os dois polos são recuperáveis nas figuras — interdição, promessa, estradinha e barriga costurada manifestam a conformidade; desvio, caminho das flores, conversa com o estranho, porta aberta e devoração manifestam a transgressão.",
+    "Não-moralização: descartadas as leituras bem × mal e inocência × maldade, que axiologizam personagens em vez de nomear a categoria; descartado também obediência × desobediência, que é o par correto no nível figurativo mas ainda pressupõe um ator que ordena.",
+    "Recorte declarado: analisada a versão fornecida (com caçador e final restaurador). Numa versão sem resgate, o percurso B se sustentaria apenas pela figura ausente — a estrada não percorrida —, e a categoria permaneceria a mesma, com investimento disfórico da transgressão."
+  ]
+};
+/* ===================== FIM DA PARTE EDITÁVEL ============================= */
+</script>
+<style>
+  :root{
+    --papel:#f7f4ee; --papel2:#fffdf9; --tinta:#25211c; --tinta2:#6b6155;
+    --linha:#cfc6b8; --a:#b4552d; --a-bg:#fbeee6; --b:#2f6f6b; --b-bg:#e6f0ef;
+    --centro:#4a4036;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--papel);color:var(--tinta);
+    font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;}
+  .env{max-width:1180px;margin:0 auto;padding:28px 20px 60px}
+  header h1{font-size:1.5rem;margin:0 0 6px;letter-spacing:-.01em}
+  header .sub{font-size:.78rem;text-transform:uppercase;letter-spacing:.14em;color:var(--tinta2);margin-bottom:14px}
+  .entrada{background:var(--papel2);border:1px solid var(--linha);border-left:3px solid var(--centro);
+    padding:12px 16px;font-size:.94rem;line-height:1.55;color:var(--tinta2);border-radius:2px}
+  .entrada b{color:var(--tinta);font-weight:600}
+  h2{font-size:.78rem;text-transform:uppercase;letter-spacing:.14em;color:var(--tinta2);
+    font-weight:600;margin:34px 0 12px;border-bottom:1px solid var(--linha);padding-bottom:6px}
+  .dica{font-size:.8rem;color:var(--tinta2);font-style:italic;margin:-4px 0 14px}
+
+  #rolagem{overflow-x:auto;overflow-y:hidden;padding:8px 0 4px}
+  #palco{position:relative;display:inline-block;min-width:100%}
+  #svg{position:absolute;inset:0;pointer-events:none}
+  #trilha{position:relative;display:flex;align-items:center;gap:38px;padding:26px 8px}
+
+  .col{display:flex;flex-direction:column;align-items:center;gap:10px;flex:0 0 auto}
+  .rot{font-size:.6rem;text-transform:uppercase;letter-spacing:.12em;color:var(--tinta2);
+    height:14px;white-space:nowrap}
+  .no{position:relative;width:158px;min-height:56px;display:flex;align-items:center;justify-content:center;
+    text-align:center;padding:12px 10px;background:var(--papel2);border:1px solid var(--linha);
+    border-radius:3px;cursor:help;line-height:1.25;transition:transform .12s,box-shadow .12s;outline:none}
+  .no:hover,.no:focus{transform:translateY(-2px);box-shadow:0 4px 14px rgba(0,0,0,.10)}
+  .no.centro{width:186px;background:var(--centro);color:#f7f4ee;border-color:var(--centro);font-size:1.02rem}
+  .no.pA{border-color:var(--a);background:var(--a-bg)}
+  .no.pB{border-color:var(--b);background:var(--b-bg)}
+  .no.polo{font-weight:700;letter-spacing:.02em;font-size:1.02rem;box-shadow:0 0 0 4px rgba(0,0,0,.035)}
+  .no.polo.pA{background:var(--a);color:#fff8f4;border-color:var(--a)}
+  .no.polo.pB{background:var(--b);color:#f2fbfa;border-color:var(--b)}
+  .alt{width:132px;font-size:.76rem;padding:7px 8px;text-align:center;background:transparent;
+    border:1px dashed var(--linha);border-radius:3px;color:var(--tinta2);cursor:help;
+    text-decoration:line-through;text-decoration-color:rgba(0,0,0,.22);transition:opacity .12s;outline:none}
+  .alt:hover,.alt:focus{opacity:1;color:var(--tinta);border-color:var(--tinta2)}
+  .pilha{display:flex;flex-direction:column;gap:6px;align-items:center;min-height:1px}
+
+  #dica{position:fixed;z-index:50;max-width:330px;background:#fffdf9;border:1px solid var(--linha);
+    border-top:3px solid var(--centro);border-radius:3px;padding:12px 14px;
+    box-shadow:0 10px 30px rgba(0,0,0,.16);font-size:.86rem;line-height:1.5;display:none}
+  #dica.pA{border-top-color:var(--a)} #dica.pB{border-top-color:var(--b)}
+  #dica .t{font-weight:700;font-size:.98rem;margin-bottom:4px}
+  #dica .d{color:var(--tinta);margin-bottom:8px}
+  #dica .f{font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:var(--tinta2)}
+  #dica .j{margin-top:9px;padding-top:9px;border-top:1px solid var(--linha);font-size:.82rem;
+    color:var(--tinta2);font-style:italic}
+
+  .oposicao{margin-top:8px;background:var(--papel2);border:1px solid var(--linha);border-radius:3px;padding:22px}
+  .par{display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap;text-align:center}
+  .par .p{font-size:1.3rem;font-weight:700;letter-spacing:.02em}
+  .par .p.a{color:var(--a)} .par .p.b{color:var(--b)}
+  .par .vs{font-size:.8rem;color:var(--tinta2);letter-spacing:.16em;text-transform:uppercase}
+  .eixo{text-align:center;margin-top:12px;font-size:.9rem;color:var(--tinta2)}
+  .eixo b{color:var(--tinta)}
+  .justif{margin-top:16px;padding-top:14px;border-top:1px solid var(--linha);font-size:.94rem;line-height:1.6}
+  ul.val{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+  ul.val li{font-size:.9rem;line-height:1.5;padding-left:20px;position:relative;color:var(--tinta2)}
+  ul.val li::before{content:"✓";position:absolute;left:0;color:var(--b);font-weight:700}
+  footer{margin-top:40px;font-size:.75rem;color:var(--tinta2);text-align:center;line-height:1.6}
+
+  @media (max-width:820px){
+    #trilha{flex-direction:column;gap:26px}
+    .no{width:200px} .alt{width:170px}
+    .pilha{flex-direction:row;flex-wrap:wrap;justify-content:center}
+  }
+</style>
+</head>
+<body>
+<div class="env">
+  <header>
+    <div class="sub">Semiótica discursiva · nível fundamental</div>
+    <h1 id="titulo"></h1>
+  </header>
+  <div class="entrada"><b>Material analisado.</b> <span id="entrada"></span></div>
+
+  <h2>Percurso de abstração</h2>
+  <p class="dica">Passe o mouse (ou toque) sobre qualquer termo para ver a definição de dicionário e o motivo do passo. Os termos riscados foram considerados e descartados.</p>
+  <div id="rolagem"><div id="palco"><svg id="svg"></svg><div id="trilha"></div></div></div>
+
+  <h2>Oposição semântica de base</h2>
+  <div class="oposicao">
+    <div class="par">
+      <span class="p a" id="oa"></span><span class="vs">versus</span><span class="p b" id="ob"></span>
+    </div>
+    <div class="eixo">eixo semântico: <b id="oeixo"></b></div>
+    <div class="justif" id="ojust"></div>
+  </div>
+
+  <h2>Validação da categoria</h2>
+  <ul class="val" id="val"></ul>
+
+  <footer>Percurso gerativo do sentido · nível fundamental<br>cada passo de abstração é o gênero próximo da definição lexicográfica do termo anterior</footer>
+</div>
+<div id="dica" role="tooltip"></div>
+
+<script>
+const trilha=document.getElementById('trilha');
+const svg=document.getElementById('svg');
+const dica=document.getElementById('dica');
+let fixado=null;
+
+document.getElementById('titulo').textContent=DADOS.titulo;
+document.getElementById('entrada').textContent=DADOS.entrada;
+document.getElementById('oa').textContent=DADOS.oposicao.termo_a;
+document.getElementById('ob').textContent=DADOS.oposicao.termo_b;
+document.getElementById('oeixo').textContent=DADOS.oposicao.eixo;
+document.getElementById('ojust').textContent=DADOS.oposicao.justificativa;
+document.getElementById('val').innerHTML=(DADOS.validacao||[]).map(v=>'<li></li>').join('');
+document.querySelectorAll('#val li').forEach((li,i)=>li.append(DADOS.validacao[i]));
+
+const pA=DADOS.percursos.find(p=>p.polo==='A')||DADOS.percursos[0];
+const pB=DADOS.percursos.find(p=>p.polo==='B')||DADOS.percursos[1]||{niveis:[]};
+
+function chips(lista,classe){
+  const d=document.createElement('div'); d.className='pilha';
+  (lista||[]).forEach(a=>{
+    const c=document.createElement('div');
+    c.className='alt'; c.tabIndex=0; c.textContent=a.termo;
+    c.dataset.info=JSON.stringify({t:a.termo,d:a.definicao,f:a.fonte,j:'Descartado — '+a.motivo,c:classe});
+    d.appendChild(c);
+  });
+  return d;
+}
+function coluna(item,classe,rotulo,ehPolo,ehCentro){
+  const col=document.createElement('div'); col.className='col';
+  const r=document.createElement('div'); r.className='rot'; r.textContent=rotulo; col.appendChild(r);
+  const cima=chips((item.alternativas||[]).slice(0,1),classe); col.appendChild(cima);
+  const no=document.createElement('div');
+  no.className='no'+(ehCentro?' centro':' '+classe)+(ehPolo?' polo':'');
+  no.tabIndex=0; no.textContent=item.termo;
+  no.dataset.info=JSON.stringify({t:item.termo,d:item.definicao,f:item.fonte,
+    j:item.justificativa||item.nota||'',c:ehCentro?'':classe});
+  col.appendChild(no); col.dataset.no='1';
+  col.appendChild(chips((item.alternativas||[]).slice(1),classe));
+  return col;
+}
+const colunas=[];
+[...pA.niveis].reverse().forEach((n,i,arr)=>{
+  const nivel=arr.length-i;
+  colunas.push(coluna(n,'pA',(nivel===arr.length?'polo A · nível '+nivel:'nível '+nivel),nivel===arr.length,false));
+});
+colunas.push(coluna(DADOS.centro,'','centro figurativo',false,true));
+(pB.niveis||[]).forEach((n,i,arr)=>{
+  colunas.push(coluna(n,'pB',(i===arr.length-1?'polo B · nível '+(i+1):'nível '+(i+1)),i===arr.length-1,false));
+});
+colunas.forEach(c=>trilha.appendChild(c));
+
+function info(el){
+  const o=JSON.parse(el.dataset.info);
+  dica.className=o.c||'';
+  dica.innerHTML='<div class="t"></div><div class="d"></div><div class="f"></div>'+(o.j?'<div class="j"></div>':'');
+  dica.querySelector('.t').textContent=o.t;
+  dica.querySelector('.d').textContent=o.d;
+  dica.querySelector('.f').textContent=o.f;
+  if(o.j) dica.querySelector('.j').textContent=o.j;
+  dica.style.display='block';
+}
+function posiciona(x,y){
+  const r=dica.getBoundingClientRect();
+  let l=x+16, t=y+16;
+  if(l+r.width>innerWidth-10) l=x-r.width-16;
+  if(t+r.height>innerHeight-10) t=Math.max(10,y-r.height-16);
+  dica.style.left=l+'px'; dica.style.top=t+'px';
+}
+document.addEventListener('mouseover',e=>{
+  const el=e.target.closest('[data-info]'); if(!el||fixado) return;
+  info(el); posiciona(e.clientX,e.clientY);
+});
+document.addEventListener('mousemove',e=>{ if(dica.style.display==='block'&&!fixado) posiciona(e.clientX,e.clientY); });
+document.addEventListener('mouseout',e=>{ if(!fixado&&e.target.closest('[data-info]')) dica.style.display='none'; });
+document.addEventListener('click',e=>{
+  const el=e.target.closest('[data-info]');
+  if(el){ fixado=null; info(el); const r=el.getBoundingClientRect(); posiciona(r.left+r.width/2,r.bottom-14); fixado=el; }
+  else { fixado=null; dica.style.display='none'; }
+});
+document.addEventListener('focusin',e=>{
+  const el=e.target.closest('[data-info]'); if(!el) return;
+  info(el); const r=el.getBoundingClientRect(); posiciona(r.left,r.bottom);
+});
+document.addEventListener('keydown',e=>{ if(e.key==='Escape'){fixado=null;dica.style.display='none';} });
+
+function linha(x1,y1,x2,y2,cor,traco,largura){
+  const p=document.createElementNS('http://www.w3.org/2000/svg','path');
+  const mx=(x1+x2)/2;
+  p.setAttribute('d',`M${x1},${y1} C${mx},${y1} ${mx},${y2} ${x2},${y2}`);
+  p.setAttribute('fill','none'); p.setAttribute('stroke',cor);
+  p.setAttribute('stroke-width',largura||1.4);
+  if(traco) p.setAttribute('stroke-dasharray',traco);
+  svg.appendChild(p);
+}
+function desenha(){
+  const base=document.getElementById('palco').getBoundingClientRect();
+  svg.setAttribute('width',base.width); svg.setAttribute('height',base.height);
+  svg.style.width=base.width+'px'; svg.style.height=base.height+'px';
+  svg.innerHTML='';
+  const est=getComputedStyle(document.documentElement);
+  const cA=est.getPropertyValue('--a').trim(), cB=est.getPropertyValue('--b').trim(),
+        cL=est.getPropertyValue('--linha').trim();
+  const R=el=>{const r=el.getBoundingClientRect();
+    return {x:r.left-base.left,y:r.top-base.top,w:r.width,h:r.height,
+            cx:r.left-base.left+r.width/2, cy:r.top-base.top+r.height/2};};
+  const vertical=innerWidth<=820;
+  const nos=colunas.map(c=>c.querySelector('.no'));
+  const iCentro=nos.findIndex(n=>n.classList.contains('centro'));
+  for(let i=0;i<nos.length-1;i++){
+    const a=R(nos[i]), b=R(nos[i+1]);
+    const cor=(i<iCentro)?cA:cB;
+    if(vertical) linha(a.cx,a.y+a.h,b.cx,b.y,cor,null,1.6);
+    else linha(a.x+a.w,a.cy,b.x,b.cy,cor,null,1.6);
+  }
+  colunas.forEach((col,i)=>{
+    const no=R(col.querySelector('.no'));
+    col.querySelectorAll('.alt').forEach(alt=>{
+      const a=R(alt);
+      if(vertical) linha(no.x,no.cy,a.x+a.w,a.cy,cL,'3 3',1);
+      else linha(no.cx,(a.cy<no.cy?no.y:no.y+no.h),a.cx,(a.cy<no.cy?a.y+a.h:a.y),cL,'3 3',1);
+    });
+  });
+  const polos=nos.filter(n=>n.classList.contains('polo'));
+  if(polos.length===2&&!vertical){
+    const a=R(polos[0]), b=R(polos[1]);
+    const p=document.createElementNS('http://www.w3.org/2000/svg','path');
+    const topo=Math.min(a.y,b.y)-20;
+    p.setAttribute('d',`M${a.cx},${a.y} C${a.cx},${topo} ${b.cx},${topo} ${b.cx},${b.y}`);
+    p.setAttribute('fill','none'); p.setAttribute('stroke',cA); p.setAttribute('stroke-width',1.2);
+    p.setAttribute('stroke-dasharray','6 4'); p.setAttribute('opacity','.55');
+    svg.appendChild(p);
+  }
+}
+addEventListener('resize',desenha);
+addEventListener('load',desenha);
+setTimeout(desenha,60);
+</script>
+</body>
+</html>
