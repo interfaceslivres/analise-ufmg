@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Oposição semântica de base — De povo adentro</title>
+<script>
+/* =========================================================================
+   ÚNICA PARTE A SER EDITADA. Substitua pelos dados da análise.
+   ========================================================================= */
+const DADOS = {
+  titulo: "“De povo adentro” — a fabricação do candidato",
+  entrada: "Cordel satírico em três estrofes sobre como se monta um partido e um candidato no Brasil, até a cabina de votação. Trechos-chave da análise: “Disfarçado de gentil”, “Que negue toda verdade / Até com prova na mão”, “O resto é televisão”, “sai muçum lubrificado”, “A marca da vaselina”.",
+  centro: {
+    termo: "o candidato disfarçado de gentil",
+    definicao: "sujeito construído segundo um “perfil” prescrito: come feito esmeril, mas se apresenta com a feição mais ó meno e bom de aceno",
+    fonte: "descrição figurativa do material",
+    nota: "O cordel não narra um roubo: narra uma FABRICAÇÃO. As exigências do perfil são todas exigências de manifestação (disfarce, feição, aceno, televisão), enquanto o traço que as motiva — o apetite — permanece coberto. Esse é o núcleo tensivo."
+  },
+  percursos: [
+    {
+      polo: "A",
+      rotulo: "o que se dá a ver",
+      niveis: [
+        {
+          termo: "disfarce",
+          definicao: "o que serve para disfarçar, para esconder ou dissimular o verdadeiro aspecto de algo ou alguém",
+          fonte: "Aulete Digital",
+          justificativa: "Termo do próprio texto (“disfarçado de gentil”), reforçado por “com as feição mais ó meno” e “que seja bom de aceno”: um aspecto exterior montado sobre outro.",
+          alternativas: [
+            { termo: "hipocrisia", definicao: "fingimento de virtudes, sentimentos ou crenças que não se têm", fonte: "definição lexicográfica (sem consulta on-line)", motivo: "Avaliativo: já julga o disfarce em vez de descrever sua operação." },
+            { termo: "propaganda", definicao: "difusão organizada de mensagens destinadas a influenciar opiniões", fonte: "definição lexicográfica (sem consulta on-line)", motivo: "Figurativo demais: retém suporte, meio e instituição (“o resto é televisão”)." }
+          ]
+        },
+        {
+          termo: "dissimulação",
+          definicao: "ação ou artifício de dissimular; fingimento, disfarce, falsa aparência",
+          fonte: "Aulete Digital",
+          justificativa: "Gênero próximo extraído da definição de disfarce: o disfarce é o INSTRUMENTO (“o que serve para dissimular”); a dissimulação é a OPERAÇÃO de que ele é instrumento.",
+          alternativas: [
+            { termo: "mentira", definicao: "afirmação contrária ao que se sabe ser verdadeiro", fonte: "definição lexicográfica (sem consulta on-line)", motivo: "Na veridicção, mentira é termo DERIVADO (parecer sem ser) — resultado da categoria, não a categoria." },
+            { termo: "engano", definicao: "erro em que alguém é induzido a cair", fonte: "definição lexicográfica (sem consulta on-line)", motivo: "Desloca o eixo para o efeito no destinatário (o povo), e não para o modo de manifestação do sujeito." }
+          ]
+        },
+        {
+          termo: "aparência",
+          definicao: "o que aparece exteriormente, o que se mostra à primeira vista; capa, cor, disfarce (“é um malvado sob a aparência de santo”)",
+          fonte: "Aulete Digital",
+          justificativa: "A definição de dissimulação é literalmente “falsa aparência”. Retirado o traço avaliativo “falsa”, o gênero próximo que resta é a aparência: o exterior que se dá a ver.",
+          alternativas: [
+            { termo: "imagem", definicao: "representação sensível de algo, sobretudo visual", fonte: "definição lexicográfica (sem consulta on-line)", motivo: "Ainda figurativiza: supõe suporte e registro visual — o próprio “televisão” do poema." },
+            { termo: "fachada", definicao: "face exterior de um edifício; por extensão, exterior enganoso", fonte: "definição lexicográfica (sem consulta on-line)", motivo: "Metáfora espacial: conserva traço arquitetônico, logo figurativo." }
+          ]
+        },
+        {
+          termo: "PARECER",
+          definicao: "modo como algo se manifesta e se dá a ver ao juízo alheio, independentemente daquilo que efetivamente é",
+          fonte: "acepção lexicográfico-filosófica (sem consulta on-line)",
+          justificativa: "Termo categorial: a definição de aparência supõe um exterior que se mostra em contraste com o que está por baixo. “Parecer” só se define por relação a “ser” — e não admite hiperônimo sem cair em “manifestar-se”, que é verbo vazio.",
+          alternativas: []
+        }
+      ]
+    },
+    {
+      polo: "B",
+      rotulo: "o que permanece por baixo",
+      niveis: [
+        {
+          termo: "voracidade",
+          definicao: "qualidade de quem devora com sofreguidão; avidez insaciável",
+          fonte: "Aulete Digital (verbete “voraz” / campo analógico: avidez, sofreguidão, rapacidade)",
+          justificativa: "Figuras do texto que dizem o que o sujeito é: “que coma feito esmeril”, “que só pense em enricar / mas enricar de verdade” e o “enrabado” final — sempre o mesmo traço de apetite que consome.",
+          alternativas: [
+            { termo: "ganância", definicao: "desejo imoderado de lucro ou de posse", fonte: "definição lexicográfica (sem consulta on-line)", motivo: "Avaliativo: carrega condenação moral, axiologizando o eixo antes da hora." },
+            { termo: "corrupção", definicao: "uso de função pública em proveito privado", fonte: "definição lexicográfica (sem consulta on-line)", motivo: "É TEMA (leitura jurídico-política do texto), não categoria fundamental." }
+          ]
+        },
+        {
+          termo: "índole",
+          definicao: "disposição, inclinação, propensão natural do ânimo; tendência característica",
+          fonte: "Aulete Digital",
+          justificativa: "No cordel a voracidade não é ato ocasional: é requisito de admissão — “mas com o seguinte perfil”. Gênero próximo da definição: uma qualidade constitutiva, uma propensão do sujeito, e não uma ação.",
+          alternativas: [
+            { termo: "caráter", definicao: "conjunto de traços morais que qualificam a conduta de alguém", fonte: "definição lexicográfica (sem consulta on-line)", motivo: "Moralizante no uso corrente (“ter caráter”): reintroduz juízo no eixo." },
+            { termo: "apetite", definicao: "desejo de ingerir alimento; por extensão, desejo intenso", fonte: "definição lexicográfica (sem consulta on-line)", motivo: "Sinônimo lateral de voracidade, não hiperônimo — e conserva traço somático, logo figurativo." }
+          ]
+        },
+        {
+          termo: "essência",
+          definicao: "o que faz com que uma coisa seja o que é; a sua natureza íntima, o seu modo de ser próprio",
+          fonte: "Aulete Digital",
+          justificativa: "A definição de índole remete ao que é “natural”, ao que pertence ao sujeito por constituição. O gênero próximo desse traço constitutivo é aquilo que faz o sujeito ser o que é: sua essência.",
+          alternativas: [
+            { termo: "realidade", definicao: "o que existe de fato, independentemente da representação que dele se faça", fonte: "definição lexicográfica (sem consulta on-line)", motivo: "Mais amplo, mas desloca o eixo para o mundo dos fatos, perdendo o modo de existir DO SUJEITO." },
+            { termo: "verdade", definicao: "conformidade entre o que se enuncia e o que é", fonte: "definição lexicográfica (sem consulta on-line)", motivo: "Termo veridictório DERIVADO (conjunção de ser e parecer) — está um andar acima, não é polo da categoria de base." }
+          ]
+        },
+        {
+          termo: "SER",
+          definicao: "modo de existir próprio de algo, considerado independentemente de como se mostra ou se manifesta",
+          fonte: "acepção lexicográfico-filosófica (sem consulta on-line)",
+          justificativa: "Termo categorial: a definição de essência já opõe o “modo de ser próprio” às suas manifestações variáveis. Abstrair mais levaria a “existência” e depois ao vazio (“ente”, “coisa”).",
+          alternativas: []
+        }
+      ]
+    }
+  ],
+  oposicao: {
+    termo_a: "PARECER",
+    termo_b: "SER",
+    eixo: "veridicção — a relação entre o que o sujeito é e o que ele manifesta",
+    justificativa: "Toda a receita do cordel é uma receita de manifestação: disfarçar-se de gentil, ter a feição mais ó meno, ser bom de aceno, negar a verdade com a prova na mão, e “o resto é televisão”. O que se mantém constante e coberto é o apetite. O desfecho fecha a categoria de forma exemplar: na cabina, o eleitor escolhe “a marca da vaselina” — o que varia entre as opções é o rótulo; o que não varia é o que lhe é feito. A escolha inteira se dá no plano do parecer, e é justamente por isso que ela não altera o ser. O “muçum lubrificado” é a figura perfeita do polo B: o que não se deixa apreender, o que escorrega sob a superfície."
+  },
+  validacao: [
+    "Simetria de abstração: ser e parecer estão no mesmo grau categorial — nenhum é hipônimo do outro, e ambos perderam ator, tempo e espaço ao longo de quatro níveis.",
+    "Eixo comum: nomeável com um só termo — a veridicção (relação entre imanência e manifestação). Não é preciso somar dois eixos com “e”.",
+    "Não-figuratividade: os polos não evocam cena alguma; as figuras (esmeril, televisão, muçum, cabina, vaselina) ficaram nos níveis inferiores do percurso.",
+    "Reversibilidade: “parecer” se define como o que se mostra independentemente do que se é; “ser”, como o que subsiste independentemente do que se mostra. Cada definição mobiliza o outro polo.",
+    "Não-moralização: descartada a leitura “honestidade × desonestidade”, que axiologiza sem abstrair. Descartada também “verdade × mentira”: são termos DERIVADOS da relação ser/parecer, não a categoria de base. O texto instala precisamente o modo veridictório da MENTIRA (parecer sem ser) — o que confirma, e não substitui, a categoria subjacente.",
+    "Pertinência ao texto: polo A recuperável em “disfarçado de gentil”, “feição mais ó meno”, “bom de aceno”, “o resto é televisão”, “a marca da vaselina”; polo B em “coma feito esmeril”, “só pense em enricar”, “muçum lubrificado”, “enrabado”.",
+    "Nota sobre o destinatário: “os cabra abestaidado” é o sujeito que só tem acesso ao parecer — a sanção cognitiva falha, e a manipulação se completa. O povo não é um terceiro polo: é o lugar de onde a categoria é vista de um lado só."
+  ]
+};
+/* ===================== FIM DA PARTE EDITÁVEL ============================= */
+</script>
+<style>
+  :root{
+    --papel:#f7f4ee; --papel2:#fffdf9; --tinta:#25211c; --tinta2:#6b6155;
+    --linha:#cfc6b8; --a:#b4552d; --a-bg:#fbeee6; --b:#2f6f6b; --b-bg:#e6f0ef;
+    --centro:#4a4036;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--papel);color:var(--tinta);
+    font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;}
+  .env{max-width:1180px;margin:0 auto;padding:28px 20px 60px}
+  header h1{font-size:1.5rem;margin:0 0 6px;letter-spacing:-.01em}
+  header .sub{font-size:.78rem;text-transform:uppercase;letter-spacing:.14em;color:var(--tinta2);margin-bottom:14px}
+  .entrada{background:var(--papel2);border:1px solid var(--linha);border-left:3px solid var(--centro);
+    padding:12px 16px;font-size:.94rem;line-height:1.55;color:var(--tinta2);border-radius:2px}
+  .entrada b{color:var(--tinta);font-weight:600}
+  h2{font-size:.78rem;text-transform:uppercase;letter-spacing:.14em;color:var(--tinta2);
+    font-weight:600;margin:34px 0 12px;border-bottom:1px solid var(--linha);padding-bottom:6px}
+  .dica{font-size:.8rem;color:var(--tinta2);font-style:italic;margin:-4px 0 14px}
+
+  #rolagem{overflow-x:auto;overflow-y:hidden;padding:8px 0 4px}
+  #palco{position:relative;display:inline-block;min-width:100%}
+  #svg{position:absolute;inset:0;pointer-events:none}
+  #trilha{position:relative;display:flex;align-items:center;gap:38px;padding:26px 8px}
+
+  .col{display:flex;flex-direction:column;align-items:center;gap:10px;flex:0 0 auto}
+  .rot{font-size:.6rem;text-transform:uppercase;letter-spacing:.12em;color:var(--tinta2);
+    height:14px;white-space:nowrap}
+  .no{position:relative;width:158px;min-height:56px;display:flex;align-items:center;justify-content:center;
+    text-align:center;padding:12px 10px;background:var(--papel2);border:1px solid var(--linha);
+    border-radius:3px;cursor:help;line-height:1.25;transition:transform .12s,box-shadow .12s;outline:none}
+  .no:hover,.no:focus{transform:translateY(-2px);box-shadow:0 4px 14px rgba(0,0,0,.10)}
+  .no.centro{width:186px;background:var(--centro);color:#f7f4ee;border-color:var(--centro);font-size:1.02rem}
+  .no.pA{border-color:var(--a);background:var(--a-bg)}
+  .no.pB{border-color:var(--b);background:var(--b-bg)}
+  .no.polo{font-weight:700;letter-spacing:.02em;font-size:1.02rem;box-shadow:0 0 0 4px rgba(0,0,0,.035)}
+  .no.polo.pA{background:var(--a);color:#fff8f4;border-color:var(--a)}
+  .no.polo.pB{background:var(--b);color:#f2fbfa;border-color:var(--b)}
+  .alt{width:132px;font-size:.76rem;padding:7px 8px;text-align:center;background:transparent;
+    border:1px dashed var(--linha);border-radius:3px;color:var(--tinta2);cursor:help;
+    text-decoration:line-through;text-decoration-color:rgba(0,0,0,.22);transition:opacity .12s;outline:none}
+  .alt:hover,.alt:focus{opacity:1;color:var(--tinta);border-color:var(--tinta2)}
+  .pilha{display:flex;flex-direction:column;gap:6px;align-items:center;min-height:1px}
+
+  #dica{position:fixed;z-index:50;max-width:330px;background:#fffdf9;border:1px solid var(--linha);
+    border-top:3px solid var(--centro);border-radius:3px;padding:12px 14px;
+    box-shadow:0 10px 30px rgba(0,0,0,.16);font-size:.86rem;line-height:1.5;display:none}
+  #dica.pA{border-top-color:var(--a)} #dica.pB{border-top-color:var(--b)}
+  #dica .t{font-weight:700;font-size:.98rem;margin-bottom:4px}
+  #dica .d{color:var(--tinta);margin-bottom:8px}
+  #dica .f{font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:var(--tinta2)}
+  #dica .j{margin-top:9px;padding-top:9px;border-top:1px solid var(--linha);font-size:.82rem;
+    color:var(--tinta2);font-style:italic}
+
+  .oposicao{margin-top:8px;background:var(--papel2);border:1px solid var(--linha);border-radius:3px;padding:22px}
+  .par{display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap;text-align:center}
+  .par .p{font-size:1.3rem;font-weight:700;letter-spacing:.02em}
+  .par .p.a{color:var(--a)} .par .p.b{color:var(--b)}
+  .par .vs{font-size:.8rem;color:var(--tinta2);letter-spacing:.16em;text-transform:uppercase}
+  .eixo{text-align:center;margin-top:12px;font-size:.9rem;color:var(--tinta2)}
+  .eixo b{color:var(--tinta)}
+  .justif{margin-top:16px;padding-top:14px;border-top:1px solid var(--linha);font-size:.94rem;line-height:1.6}
+  ul.val{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+  ul.val li{font-size:.9rem;line-height:1.5;padding-left:20px;position:relative;color:var(--tinta2)}
+  ul.val li::before{content:"✓";position:absolute;left:0;color:var(--b);font-weight:700}
+  footer{margin-top:40px;font-size:.75rem;color:var(--tinta2);text-align:center;line-height:1.6}
+
+  @media (max-width:820px){
+    #trilha{flex-direction:column;gap:26px}
+    .no{width:200px} .alt{width:170px}
+    .pilha{flex-direction:row;flex-wrap:wrap;justify-content:center}
+  }
+</style>
+</head>
+<body>
+<div class="env">
+  <header>
+    <div class="sub">Semiótica discursiva · nível fundamental</div>
+    <h1 id="titulo"></h1>
+  </header>
+  <div class="entrada"><b>Material analisado.</b> <span id="entrada"></span></div>
+
+  <h2>Percurso de abstração</h2>
+  <p class="dica">Passe o mouse (ou toque) sobre qualquer termo para ver a definição de dicionário e o motivo do passo. Os termos riscados foram considerados e descartados.</p>
+  <div id="rolagem"><div id="palco"><svg id="svg"></svg><div id="trilha"></div></div></div>
+
+  <h2>Oposição semântica de base</h2>
+  <div class="oposicao">
+    <div class="par">
+      <span class="p a" id="oa"></span><span class="vs">versus</span><span class="p b" id="ob"></span>
+    </div>
+    <div class="eixo">eixo semântico: <b id="oeixo"></b></div>
+    <div class="justif" id="ojust"></div>
+  </div>
+
+  <h2>Validação da categoria</h2>
+  <ul class="val" id="val"></ul>
+
+  <footer>Percurso gerativo do sentido · nível fundamental<br>cada passo de abstração é o gênero próximo da definição lexicográfica do termo anterior</footer>
+</div>
+<div id="dica" role="tooltip"></div>
+
+<script>
+const trilha=document.getElementById('trilha');
+const svg=document.getElementById('svg');
+const dica=document.getElementById('dica');
+let fixado=null;
+
+document.getElementById('titulo').textContent=DADOS.titulo;
+document.getElementById('entrada').textContent=DADOS.entrada;
+document.getElementById('oa').textContent=DADOS.oposicao.termo_a;
+document.getElementById('ob').textContent=DADOS.oposicao.termo_b;
+document.getElementById('oeixo').textContent=DADOS.oposicao.eixo;
+document.getElementById('ojust').textContent=DADOS.oposicao.justificativa;
+document.getElementById('val').innerHTML=(DADOS.validacao||[]).map(v=>'<li></li>').join('');
+document.querySelectorAll('#val li').forEach((li,i)=>li.append(DADOS.validacao[i]));
+
+const pA=DADOS.percursos.find(p=>p.polo==='A')||DADOS.percursos[0];
+const pB=DADOS.percursos.find(p=>p.polo==='B')||DADOS.percursos[1]||{niveis:[]};
+
+function chips(lista,classe){
+  const d=document.createElement('div'); d.className='pilha';
+  (lista||[]).forEach(a=>{
+    const c=document.createElement('div');
+    c.className='alt'; c.tabIndex=0; c.textContent=a.termo;
+    c.dataset.info=JSON.stringify({t:a.termo,d:a.definicao,f:a.fonte,j:'Descartado — '+a.motivo,c:classe});
+    d.appendChild(c);
+  });
+  return d;
+}
+function coluna(item,classe,rotulo,ehPolo,ehCentro){
+  const col=document.createElement('div'); col.className='col';
+  const r=document.createElement('div'); r.className='rot'; r.textContent=rotulo; col.appendChild(r);
+  const cima=chips((item.alternativas||[]).slice(0,1),classe); col.appendChild(cima);
+  const no=document.createElement('div');
+  no.className='no'+(ehCentro?' centro':' '+classe)+(ehPolo?' polo':'');
+  no.tabIndex=0; no.textContent=item.termo;
+  no.dataset.info=JSON.stringify({t:item.termo,d:item.definicao,f:item.fonte,
+    j:item.justificativa||item.nota||'',c:ehCentro?'':classe});
+  col.appendChild(no); col.dataset.no='1';
+  col.appendChild(chips((item.alternativas||[]).slice(1),classe));
+  return col;
+}
+const colunas=[];
+[...pA.niveis].reverse().forEach((n,i,arr)=>{
+  const nivel=arr.length-i;
+  colunas.push(coluna(n,'pA',(nivel===arr.length?'polo A · nível '+nivel:'nível '+nivel),nivel===arr.length,false));
+});
+colunas.push(coluna(DADOS.centro,'','centro figurativo',false,true));
+(pB.niveis||[]).forEach((n,i,arr)=>{
+  colunas.push(coluna(n,'pB',(i===arr.length-1?'polo B · nível '+(i+1):'nível '+(i+1)),i===arr.length-1,false));
+});
+colunas.forEach(c=>trilha.appendChild(c));
+
+function info(el){
+  const o=JSON.parse(el.dataset.info);
+  dica.className=o.c||'';
+  dica.innerHTML='<div class="t"></div><div class="d"></div><div class="f"></div>'+(o.j?'<div class="j"></div>':'');
+  dica.querySelector('.t').textContent=o.t;
+  dica.querySelector('.d').textContent=o.d;
+  dica.querySelector('.f').textContent=o.f;
+  if(o.j) dica.querySelector('.j').textContent=o.j;
+  dica.style.display='block';
+}
+function posiciona(x,y){
+  const r=dica.getBoundingClientRect();
+  let l=x+16, t=y+16;
+  if(l+r.width>innerWidth-10) l=x-r.width-16;
+  if(t+r.height>innerHeight-10) t=Math.max(10,y-r.height-16);
+  dica.style.left=l+'px'; dica.style.top=t+'px';
+}
+document.addEventListener('mouseover',e=>{
+  const el=e.target.closest('[data-info]'); if(!el||fixado) return;
+  info(el); posiciona(e.clientX,e.clientY);
+});
+document.addEventListener('mousemove',e=>{ if(dica.style.display==='block'&&!fixado) posiciona(e.clientX,e.clientY); });
+document.addEventListener('mouseout',e=>{ if(!fixado&&e.target.closest('[data-info]')) dica.style.display='none'; });
+document.addEventListener('click',e=>{
+  const el=e.target.closest('[data-info]');
+  if(el){ fixado=null; info(el); const r=el.getBoundingClientRect(); posiciona(r.left+r.width/2,r.bottom-14); fixado=el; }
+  else { fixado=null; dica.style.display='none'; }
+});
+document.addEventListener('focusin',e=>{
+  const el=e.target.closest('[data-info]'); if(!el) return;
+  info(el); const r=el.getBoundingClientRect(); posiciona(r.left,r.bottom);
+});
+document.addEventListener('keydown',e=>{ if(e.key==='Escape'){fixado=null;dica.style.display='none';} });
+
+function linha(x1,y1,x2,y2,cor,traco,largura){
+  const p=document.createElementNS('http://www.w3.org/2000/svg','path');
+  const mx=(x1+x2)/2;
+  p.setAttribute('d',`M${x1},${y1} C${mx},${y1} ${mx},${y2} ${x2},${y2}`);
+  p.setAttribute('fill','none'); p.setAttribute('stroke',cor);
+  p.setAttribute('stroke-width',largura||1.4);
+  if(traco) p.setAttribute('stroke-dasharray',traco);
+  svg.appendChild(p);
+}
+function desenha(){
+  const base=document.getElementById('palco').getBoundingClientRect();
+  svg.setAttribute('width',base.width); svg.setAttribute('height',base.height);
+  svg.style.width=base.width+'px'; svg.style.height=base.height+'px';
+  svg.innerHTML='';
+  const est=getComputedStyle(document.documentElement);
+  const cA=est.getPropertyValue('--a').trim(), cB=est.getPropertyValue('--b').trim(),
+        cL=est.getPropertyValue('--linha').trim();
+  const R=el=>{const r=el.getBoundingClientRect();
+    return {x:r.left-base.left,y:r.top-base.top,w:r.width,h:r.height,
+            cx:r.left-base.left+r.width/2, cy:r.top-base.top+r.height/2};};
+  const vertical=innerWidth<=820;
+  const nos=colunas.map(c=>c.querySelector('.no'));
+  const iCentro=nos.findIndex(n=>n.classList.contains('centro'));
+  for(let i=0;i<nos.length-1;i++){
+    const a=R(nos[i]), b=R(nos[i+1]);
+    const cor=(i<iCentro)?cA:cB;
+    if(vertical) linha(a.cx,a.y+a.h,b.cx,b.y,cor,null,1.6);
+    else linha(a.x+a.w,a.cy,b.x,b.cy,cor,null,1.6);
+  }
+  colunas.forEach((col,i)=>{
+    const no=R(col.querySelector('.no'));
+    col.querySelectorAll('.alt').forEach(alt=>{
+      const a=R(alt);
+      if(vertical) linha(no.x,no.cy,a.x+a.w,a.cy,cL,'3 3',1);
+      else linha(no.cx,(a.cy<no.cy?no.y:no.y+no.h),a.cx,(a.cy<no.cy?a.y+a.h:a.y),cL,'3 3',1);
+    });
+  });
+  const polos=nos.filter(n=>n.classList.contains('polo'));
+  if(polos.length===2&&!vertical){
+    const a=R(polos[0]), b=R(polos[1]);
+    const p=document.createElementNS('http://www.w3.org/2000/svg','path');
+    const topo=Math.min(a.y,b.y)-20;
+    p.setAttribute('d',`M${a.cx},${a.y} C${a.cx},${topo} ${b.cx},${topo} ${b.cx},${b.y}`);
+    p.setAttribute('fill','none'); p.setAttribute('stroke',cA); p.setAttribute('stroke-width',1.2);
+    p.setAttribute('stroke-dasharray','6 4'); p.setAttribute('opacity','.55');
+    svg.appendChild(p);
+  }
+}
+addEventListener('resize',desenha);
+addEventListener('load',desenha);
+setTimeout(desenha,60);
+</script>
+</body>
+</html>
