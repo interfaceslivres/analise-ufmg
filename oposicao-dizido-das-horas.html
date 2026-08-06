@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Oposição semântica de base — O dizido das horas no Sertão</title>
+<script>
+/* =========================================================================
+   ÚNICA PARTE A SER EDITADA. Substitua pelos dados da análise.
+   ========================================================================= */
+const DADOS = {
+  titulo: "O dizido das horas no Sertão — Jessier Quirino",
+  entrada: "Poema em que o modo sertanejo de nomear as horas é exposto hora a hora: a cada número do relógio corresponde um nome tirado do mundo — o canto do galo, o quebrar da barra, a braça de sol, o sol a pino, a detardezinha, a hora da visage, o frião da noite. Análise do poema integral.",
+  centro: {
+    termo: "o dizido das horas",
+    definicao: "o modo como o sertanejo antigo enuncia a hora: não pelo número que o ponteiro marca, mas por um nome tirado do que o mundo mostra naquele instante",
+    fonte: "expressão do próprio texto (nível figurativo)",
+    nota: "Condensa o núcleo tensivo: cada instante do poema aparece duas vezes — como número contado e como nome sentido. 'Uma hora da manhã / Primeiro canto do galo' é a fórmula que se repete do começo ao fim."
+  },
+  percursos: [
+    {
+      polo: "A",
+      rotulo: "a hora que o relógio conta",
+      niveis: [
+        {
+          termo: "relógio",
+          definicao: "maquinismo que serve para marcar as horas; qualquer instrumento de marcar o tempo",
+          fonte: "Aulete Digital",
+          justificativa: "Figura de abertura e refrão do poema: 'o ponteirar do relógio', 'ponteiro bateu as nove', 'se o burro dá onze horas'. É o termo pelo qual o número entra no texto.",
+          alternativas: [
+            { termo: "hora", definicao: "cada uma das vinte e quatro partes em que se divide o dia", fonte: "definição lexicográfica (sem consulta on-line)", motivo: "É o objeto comum aos dois polos — o que ambos apreendem — e não pode pertencer a um deles." },
+            { termo: "modernidade", definicao: "condição do que pertence ao tempo presente", fonte: "definição lexicográfica (sem consulta on-line)", motivo: "Recorte histórico e avaliativo; o relógio no poema não é novo, é 'o relógio' do sertanejo antigo." }
+          ]
+        },
+        {
+          termo: "medida",
+          definicao: "determinação de uma grandeza pela comparação com uma unidade convencionada",
+          fonte: "definição lexicográfica (sem consulta on-line)",
+          justificativa: "Gênero próximo extraído da definição de relógio: instrumento de marcar/medir o tempo. Cai o traço de máquina; permanece o ato de medir.",
+          alternativas: [
+            { termo: "cronometria", definicao: "técnica de medição precisa do tempo", fonte: "definição lexicográfica (sem consulta on-line)", motivo: "Sinônimo especializado, não hiperônimo: não abstrai, apenas tecniciza." },
+            { termo: "precisão", definicao: "exatidão com que algo é determinado", fonte: "definição lexicográfica (sem consulta on-line)", motivo: "É uma qualidade atribuída à medida, não o gênero a que a medida pertence." },
+            { termo: "número", definicao: "expressão de uma quantidade determinada", fonte: "definição lexicográfica (sem consulta on-line)", motivo: "É o resultado da medida — hipônimo lateral, e ainda preso à notação." }
+          ]
+        },
+        {
+          termo: "grandeza",
+          definicao: "tudo aquilo que é suscetível de aumento ou diminuição e que, por isso, pode ser medido",
+          fonte: "definição lexicográfica (sem consulta on-line)",
+          justificativa: "A definição de medida pressupõe algo mensurável: o gênero próximo é a própria mensurabilidade, já sem o ato humano de medir.",
+          alternativas: [
+            { termo: "escala", definicao: "série graduada que serve de referência à medição", fonte: "definição lexicográfica (sem consulta on-line)", motivo: "Ainda instrumental: reintroduz o dispositivo concreto que se acabou de abandonar." },
+            { termo: "matemática", definicao: "ciência que estuda quantidades, grandezas e relações", fonte: "definição lexicográfica (sem consulta on-line)", motivo: "Nome de um domínio de saber: desloca o eixo do modo de apreensão para o campo do conhecimento." }
+          ]
+        },
+        {
+          termo: "QUANTIDADE",
+          definicao: "qualidade do que é suscetível de aumento ou diminuição; do que pode ser medido ou numerado",
+          fonte: "Aulete Digital",
+          justificativa: "Termo categorial: a própria definição só se sustenta por contraste com aquilo que não se mede nem se numera. Acima dele só restaria 'ser', que nada diria do poema.",
+          alternativas: []
+        }
+      ]
+    },
+    {
+      polo: "B",
+      rotulo: "a hora que o mundo mostra",
+      niveis: [
+        {
+          termo: "indício",
+          definicao: "sinal perceptível pelo qual se dá a conhecer algo que não se vê diretamente",
+          fonte: "definição lexicográfica (sem consulta on-line)",
+          justificativa: "Gênero próximo das figuras que dizem a hora no poema — canto do galo, quebrar da barra, sol a pino, suor descendo, frião da noite: nenhuma delas mede o tempo, todas o mostram.",
+          alternativas: [
+            { termo: "natureza", definicao: "conjunto dos seres e fenômenos do mundo físico", fonte: "definição lexicográfica (sem consulta on-line)", motivo: "Sai do eixo: o 'dizido' é elaboração de linguagem ('no mais puro boquejar', 'velho linguajar'), não natureza bruta. Levaria à oposição de catálogo natureza × cultura, que o texto não sustenta." },
+            { termo: "presságio", definicao: "sinal tido como anúncio de acontecimento futuro", fonte: "definição lexicográfica (sem consulta on-line)", motivo: "Acrescenta traço mântico ausente: o galo não prediz, constata." },
+            { termo: "animal", definicao: "ser vivo dotado de sensibilidade e movimento", fonte: "definição lexicográfica (sem consulta on-line)", motivo: "Figurativo: mantém ator concreto, e deixaria de fora o sol, o calor e o medo." }
+          ]
+        },
+        {
+          termo: "percepção",
+          definicao: "ato de apreender pelos sentidos as propriedades das coisas",
+          fonte: "definição lexicográfica (sem consulta on-line)",
+          justificativa: "A definição de indício repousa no perceptível: o gênero próximo é o próprio apreender sensível. Caem o objeto e a cena; resta o modo de apreensão.",
+          alternativas: [
+            { termo: "sensação", definicao: "efeito imediato produzido nos sentidos por um estímulo", fonte: "definição lexicográfica (sem consulta on-line)", motivo: "Hipônimo: é um momento da percepção, não seu gênero." },
+            { termo: "experiência", definicao: "conhecimento adquirido pela prática e pelo convívio", fonte: "definição lexicográfica (sem consulta on-line)", motivo: "Amplo demais e de outro eixo: desloca para a aquisição de saber." }
+          ]
+        },
+        {
+          termo: "atributo",
+          definicao: "aquilo que se apreende como próprio de um ser e que nele varia em graus de mais e de menos, sem unidade que o conte",
+          fonte: "definição lexicográfica (sem consulta on-line)",
+          justificativa: "A definição de percepção pressupõe propriedades apreendidas: o gênero próximo é a propriedade mesma, destacada do sujeito que a percebe.",
+          alternativas: [
+            { termo: "intensidade", definicao: "grau de força com que algo se manifesta", fonte: "definição lexicográfica (sem consulta on-line)", motivo: "É o modo de variação do atributo — hipônimo, e já contaminado de gradação mensurável." },
+            { termo: "calor", definicao: "estado ou sensação de temperatura elevada", fonte: "definição lexicográfica (sem consulta on-line)", motivo: "Figurativo: uma entre as propriedades do poema ('sertão quente, de torá'), não a categoria." }
+          ]
+        },
+        {
+          termo: "QUALIDADE",
+          definicao: "caráter, índole, atributo; aquilo que constitui o modo de ser de algo e se apreende sem contagem",
+          fonte: "Aulete Digital",
+          justificativa: "Termo categorial e recíproco do polo A: o Aulete define quantidade como 'qualidade do que pode ser medido', de modo que um termo só se enuncia mobilizando o outro.",
+          alternativas: []
+        }
+      ]
+    }
+  ],
+  oposicao: {
+    termo_a: "QUANTIDADE",
+    termo_b: "QUALIDADE",
+    eixo: "modo de apreensão do tempo",
+    justificativa: "O poema é construído sobre a duplicação sistemática de cada instante: o número que o ponteiro conta e o nome que o mundo dá. 'Uma hora da manhã / Primeiro canto do galo'; 'Às doze é o sol a pino'; 'Às dez, é a hora velha'. O procedimento inteiro consiste em converter grandeza medida em propriedade sentida — luz, calor, som, fome, frio, medo. E o texto encerra exatamente onde a conversão falha: 'Meia noite é meia noite / e acabou-se o versejar' — a única hora que só pode ser dita pelo número, e nela o poema para."
+  },
+  validacao: [
+    "Simetria de abstração: ambos os polos são substantivos abstratos alcançados em quatro passos de hiperonímia a partir de figuras do próprio poema.",
+    "Eixo comum: modo de apreensão do tempo — nomeável em um único sintagma, sem coordenação de dois eixos.",
+    "Não-figuratividade: nenhum dos polos evoca ator, tempo ou espaço concretos; galo, sol e relógio ficaram todos nos níveis inferiores.",
+    "Reversibilidade: o verbete de quantidade define-a como 'qualidade do que pode ser medido'; qualidade, por sua vez, é o que se apreende sem contagem. Cada polo só se enuncia mobilizando o outro.",
+    "Pertinência ao texto: todas as estrofes recuperam os dois polos, e a estrofe final os expõe em estado puro na meia-noite sem nome.",
+    "Não-moralização: descartadas 'tradição × modernidade' e 'autêntico × artificial', que axiologizam; descartada também 'natureza × cultura', de catálogo, incompatível com um dizido que é obra de linguagem."
+  ]
+};
+/* ===================== FIM DA PARTE EDITÁVEL ============================= */
+</script>
+<style>
+  :root{
+    --papel:#f7f4ee; --papel2:#fffdf9; --tinta:#25211c; --tinta2:#6b6155;
+    --linha:#cfc6b8; --a:#b4552d; --a-bg:#fbeee6; --b:#2f6f6b; --b-bg:#e6f0ef;
+    --centro:#4a4036;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--papel);color:var(--tinta);
+    font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;}
+  .env{max-width:1180px;margin:0 auto;padding:28px 20px 60px}
+  header h1{font-size:1.5rem;margin:0 0 6px;letter-spacing:-.01em}
+  header .sub{font-size:.78rem;text-transform:uppercase;letter-spacing:.14em;color:var(--tinta2);margin-bottom:14px}
+  .entrada{background:var(--papel2);border:1px solid var(--linha);border-left:3px solid var(--centro);
+    padding:12px 16px;font-size:.94rem;line-height:1.55;color:var(--tinta2);border-radius:2px}
+  .entrada b{color:var(--tinta);font-weight:600}
+  h2{font-size:.78rem;text-transform:uppercase;letter-spacing:.14em;color:var(--tinta2);
+    font-weight:600;margin:34px 0 12px;border-bottom:1px solid var(--linha);padding-bottom:6px}
+  .dica{font-size:.8rem;color:var(--tinta2);font-style:italic;margin:-4px 0 14px}
+
+  #rolagem{overflow-x:auto;overflow-y:hidden;padding:8px 0 4px}
+  #palco{position:relative;display:inline-block;min-width:100%}
+  #svg{position:absolute;inset:0;pointer-events:none}
+  #trilha{position:relative;display:flex;align-items:center;gap:38px;padding:26px 8px}
+
+  .col{display:flex;flex-direction:column;align-items:center;gap:10px;flex:0 0 auto}
+  .rot{font-size:.6rem;text-transform:uppercase;letter-spacing:.12em;color:var(--tinta2);
+    height:14px;white-space:nowrap}
+  .no{position:relative;width:158px;min-height:56px;display:flex;align-items:center;justify-content:center;
+    text-align:center;padding:12px 10px;background:var(--papel2);border:1px solid var(--linha);
+    border-radius:3px;cursor:help;line-height:1.25;transition:transform .12s,box-shadow .12s;outline:none}
+  .no:hover,.no:focus{transform:translateY(-2px);box-shadow:0 4px 14px rgba(0,0,0,.10)}
+  .no.centro{width:186px;background:var(--centro);color:#f7f4ee;border-color:var(--centro);font-size:1.02rem}
+  .no.pA{border-color:var(--a);background:var(--a-bg)}
+  .no.pB{border-color:var(--b);background:var(--b-bg)}
+  .no.polo{font-weight:700;letter-spacing:.02em;font-size:1.02rem;box-shadow:0 0 0 4px rgba(0,0,0,.035)}
+  .no.polo.pA{background:var(--a);color:#fff8f4;border-color:var(--a)}
+  .no.polo.pB{background:var(--b);color:#f2fbfa;border-color:var(--b)}
+  .alt{width:132px;font-size:.76rem;padding:7px 8px;text-align:center;background:transparent;
+    border:1px dashed var(--linha);border-radius:3px;color:var(--tinta2);cursor:help;
+    text-decoration:line-through;text-decoration-color:rgba(0,0,0,.22);transition:opacity .12s;outline:none}
+  .alt:hover,.alt:focus{opacity:1;color:var(--tinta);border-color:var(--tinta2)}
+  .pilha{display:flex;flex-direction:column;gap:6px;align-items:center;min-height:1px}
+
+  #dica{position:fixed;z-index:50;max-width:330px;background:#fffdf9;border:1px solid var(--linha);
+    border-top:3px solid var(--centro);border-radius:3px;padding:12px 14px;
+    box-shadow:0 10px 30px rgba(0,0,0,.16);font-size:.86rem;line-height:1.5;display:none}
+  #dica.pA{border-top-color:var(--a)} #dica.pB{border-top-color:var(--b)}
+  #dica .t{font-weight:700;font-size:.98rem;margin-bottom:4px}
+  #dica .d{color:var(--tinta);margin-bottom:8px}
+  #dica .f{font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:var(--tinta2)}
+  #dica .j{margin-top:9px;padding-top:9px;border-top:1px solid var(--linha);font-size:.82rem;
+    color:var(--tinta2);font-style:italic}
+
+  .oposicao{margin-top:8px;background:var(--papel2);border:1px solid var(--linha);border-radius:3px;padding:22px}
+  .par{display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap;text-align:center}
+  .par .p{font-size:1.3rem;font-weight:700;letter-spacing:.02em}
+  .par .p.a{color:var(--a)} .par .p.b{color:var(--b)}
+  .par .vs{font-size:.8rem;color:var(--tinta2);letter-spacing:.16em;text-transform:uppercase}
+  .eixo{text-align:center;margin-top:12px;font-size:.9rem;color:var(--tinta2)}
+  .eixo b{color:var(--tinta)}
+  .justif{margin-top:16px;padding-top:14px;border-top:1px solid var(--linha);font-size:.94rem;line-height:1.6}
+  ul.val{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+  ul.val li{font-size:.9rem;line-height:1.5;padding-left:20px;position:relative;color:var(--tinta2)}
+  ul.val li::before{content:"✓";position:absolute;left:0;color:var(--b);font-weight:700}
+  footer{margin-top:40px;font-size:.75rem;color:var(--tinta2);text-align:center;line-height:1.6}
+
+  @media (max-width:820px){
+    #trilha{flex-direction:column;gap:26px}
+    .no{width:200px} .alt{width:170px}
+    .pilha{flex-direction:row;flex-wrap:wrap;justify-content:center}
+  }
+</style>
+</head>
+<body>
+<div class="env">
+  <header>
+    <div class="sub">Semiótica discursiva · nível fundamental</div>
+    <h1 id="titulo"></h1>
+  </header>
+  <div class="entrada"><b>Material analisado.</b> <span id="entrada"></span></div>
+
+  <h2>Percurso de abstração</h2>
+  <p class="dica">Passe o mouse (ou toque) sobre qualquer termo para ver a definição de dicionário e o motivo do passo. Os termos riscados foram considerados e descartados.</p>
+  <div id="rolagem"><div id="palco"><svg id="svg"></svg><div id="trilha"></div></div></div>
+
+  <h2>Oposição semântica de base</h2>
+  <div class="oposicao">
+    <div class="par">
+      <span class="p a" id="oa"></span><span class="vs">versus</span><span class="p b" id="ob"></span>
+    </div>
+    <div class="eixo">eixo semântico: <b id="oeixo"></b></div>
+    <div class="justif" id="ojust"></div>
+  </div>
+
+  <h2>Validação da categoria</h2>
+  <ul class="val" id="val"></ul>
+
+  <footer>Percurso gerativo do sentido · nível fundamental<br>cada passo de abstração é o gênero próximo da definição lexicográfica do termo anterior</footer>
+</div>
+<div id="dica" role="tooltip"></div>
+
+<script>
+const trilha=document.getElementById('trilha');
+const svg=document.getElementById('svg');
+const dica=document.getElementById('dica');
+let fixado=null;
+
+document.getElementById('titulo').textContent=DADOS.titulo;
+document.getElementById('entrada').textContent=DADOS.entrada;
+document.getElementById('oa').textContent=DADOS.oposicao.termo_a;
+document.getElementById('ob').textContent=DADOS.oposicao.termo_b;
+document.getElementById('oeixo').textContent=DADOS.oposicao.eixo;
+document.getElementById('ojust').textContent=DADOS.oposicao.justificativa;
+document.getElementById('val').innerHTML=(DADOS.validacao||[]).map(v=>'<li></li>').join('');
+document.querySelectorAll('#val li').forEach((li,i)=>li.append(DADOS.validacao[i]));
+
+const pA=DADOS.percursos.find(p=>p.polo==='A')||DADOS.percursos[0];
+const pB=DADOS.percursos.find(p=>p.polo==='B')||DADOS.percursos[1]||{niveis:[]};
+
+function chips(lista,classe){
+  const d=document.createElement('div'); d.className='pilha';
+  (lista||[]).forEach(a=>{
+    const c=document.createElement('div');
+    c.className='alt'; c.tabIndex=0; c.textContent=a.termo;
+    c.dataset.info=JSON.stringify({t:a.termo,d:a.definicao,f:a.fonte,j:'Descartado — '+a.motivo,c:classe});
+    d.appendChild(c);
+  });
+  return d;
+}
+function coluna(item,classe,rotulo,ehPolo,ehCentro){
+  const col=document.createElement('div'); col.className='col';
+  const r=document.createElement('div'); r.className='rot'; r.textContent=rotulo; col.appendChild(r);
+  const cima=chips((item.alternativas||[]).slice(0,1),classe); col.appendChild(cima);
+  const no=document.createElement('div');
+  no.className='no'+(ehCentro?' centro':' '+classe)+(ehPolo?' polo':'');
+  no.tabIndex=0; no.textContent=item.termo;
+  no.dataset.info=JSON.stringify({t:item.termo,d:item.definicao,f:item.fonte,
+    j:item.justificativa||item.nota||'',c:ehCentro?'':classe});
+  col.appendChild(no); col.dataset.no='1';
+  col.appendChild(chips((item.alternativas||[]).slice(1),classe));
+  return col;
+}
+const colunas=[];
+[...pA.niveis].reverse().forEach((n,i,arr)=>{
+  const nivel=arr.length-i;
+  colunas.push(coluna(n,'pA',(nivel===arr.length?'polo A · nível '+nivel:'nível '+nivel),nivel===arr.length,false));
+});
+colunas.push(coluna(DADOS.centro,'','centro figurativo',false,true));
+(pB.niveis||[]).forEach((n,i,arr)=>{
+  colunas.push(coluna(n,'pB',(i===arr.length-1?'polo B · nível '+(i+1):'nível '+(i+1)),i===arr.length-1,false));
+});
+colunas.forEach(c=>trilha.appendChild(c));
+
+function info(el){
+  const o=JSON.parse(el.dataset.info);
+  dica.className=o.c||'';
+  dica.innerHTML='<div class="t"></div><div class="d"></div><div class="f"></div>'+(o.j?'<div class="j"></div>':'');
+  dica.querySelector('.t').textContent=o.t;
+  dica.querySelector('.d').textContent=o.d;
+  dica.querySelector('.f').textContent=o.f;
+  if(o.j) dica.querySelector('.j').textContent=o.j;
+  dica.style.display='block';
+}
+function posiciona(x,y){
+  const r=dica.getBoundingClientRect();
+  let l=x+16, t=y+16;
+  if(l+r.width>innerWidth-10) l=x-r.width-16;
+  if(t+r.height>innerHeight-10) t=Math.max(10,y-r.height-16);
+  dica.style.left=l+'px'; dica.style.top=t+'px';
+}
+document.addEventListener('mouseover',e=>{
+  const el=e.target.closest('[data-info]'); if(!el||fixado) return;
+  info(el); posiciona(e.clientX,e.clientY);
+});
+document.addEventListener('mousemove',e=>{ if(dica.style.display==='block'&&!fixado) posiciona(e.clientX,e.clientY); });
+document.addEventListener('mouseout',e=>{ if(!fixado&&e.target.closest('[data-info]')) dica.style.display='none'; });
+document.addEventListener('click',e=>{
+  const el=e.target.closest('[data-info]');
+  if(el){ fixado=null; info(el); const r=el.getBoundingClientRect(); posiciona(r.left+r.width/2,r.bottom-14); fixado=el; }
+  else { fixado=null; dica.style.display='none'; }
+});
+document.addEventListener('focusin',e=>{
+  const el=e.target.closest('[data-info]'); if(!el) return;
+  info(el); const r=el.getBoundingClientRect(); posiciona(r.left,r.bottom);
+});
+document.addEventListener('keydown',e=>{ if(e.key==='Escape'){fixado=null;dica.style.display='none';} });
+
+function linha(x1,y1,x2,y2,cor,traco,largura){
+  const p=document.createElementNS('http://www.w3.org/2000/svg','path');
+  const mx=(x1+x2)/2;
+  p.setAttribute('d',`M${x1},${y1} C${mx},${y1} ${mx},${y2} ${x2},${y2}`);
+  p.setAttribute('fill','none'); p.setAttribute('stroke',cor);
+  p.setAttribute('stroke-width',largura||1.4);
+  if(traco) p.setAttribute('stroke-dasharray',traco);
+  svg.appendChild(p);
+}
+function desenha(){
+  const base=document.getElementById('palco').getBoundingClientRect();
+  svg.setAttribute('width',base.width); svg.setAttribute('height',base.height);
+  svg.style.width=base.width+'px'; svg.style.height=base.height+'px';
+  svg.innerHTML='';
+  const est=getComputedStyle(document.documentElement);
+  const cA=est.getPropertyValue('--a').trim(), cB=est.getPropertyValue('--b').trim(),
+        cL=est.getPropertyValue('--linha').trim();
+  const R=el=>{const r=el.getBoundingClientRect();
+    return {x:r.left-base.left,y:r.top-base.top,w:r.width,h:r.height,
+            cx:r.left-base.left+r.width/2, cy:r.top-base.top+r.height/2};};
+  const vertical=innerWidth<=820;
+  const nos=colunas.map(c=>c.querySelector('.no'));
+  const iCentro=nos.findIndex(n=>n.classList.contains('centro'));
+  for(let i=0;i<nos.length-1;i++){
+    const a=R(nos[i]), b=R(nos[i+1]);
+    const cor=(i<iCentro)?cA:cB;
+    if(vertical) linha(a.cx,a.y+a.h,b.cx,b.y,cor,null,1.6);
+    else linha(a.x+a.w,a.cy,b.x,b.cy,cor,null,1.6);
+  }
+  colunas.forEach((col,i)=>{
+    const no=R(col.querySelector('.no'));
+    col.querySelectorAll('.alt').forEach(alt=>{
+      const a=R(alt);
+      if(vertical) linha(no.x,no.cy,a.x+a.w,a.cy,cL,'3 3',1);
+      else linha(no.cx,(a.cy<no.cy?no.y:no.y+no.h),a.cx,(a.cy<no.cy?a.y+a.h:a.y),cL,'3 3',1);
+    });
+  });
+  const polos=nos.filter(n=>n.classList.contains('polo'));
+  if(polos.length===2&&!vertical){
+    const a=R(polos[0]), b=R(polos[1]);
+    const p=document.createElementNS('http://www.w3.org/2000/svg','path');
+    const topo=Math.min(a.y,b.y)-20;
+    p.setAttribute('d',`M${a.cx},${a.y} C${a.cx},${topo} ${b.cx},${topo} ${b.cx},${b.y}`);
+    p.setAttribute('fill','none'); p.setAttribute('stroke',cA); p.setAttribute('stroke-width',1.2);
+    p.setAttribute('stroke-dasharray','6 4'); p.setAttribute('opacity','.55');
+    svg.appendChild(p);
+  }
+}
+addEventListener('resize',desenha);
+addEventListener('load',desenha);
+setTimeout(desenha,60);
+</script>
+</body>
+</html>
