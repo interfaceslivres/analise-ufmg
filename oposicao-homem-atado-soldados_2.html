@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Oposição semântica de base</title>
+<script>
+/* =========================================================================
+   ÚNICA PARTE A SER EDITADA. Substitua pelos dados da análise.
+   ========================================================================= */
+const DADOS = {
+  titulo: "O homem atado entre soldados — pintura devocional da Paixão",
+  entrada: "Pintura devocional (têmpera/óleo, feitura popular): um homem de cabelos longos e barba, túnica clara e manto azul, descalço, com as mãos atadas à frente por uma corda, é agarrado e conduzido por três soldados de elmo emplumado, couraça e lança. Um deles ergue o punho acima da cabeça do preso; ao fundo, colunas de um edifício. Recorte adotado: a cena é analisada como configuração plástica e figurativa, sem acionar o texto bíblico como fonte de sentido.",
+  centro: {
+    termo: "o homem atado entre soldados",
+    definicao: "Cena de captura: um corpo desarmado, descalço e de mãos ligadas, cercado, seguro e conduzido por corpos armados, couraçados e em movimento.",
+    fonte: "descrição figurativa do material",
+    nota: "Não é a violência o núcleo tensivo, mas o contraste entre um corpo cuja conduta é determinada de fora (cordas, mãos que agarram, punho erguido) e um corpo que não devolve nem recusa essa determinação (mãos postas, olhar erguido, ausência de luta). O centro é escolhido porque condensa os dois lados desse contraste numa só figura."
+  },
+  percursos: [
+    {
+      polo: "A",
+      rotulo: "o que se impõe de fora",
+      niveis: [
+        {
+          termo: "coerção",
+          definicao: "Ato ou possibilidade de coagir; imposição de algo a alguém pela força, de modo a obrigá-lo a fazer ou sofrer o que não faria por si.",
+          fonte: "Infopédia / Dicio",
+          justificativa: "A corda, as mãos que seguram, o punho erguido e a lança são todos figuras de um mesmo fazer: obrigar pela força. O gênero próximo de \u201Catar/agarrar\u201D, na cena, é o constranger.",
+          alternativas: [
+            { termo: "violência", definicao: "Emprego de força brutal, que fere ou destrói.", fonte: "definição lexicográfica (sem consulta on-line)", motivo: "Avaliativo e patêmico: já embute juízo sobre o ato e desloca o eixo para a axiologia moral." },
+            { termo: "soldado", definicao: "Militar que serve nas forças armadas.", fonte: "definição lexicográfica (sem consulta on-line)", motivo: "Ator: mantém-se no nível figurativo, com tempo, espaço e papel actancial." },
+            { termo: "castigo", definicao: "Pena imposta a quem cometeu falta.", fonte: "definição lexicográfica (sem consulta on-line)", motivo: "Sai do eixo: introduz culpa e retribuição, que a cena não figurativiza." }
+          ]
+        },
+        {
+          termo: "sujeição",
+          definicao: "Estado ou condição de quem se acha sob o poder, a lei ou a vontade de outrem.",
+          fonte: "definição lexicográfica (sem consulta on-line)",
+          justificativa: "A definição de coerção supõe uma vontade que se impõe a outra; abandonando o ato e retendo a relação que ele instaura, o gênero próximo é o estado de estar sob vontade alheia.",
+          alternativas: [
+            { termo: "dominação", definicao: "Exercício de poder e autoridade sobre alguém.", fonte: "definição lexicográfica (sem consulta on-line)", motivo: "Termo converso, não hiperônimo: nomeia a mesma relação vista do outro lado, e não uma classe mais ampla." },
+            { termo: "opressão", definicao: "Ato de oprimir; domínio exercido com abuso e crueldade.", fonte: "definição lexicográfica (sem consulta on-line)", motivo: "Avaliativo: acrescenta ao domínio um traço de excesso e injustiça." }
+          ]
+        },
+        {
+          termo: "HETERONOMIA",
+          definicao: "Condição do sujeito cujas normas de conduta provêm de fora, exteriores a ele, e que se acha sujeito à vontade ou à lei de outrem.",
+          fonte: "Dicio, Dicionário Online de Português",
+          justificativa: "Termo categorial: a sujeição é uma modalidade da heteronomia, e esta não admite hiperônimo sem cair em \u201Ccondição\u201D ou \u201Cestado\u201D — vazio categorial. Só se define pela origem externa da lei, isto é, por relação com seu contrário.",
+          alternativas: []
+        }
+      ]
+    },
+    {
+      polo: "B",
+      rotulo: "o que se determina por si",
+      niveis: [
+        {
+          termo: "entrega",
+          definicao: "Ato de pôr-se ou pôr algo nas mãos de outrem; ação de ceder sem opor resistência.",
+          fonte: "definição lexicográfica (sem consulta on-line)",
+          justificativa: "Figura do corpo que não recua nem revida: mãos unidas à frente, pés firmados no chão, olhar erguido e não dirigido aos captores, ausência de arma e de qualquer marca de luta.",
+          alternativas: [
+            { termo: "derrota", definicao: "Perda de um combate ou disputa.", fonte: "definição lexicográfica (sem consulta on-line)", motivo: "Sai do eixo: pressupõe um combate travado, e a cena não figurativiza confronto algum." },
+            { termo: "medo", definicao: "Sentimento de inquietação diante de um perigo.", fonte: "definição lexicográfica (sem consulta on-line)", motivo: "Patêmico e contrafigurativo: a expressão do preso é serena, sem os traços plásticos do pavor." },
+            { termo: "fraqueza", definicao: "Falta de força física ou moral.", fonte: "definição lexicográfica (sem consulta on-line)", motivo: "Avaliativo e privativo: lê como falta o que a plástica da figura constrói como firmeza." }
+          ]
+        },
+        {
+          termo: "consentimento",
+          definicao: "Ato de anuir; manifestação de vontade pela qual alguém aceita ou permite aquilo que lhe é pedido ou imposto.",
+          fonte: "definição lexicográfica (sem consulta on-line)",
+          justificativa: "A definição de entrega supõe que o ceder parte do próprio sujeito; retido esse traço e abandonado o gesto, o gênero próximo é a anuência da vontade.",
+          alternativas: [
+            { termo: "resignação", definicao: "Conformidade com aquilo que não se pode evitar.", fonte: "definição lexicográfica (sem consulta on-line)", motivo: "Patêmico: acrescenta um estado de alma e supõe impossibilidade, não vontade." },
+            { termo: "obediência", definicao: "Ato de cumprir o que é ordenado por quem tem autoridade.", fonte: "definição lexicográfica (sem consulta on-line)", motivo: "Pertence ao percurso A: a determinação continua vindo de fora, apenas aceita." }
+          ]
+        },
+        {
+          termo: "AUTONOMIA",
+          definicao: "Condição do sujeito que se rege por lei ou vontade próprias, e não por princípio recebido de fora.",
+          fonte: "Dicio, Dicionário Online de Português",
+          justificativa: "Termo categorial: o consentimento é a manifestação de uma vontade que se determina a si mesma; acima dele não há hiperônimo que ainda diga algo. Define-se pela origem interna da lei — recíproco exato de heteronomia.",
+          alternativas: []
+        }
+      ]
+    }
+  ],
+  oposicao: {
+    termo_a: "HETERONOMIA",
+    termo_b: "AUTONOMIA",
+    eixo: "origem da determinação que rege o sujeito (lei recebida de fora × lei dada por si)",
+    justificativa: "A pintura só produz sentido porque monta, num único corpo, a coincidência dos dois polos: o mesmo homem é integralmente determinado de fora (corda, mãos que o seguram, punho erguido, elmos, lança, arquitetura de poder ao fundo) e integralmente não-determinado por isso (mãos postas em vez de crispadas, pés plantados, olhar que não responde aos captores). Os soldados, ao contrário, aparecem em esforço, torção e movimento — figurativizam a força que precisa ser exercida. A tensão da cena é a de uma heteronomia que se aplica sobre o corpo sem alcançar o sujeito."
+  },
+  validacao: [
+    "Simetria de abstração: os dois polos são substantivos abstratos de mesmo grau, alcançados em três passos de hiperonímia cada (coerção → sujeição → heteronomia; entrega → consentimento → autonomia).",
+    "Eixo comum: origem da determinação que rege o sujeito — nomeável sem coordenação de dois eixos.",
+    "Não-figuratividade: nenhum dos polos evoca ator, tempo ou espaço concretos; ambos são condições do sujeito.",
+    "Reversibilidade: heteronomia define-se como lei vinda de outrem; autonomia, como lei vinda de si — cada definição mobiliza a outra pelo mesmo traço (a procedência do princípio).",
+    "Contrariedade e não contradição: embora os dicionários glosem heteronomia como \u201Causência de autonomia\u201D, os dois termos são positivos, e não A × não-A: cada um afirma uma procedência determinada da norma (de fora / de si), e é essa procedência que constitui o eixo.",
+    "Pertinência ao texto: as figuras recuperam os dois polos separadamente — corda, armas, elmos e mãos que agarram para A; mãos postas, pés descalços firmes, ausência de arma e de luta, olhar erguido para B.",
+    "Não-moralização: descartadas as leituras \u201Cbem × mal\u201D e \u201Cinocência × culpa\u201D, que axiologizam a cena e deslocam o eixo para o jurídico-moral; descartada também \u201Cdominação × submissão\u201D, cujos termos são conversos de uma mesma relação, e não polos de um eixo.",
+    "Nota sobre o percurso B: o polo B não é manifestado por um ator distinto, mas pela plástica do próprio corpo capturado — a categoria se instala dentro de uma única figura, e é daí que vem o efeito de paradoxo da imagem."
+  ]
+};
+/* ===================== FIM DA PARTE EDITÁVEL ============================= */
+</script>
+<style>
+  :root{
+    --papel:#f7f4ee; --papel2:#fffdf9; --tinta:#25211c; --tinta2:#6b6155;
+    --linha:#cfc6b8; --a:#b4552d; --a-bg:#fbeee6; --b:#2f6f6b; --b-bg:#e6f0ef;
+    --centro:#4a4036;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--papel);color:var(--tinta);
+    font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;}
+  .env{max-width:1180px;margin:0 auto;padding:28px 20px 60px}
+  header h1{font-size:1.5rem;margin:0 0 6px;letter-spacing:-.01em}
+  header .sub{font-size:.78rem;text-transform:uppercase;letter-spacing:.14em;color:var(--tinta2);margin-bottom:14px}
+  .entrada{background:var(--papel2);border:1px solid var(--linha);border-left:3px solid var(--centro);
+    padding:12px 16px;font-size:.94rem;line-height:1.55;color:var(--tinta2);border-radius:2px}
+  .entrada b{color:var(--tinta);font-weight:600}
+  h2{font-size:.78rem;text-transform:uppercase;letter-spacing:.14em;color:var(--tinta2);
+    font-weight:600;margin:34px 0 12px;border-bottom:1px solid var(--linha);padding-bottom:6px}
+  .dica{font-size:.8rem;color:var(--tinta2);font-style:italic;margin:-4px 0 14px}
+
+  #rolagem{overflow-x:auto;overflow-y:hidden;padding:8px 0 4px}
+  #palco{position:relative;display:inline-block;min-width:100%}
+  #svg{position:absolute;inset:0;pointer-events:none}
+  #trilha{position:relative;display:flex;align-items:center;gap:38px;padding:26px 8px}
+
+  .col{display:flex;flex-direction:column;align-items:center;gap:10px;flex:0 0 auto}
+  .rot{font-size:.6rem;text-transform:uppercase;letter-spacing:.12em;color:var(--tinta2);
+    height:14px;white-space:nowrap}
+  .no{position:relative;width:158px;min-height:56px;display:flex;align-items:center;justify-content:center;
+    text-align:center;padding:12px 10px;background:var(--papel2);border:1px solid var(--linha);
+    border-radius:3px;cursor:help;line-height:1.25;transition:transform .12s,box-shadow .12s;outline:none}
+  .no:hover,.no:focus{transform:translateY(-2px);box-shadow:0 4px 14px rgba(0,0,0,.10)}
+  .no.centro{width:186px;background:var(--centro);color:#f7f4ee;border-color:var(--centro);font-size:1.02rem}
+  .no.pA{border-color:var(--a);background:var(--a-bg)}
+  .no.pB{border-color:var(--b);background:var(--b-bg)}
+  .no.polo{font-weight:700;letter-spacing:.02em;font-size:1.02rem;box-shadow:0 0 0 4px rgba(0,0,0,.035)}
+  .no.polo.pA{background:var(--a);color:#fff8f4;border-color:var(--a)}
+  .no.polo.pB{background:var(--b);color:#f2fbfa;border-color:var(--b)}
+  .alt{width:132px;font-size:.76rem;padding:7px 8px;text-align:center;background:transparent;
+    border:1px dashed var(--linha);border-radius:3px;color:var(--tinta2);cursor:help;
+    text-decoration:line-through;text-decoration-color:rgba(0,0,0,.22);transition:opacity .12s;outline:none}
+  .alt:hover,.alt:focus{opacity:1;color:var(--tinta);border-color:var(--tinta2)}
+  .pilha{display:flex;flex-direction:column;gap:6px;align-items:center;min-height:1px}
+
+  #dica{position:fixed;z-index:50;max-width:330px;background:#fffdf9;border:1px solid var(--linha);
+    border-top:3px solid var(--centro);border-radius:3px;padding:12px 14px;
+    box-shadow:0 10px 30px rgba(0,0,0,.16);font-size:.86rem;line-height:1.5;display:none}
+  #dica.pA{border-top-color:var(--a)} #dica.pB{border-top-color:var(--b)}
+  #dica .t{font-weight:700;font-size:.98rem;margin-bottom:4px}
+  #dica .d{color:var(--tinta);margin-bottom:8px}
+  #dica .f{font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:var(--tinta2)}
+  #dica .j{margin-top:9px;padding-top:9px;border-top:1px solid var(--linha);font-size:.82rem;
+    color:var(--tinta2);font-style:italic}
+
+  .oposicao{margin-top:8px;background:var(--papel2);border:1px solid var(--linha);border-radius:3px;padding:22px}
+  .par{display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap;text-align:center}
+  .par .p{font-size:1.3rem;font-weight:700;letter-spacing:.02em}
+  .par .p.a{color:var(--a)} .par .p.b{color:var(--b)}
+  .par .vs{font-size:.8rem;color:var(--tinta2);letter-spacing:.16em;text-transform:uppercase}
+  .eixo{text-align:center;margin-top:12px;font-size:.9rem;color:var(--tinta2)}
+  .eixo b{color:var(--tinta)}
+  .justif{margin-top:16px;padding-top:14px;border-top:1px solid var(--linha);font-size:.94rem;line-height:1.6}
+  ul.val{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+  ul.val li{font-size:.9rem;line-height:1.5;padding-left:20px;position:relative;color:var(--tinta2)}
+  ul.val li::before{content:"✓";position:absolute;left:0;color:var(--b);font-weight:700}
+  footer{margin-top:40px;font-size:.75rem;color:var(--tinta2);text-align:center;line-height:1.6}
+
+  @media (max-width:820px){
+    #trilha{flex-direction:column;gap:26px}
+    .no{width:200px} .alt{width:170px}
+    .pilha{flex-direction:row;flex-wrap:wrap;justify-content:center}
+  }
+</style>
+</head>
+<body>
+<div class="env">
+  <header>
+    <div class="sub">Semiótica discursiva · nível fundamental</div>
+    <h1 id="titulo"></h1>
+  </header>
+  <div class="entrada"><b>Material analisado.</b> <span id="entrada"></span></div>
+
+  <h2>Percurso de abstração</h2>
+  <p class="dica">Passe o mouse (ou toque) sobre qualquer termo para ver a definição de dicionário e o motivo do passo. Os termos riscados foram considerados e descartados.</p>
+  <div id="rolagem"><div id="palco"><svg id="svg"></svg><div id="trilha"></div></div></div>
+
+  <h2>Oposição semântica de base</h2>
+  <div class="oposicao">
+    <div class="par">
+      <span class="p a" id="oa"></span><span class="vs">versus</span><span class="p b" id="ob"></span>
+    </div>
+    <div class="eixo">eixo semântico: <b id="oeixo"></b></div>
+    <div class="justif" id="ojust"></div>
+  </div>
+
+  <h2>Validação da categoria</h2>
+  <ul class="val" id="val"></ul>
+
+  <footer>Percurso gerativo do sentido · nível fundamental<br>cada passo de abstração é o gênero próximo da definição lexicográfica do termo anterior</footer>
+</div>
+<div id="dica" role="tooltip"></div>
+
+<script>
+const trilha=document.getElementById('trilha');
+const svg=document.getElementById('svg');
+const dica=document.getElementById('dica');
+let fixado=null;
+
+document.getElementById('titulo').textContent=DADOS.titulo;
+document.getElementById('entrada').textContent=DADOS.entrada;
+document.getElementById('oa').textContent=DADOS.oposicao.termo_a;
+document.getElementById('ob').textContent=DADOS.oposicao.termo_b;
+document.getElementById('oeixo').textContent=DADOS.oposicao.eixo;
+document.getElementById('ojust').textContent=DADOS.oposicao.justificativa;
+document.getElementById('val').innerHTML=(DADOS.validacao||[]).map(v=>'<li></li>').join('');
+document.querySelectorAll('#val li').forEach((li,i)=>li.append(DADOS.validacao[i]));
+
+const pA=DADOS.percursos.find(p=>p.polo==='A')||DADOS.percursos[0];
+const pB=DADOS.percursos.find(p=>p.polo==='B')||DADOS.percursos[1]||{niveis:[]};
+
+function chips(lista,classe){
+  const d=document.createElement('div'); d.className='pilha';
+  (lista||[]).forEach(a=>{
+    const c=document.createElement('div');
+    c.className='alt'; c.tabIndex=0; c.textContent=a.termo;
+    c.dataset.info=JSON.stringify({t:a.termo,d:a.definicao,f:a.fonte,j:'Descartado — '+a.motivo,c:classe});
+    d.appendChild(c);
+  });
+  return d;
+}
+function coluna(item,classe,rotulo,ehPolo,ehCentro){
+  const col=document.createElement('div'); col.className='col';
+  const r=document.createElement('div'); r.className='rot'; r.textContent=rotulo; col.appendChild(r);
+  const cima=chips((item.alternativas||[]).slice(0,1),classe); col.appendChild(cima);
+  const no=document.createElement('div');
+  no.className='no'+(ehCentro?' centro':' '+classe)+(ehPolo?' polo':'');
+  no.tabIndex=0; no.textContent=item.termo;
+  no.dataset.info=JSON.stringify({t:item.termo,d:item.definicao,f:item.fonte,
+    j:item.justificativa||item.nota||'',c:ehCentro?'':classe});
+  col.appendChild(no); col.dataset.no='1';
+  col.appendChild(chips((item.alternativas||[]).slice(1),classe));
+  return col;
+}
+const colunas=[];
+[...pA.niveis].reverse().forEach((n,i,arr)=>{
+  const nivel=arr.length-i;
+  colunas.push(coluna(n,'pA',(nivel===arr.length?'polo A · nível '+nivel:'nível '+nivel),nivel===arr.length,false));
+});
+colunas.push(coluna(DADOS.centro,'','centro figurativo',false,true));
+(pB.niveis||[]).forEach((n,i,arr)=>{
+  colunas.push(coluna(n,'pB',(i===arr.length-1?'polo B · nível '+(i+1):'nível '+(i+1)),i===arr.length-1,false));
+});
+colunas.forEach(c=>trilha.appendChild(c));
+
+function info(el){
+  const o=JSON.parse(el.dataset.info);
+  dica.className=o.c||'';
+  dica.innerHTML='<div class="t"></div><div class="d"></div><div class="f"></div>'+(o.j?'<div class="j"></div>':'');
+  dica.querySelector('.t').textContent=o.t;
+  dica.querySelector('.d').textContent=o.d;
+  dica.querySelector('.f').textContent=o.f;
+  if(o.j) dica.querySelector('.j').textContent=o.j;
+  dica.style.display='block';
+}
+function posiciona(x,y){
+  const r=dica.getBoundingClientRect();
+  let l=x+16, t=y+16;
+  if(l+r.width>innerWidth-10) l=x-r.width-16;
+  if(t+r.height>innerHeight-10) t=Math.max(10,y-r.height-16);
+  dica.style.left=l+'px'; dica.style.top=t+'px';
+}
+document.addEventListener('mouseover',e=>{
+  const el=e.target.closest('[data-info]'); if(!el||fixado) return;
+  info(el); posiciona(e.clientX,e.clientY);
+});
+document.addEventListener('mousemove',e=>{ if(dica.style.display==='block'&&!fixado) posiciona(e.clientX,e.clientY); });
+document.addEventListener('mouseout',e=>{ if(!fixado&&e.target.closest('[data-info]')) dica.style.display='none'; });
+document.addEventListener('click',e=>{
+  const el=e.target.closest('[data-info]');
+  if(el){ fixado=null; info(el); const r=el.getBoundingClientRect(); posiciona(r.left+r.width/2,r.bottom-14); fixado=el; }
+  else { fixado=null; dica.style.display='none'; }
+});
+document.addEventListener('focusin',e=>{
+  const el=e.target.closest('[data-info]'); if(!el) return;
+  info(el); const r=el.getBoundingClientRect(); posiciona(r.left,r.bottom);
+});
+document.addEventListener('keydown',e=>{ if(e.key==='Escape'){fixado=null;dica.style.display='none';} });
+
+function linha(x1,y1,x2,y2,cor,traco,largura){
+  const p=document.createElementNS('http://www.w3.org/2000/svg','path');
+  const mx=(x1+x2)/2;
+  p.setAttribute('d',`M${x1},${y1} C${mx},${y1} ${mx},${y2} ${x2},${y2}`);
+  p.setAttribute('fill','none'); p.setAttribute('stroke',cor);
+  p.setAttribute('stroke-width',largura||1.4);
+  if(traco) p.setAttribute('stroke-dasharray',traco);
+  svg.appendChild(p);
+}
+function desenha(){
+  const base=document.getElementById('palco').getBoundingClientRect();
+  svg.setAttribute('width',base.width); svg.setAttribute('height',base.height);
+  svg.style.width=base.width+'px'; svg.style.height=base.height+'px';
+  svg.innerHTML='';
+  const est=getComputedStyle(document.documentElement);
+  const cA=est.getPropertyValue('--a').trim(), cB=est.getPropertyValue('--b').trim(),
+        cL=est.getPropertyValue('--linha').trim();
+  const R=el=>{const r=el.getBoundingClientRect();
+    return {x:r.left-base.left,y:r.top-base.top,w:r.width,h:r.height,
+            cx:r.left-base.left+r.width/2, cy:r.top-base.top+r.height/2};};
+  const vertical=innerWidth<=820;
+  const nos=colunas.map(c=>c.querySelector('.no'));
+  const iCentro=nos.findIndex(n=>n.classList.contains('centro'));
+  for(let i=0;i<nos.length-1;i++){
+    const a=R(nos[i]), b=R(nos[i+1]);
+    const cor=(i<iCentro)?cA:cB;
+    if(vertical) linha(a.cx,a.y+a.h,b.cx,b.y,cor,null,1.6);
+    else linha(a.x+a.w,a.cy,b.x,b.cy,cor,null,1.6);
+  }
+  colunas.forEach((col,i)=>{
+    const no=R(col.querySelector('.no'));
+    col.querySelectorAll('.alt').forEach(alt=>{
+      const a=R(alt);
+      if(vertical) linha(no.x,no.cy,a.x+a.w,a.cy,cL,'3 3',1);
+      else linha(no.cx,(a.cy<no.cy?no.y:no.y+no.h),a.cx,(a.cy<no.cy?a.y+a.h:a.y),cL,'3 3',1);
+    });
+  });
+  const polos=nos.filter(n=>n.classList.contains('polo'));
+  if(polos.length===2&&!vertical){
+    const a=R(polos[0]), b=R(polos[1]);
+    const p=document.createElementNS('http://www.w3.org/2000/svg','path');
+    const topo=Math.min(a.y,b.y)-20;
+    p.setAttribute('d',`M${a.cx},${a.y} C${a.cx},${topo} ${b.cx},${topo} ${b.cx},${b.y}`);
+    p.setAttribute('fill','none'); p.setAttribute('stroke',cA); p.setAttribute('stroke-width',1.2);
+    p.setAttribute('stroke-dasharray','6 4'); p.setAttribute('opacity','.55');
+    svg.appendChild(p);
+  }
+}
+addEventListener('resize',desenha);
+addEventListener('load',desenha);
+setTimeout(desenha,60);
+</script>
+</body>
+</html>
