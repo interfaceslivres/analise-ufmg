@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Oposição semântica de base</title>
+<script>
+/* =========================================================================
+   ÚNICA PARTE A SER EDITADA. Substitua pelos dados da análise.
+   ========================================================================= */
+const DADOS = {
+  titulo: "Retirante no leito seco — pintura sobre a seca no sertão",
+  entrada: "Pintura figurativa: homem magro, curvado, de chapéu de couro, calça arregaçada e pés descalços, apoiado num cajado, recolhendo algo do chão de um leito de açude ressecado coberto de peixes mortos. À direita, a carcaça de um animal de grande porte. Ao fundo, ruínas de uma casa de taipa; no alto, urubus em voo; no horizonte, uma serra verde sob céu azul sem nuvens. Dominante cromática de terra rachada, ocres e vermelhos no primeiro plano.",
+  centro: {
+    termo: "retirante no leito seco",
+    definicao: "retirante: aquele que se retira; sertanejo nordestino que, isolado ou mais comumente em grupo, emigra fugindo das secas",
+    fonte: "Dicio (verbete “retirante”) + descrição figurativa do material",
+    nota: "O núcleo tensivo não é a morte, e sim o que a produz: um homem catando os restos de um lugar onde os meios de vida acabaram. Os peixes secos no fundo do açude, a carcaça, a casa em ruínas e a magreza do corpo dizem todos a mesma coisa — deixou de haver o que era preciso haver."
+  },
+  percursos: [
+    {
+      polo: "A",
+      rotulo: "o primeiro plano — a terra sem água",
+      niveis: [
+        {
+          termo: "seca",
+          definicao: "ausência prolongada de chuva; persistência de tempo seco, estiagem continuada; carência de água",
+          fonte: "Infopédia (Porto Editora)",
+          justificativa: "Gênero próximo tirado da definição de “retirante”: quem se retira, retira-se fugindo das secas. O que motiva a figura é o estado do lugar, não o ator.",
+          alternativas: [
+            { termo: "sertão", definicao: "região do interior, afastada do litoral, de clima semiárido", fonte: "Dicio", motivo: "Figurativo demais: continua nomeando um espaço concreto, com ator e lugar." },
+            { termo: "fome", definicao: "sensação provocada pela necessidade de alimento", fonte: "Michaelis", motivo: "Hipônimo, não hiperônimo: é um efeito particular da falta, e ainda traz traço somático." }
+          ]
+        },
+        {
+          termo: "carência",
+          definicao: "ausência de algo necessário; privação, falta",
+          fonte: "Dicionário Criativo",
+          justificativa: "A própria definição de seca a apresenta como “carência de água”. Abstrai-se o objeto (água) e resta a relação: falta do necessário.",
+          alternativas: [
+            { termo: "aridez", definicao: "qualidade do terreno seco, estéril, que não produz", fonte: "Aulete Digital", motivo: "Ainda retém matéria (o solo): abstração incompleta, permanece figurativizável." },
+            { termo: "miséria", definicao: "estado de extrema pobreza; grande infelicidade", fonte: "Aulete Digital", motivo: "Axiologizante e socioeconômico: desloca o eixo para o juízo sobre a condição." }
+          ]
+        },
+        {
+          termo: "insuficiência",
+          definicao: "condição do que não basta, do que fica aquém da medida requerida",
+          fonte: "definição lexicográfica (sem consulta on-line)",
+          justificativa: "Carência define-se como ausência do necessário; o gênero próximo é a relação de aquém em face de uma medida — o objeto faltante já desapareceu.",
+          alternativas: [
+            { termo: "vazio", definicao: "espaço que nada contém", fonte: "Priberam", motivo: "Perde a referência à necessidade: vira ausência absoluta, e a categoria deixa de dizer algo sobre o material." }
+          ]
+        },
+        {
+          termo: "ESCASSEZ",
+          definicao: "condição ou qualidade daquilo que é escasso; disponibilidade menor do que a necessária para atender à demanda",
+          fonte: "Aulete Digital",
+          justificativa: "Termo categorial: só se define pela relação entre o que há e o que é preciso — ou seja, contra o excesso. Não admite hiperônimo sem cair em “estado”.",
+          alternativas: []
+        }
+      ]
+    },
+    {
+      polo: "B",
+      rotulo: "o fundo — a serra verde no horizonte",
+      niveis: [
+        {
+          termo: "viço",
+          definicao: "força vegetativa da planta; vigor de vegetação; exuberância, verdor",
+          fonte: "Aulete Digital",
+          justificativa: "Figura da faixa verde ao fundo, sob céu limpo: o verde é o signo do que ainda dispõe de água. É o único ponto do quadro onde algo prospera sem depender de carniça.",
+          alternativas: [
+            { termo: "chuva", definicao: "precipitação de água em gotas a partir das nuvens", fonte: "Michaelis", motivo: "Fenômeno concreto, com tempo e lugar: figurativo demais para iniciar o percurso abstrato." },
+            { termo: "esperança", definicao: "expectativa de conseguir o que se deseja", fonte: "Aulete Digital", motivo: "Patêmico: desloca o eixo para as paixões do sujeito, não para o estado do mundo." }
+          ]
+        },
+        {
+          termo: "fertilidade",
+          definicao: "qualidade do que é fértil, do solo que produz muito; feracidade, fecundidade",
+          fonte: "Aulete Digital",
+          justificativa: "O viço é definido como força vegetativa: seu gênero próximo é a capacidade de produzir, já sem o traço “planta”.",
+          alternativas: [
+            { termo: "verdor", definicao: "cor verde da vegetação; vigor, frescor", fonte: "Aulete Digital", motivo: "Sinônimo lateral de viço, não hiperônimo: não há ganho de abstração." }
+          ]
+        },
+        {
+          termo: "fartura",
+          definicao: "repleção, cópia, abundância de víveres, de provisões",
+          fonte: "Aulete Digital",
+          justificativa: "O que é fértil produz o que sustenta; o gênero próximo é a existência de provisões em quantidade que basta.",
+          alternativas: [
+            { termo: "riqueza", definicao: "grande quantidade de bens e valores; opulência", fonte: "Michaelis", motivo: "Introduz posse e valor de troca: desloca para o eixo econômico-social." }
+          ]
+        },
+        {
+          termo: "ABUNDÂNCIA",
+          definicao: "grande quantidade de algo, suficiente para prover as necessidades, e mais do que isso; quantidade que excede a que seria necessária",
+          fonte: "Aulete Digital",
+          justificativa: "Termo categorial: define-se, como escassez, pela relação com a medida do necessário — só que do outro lado dela.",
+          alternativas: []
+        }
+      ]
+    }
+  ],
+  oposicao: {
+    termo_a: "ESCASSEZ",
+    termo_b: "ABUNDÂNCIA",
+    eixo: "a medida do necessário — relação entre o que há e o que é preciso para manter a vida",
+    justificativa: "Toda figura da tela se distribui nesse eixo: o açude sem água com os peixes secos, a carcaça, o corpo magro, a casa em ruínas e a terra rachada manifestam o aquém; a serra verde e o céu limpo manifestam o além. A pintura organiza os dois polos também no espaço — a escassez ocupa quase toda a superfície e o primeiro plano, a abundância fica reduzida a uma faixa distante no horizonte. E há uma inversão notável: os urubus são os únicos seres fartos do quadro, de modo que a abundância só se realiza ali como consumo do que morreu — o homem curvado, catando o que resta do chão, faz exatamente o mesmo gesto que eles."
+  },
+  validacao: [
+    "Simetria de abstração: os dois polos foram obtidos em quatro passos de hiperonímia e são substantivos abstratos de mesmo grau.",
+    "Eixo comum: a medida do necessário — nomeável sem coordenar dois eixos.",
+    "Não-figuratividade: nenhum dos polos evoca ator, tempo ou espaço concretos; ambos perderam os traços de água, solo e corpo pelo caminho.",
+    "Reversibilidade: os verbetes se cruzam literalmente — escassez é a disponibilidade “menor do que a necessária”, abundância é a quantidade que “excede a que seria necessária”. Um só se define pela medida que o outro também mobiliza.",
+    "Pertinência ao texto: os dois polos são recuperáveis nas figuras (leito seco, carcaça, ruína × serra verde, céu limpo, urubus fartos).",
+    "Não-moralização: descartada a leitura “vida × morte”, que é a tematização do efeito (a morte no quadro é consequência da falta, não sua causa) e que deixaria sem função a serra verde e a ruína; descartada também “natureza × cultura”, que a casa em ruínas sustenta mas que não recobre o açude vazio nem os urubus."
+  ]
+};
+/* ===================== FIM DA PARTE EDITÁVEL ============================= */
+</script>
+<style>
+  :root{
+    --papel:#f7f4ee; --papel2:#fffdf9; --tinta:#25211c; --tinta2:#6b6155;
+    --linha:#cfc6b8; --a:#b4552d; --a-bg:#fbeee6; --b:#2f6f6b; --b-bg:#e6f0ef;
+    --centro:#4a4036;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--papel);color:var(--tinta);
+    font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;}
+  .env{max-width:1180px;margin:0 auto;padding:28px 20px 60px}
+  header h1{font-size:1.5rem;margin:0 0 6px;letter-spacing:-.01em}
+  header .sub{font-size:.78rem;text-transform:uppercase;letter-spacing:.14em;color:var(--tinta2);margin-bottom:14px}
+  .entrada{background:var(--papel2);border:1px solid var(--linha);border-left:3px solid var(--centro);
+    padding:12px 16px;font-size:.94rem;line-height:1.55;color:var(--tinta2);border-radius:2px}
+  .entrada b{color:var(--tinta);font-weight:600}
+  h2{font-size:.78rem;text-transform:uppercase;letter-spacing:.14em;color:var(--tinta2);
+    font-weight:600;margin:34px 0 12px;border-bottom:1px solid var(--linha);padding-bottom:6px}
+  .dica{font-size:.8rem;color:var(--tinta2);font-style:italic;margin:-4px 0 14px}
+
+  #rolagem{overflow-x:auto;overflow-y:hidden;padding:8px 0 4px}
+  #palco{position:relative;display:inline-block;min-width:100%}
+  #svg{position:absolute;inset:0;pointer-events:none}
+  #trilha{position:relative;display:flex;align-items:center;gap:38px;padding:26px 8px}
+
+  .col{display:flex;flex-direction:column;align-items:center;gap:10px;flex:0 0 auto}
+  .rot{font-size:.6rem;text-transform:uppercase;letter-spacing:.12em;color:var(--tinta2);
+    height:14px;white-space:nowrap}
+  .no{position:relative;width:158px;min-height:56px;display:flex;align-items:center;justify-content:center;
+    text-align:center;padding:12px 10px;background:var(--papel2);border:1px solid var(--linha);
+    border-radius:3px;cursor:help;line-height:1.25;transition:transform .12s,box-shadow .12s;outline:none}
+  .no:hover,.no:focus{transform:translateY(-2px);box-shadow:0 4px 14px rgba(0,0,0,.10)}
+  .no.centro{width:186px;background:var(--centro);color:#f7f4ee;border-color:var(--centro);font-size:1.02rem}
+  .no.pA{border-color:var(--a);background:var(--a-bg)}
+  .no.pB{border-color:var(--b);background:var(--b-bg)}
+  .no.polo{font-weight:700;letter-spacing:.02em;font-size:1.02rem;box-shadow:0 0 0 4px rgba(0,0,0,.035)}
+  .no.polo.pA{background:var(--a);color:#fff8f4;border-color:var(--a)}
+  .no.polo.pB{background:var(--b);color:#f2fbfa;border-color:var(--b)}
+  .alt{width:132px;font-size:.76rem;padding:7px 8px;text-align:center;background:transparent;
+    border:1px dashed var(--linha);border-radius:3px;color:var(--tinta2);cursor:help;
+    text-decoration:line-through;text-decoration-color:rgba(0,0,0,.22);transition:opacity .12s;outline:none}
+  .alt:hover,.alt:focus{opacity:1;color:var(--tinta);border-color:var(--tinta2)}
+  .pilha{display:flex;flex-direction:column;gap:6px;align-items:center;min-height:1px}
+
+  #dica{position:fixed;z-index:50;max-width:330px;background:#fffdf9;border:1px solid var(--linha);
+    border-top:3px solid var(--centro);border-radius:3px;padding:12px 14px;
+    box-shadow:0 10px 30px rgba(0,0,0,.16);font-size:.86rem;line-height:1.5;display:none}
+  #dica.pA{border-top-color:var(--a)} #dica.pB{border-top-color:var(--b)}
+  #dica .t{font-weight:700;font-size:.98rem;margin-bottom:4px}
+  #dica .d{color:var(--tinta);margin-bottom:8px}
+  #dica .f{font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:var(--tinta2)}
+  #dica .j{margin-top:9px;padding-top:9px;border-top:1px solid var(--linha);font-size:.82rem;
+    color:var(--tinta2);font-style:italic}
+
+  .oposicao{margin-top:8px;background:var(--papel2);border:1px solid var(--linha);border-radius:3px;padding:22px}
+  .par{display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap;text-align:center}
+  .par .p{font-size:1.3rem;font-weight:700;letter-spacing:.02em}
+  .par .p.a{color:var(--a)} .par .p.b{color:var(--b)}
+  .par .vs{font-size:.8rem;color:var(--tinta2);letter-spacing:.16em;text-transform:uppercase}
+  .eixo{text-align:center;margin-top:12px;font-size:.9rem;color:var(--tinta2)}
+  .eixo b{color:var(--tinta)}
+  .justif{margin-top:16px;padding-top:14px;border-top:1px solid var(--linha);font-size:.94rem;line-height:1.6}
+  ul.val{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+  ul.val li{font-size:.9rem;line-height:1.5;padding-left:20px;position:relative;color:var(--tinta2)}
+  ul.val li::before{content:"✓";position:absolute;left:0;color:var(--b);font-weight:700}
+  footer{margin-top:40px;font-size:.75rem;color:var(--tinta2);text-align:center;line-height:1.6}
+
+  @media (max-width:820px){
+    #trilha{flex-direction:column;gap:26px}
+    .no{width:200px} .alt{width:170px}
+    .pilha{flex-direction:row;flex-wrap:wrap;justify-content:center}
+  }
+</style>
+</head>
+<body>
+<div class="env">
+  <header>
+    <div class="sub">Semiótica discursiva · nível fundamental</div>
+    <h1 id="titulo"></h1>
+  </header>
+  <div class="entrada"><b>Material analisado.</b> <span id="entrada"></span></div>
+
+  <h2>Percurso de abstração</h2>
+  <p class="dica">Passe o mouse (ou toque) sobre qualquer termo para ver a definição de dicionário e o motivo do passo. Os termos riscados foram considerados e descartados.</p>
+  <div id="rolagem"><div id="palco"><svg id="svg"></svg><div id="trilha"></div></div></div>
+
+  <h2>Oposição semântica de base</h2>
+  <div class="oposicao">
+    <div class="par">
+      <span class="p a" id="oa"></span><span class="vs">versus</span><span class="p b" id="ob"></span>
+    </div>
+    <div class="eixo">eixo semântico: <b id="oeixo"></b></div>
+    <div class="justif" id="ojust"></div>
+  </div>
+
+  <h2>Validação da categoria</h2>
+  <ul class="val" id="val"></ul>
+
+  <footer>Percurso gerativo do sentido · nível fundamental<br>cada passo de abstração é o gênero próximo da definição lexicográfica do termo anterior</footer>
+</div>
+<div id="dica" role="tooltip"></div>
+
+<script>
+const trilha=document.getElementById('trilha');
+const svg=document.getElementById('svg');
+const dica=document.getElementById('dica');
+let fixado=null;
+
+document.getElementById('titulo').textContent=DADOS.titulo;
+document.getElementById('entrada').textContent=DADOS.entrada;
+document.getElementById('oa').textContent=DADOS.oposicao.termo_a;
+document.getElementById('ob').textContent=DADOS.oposicao.termo_b;
+document.getElementById('oeixo').textContent=DADOS.oposicao.eixo;
+document.getElementById('ojust').textContent=DADOS.oposicao.justificativa;
+document.getElementById('val').innerHTML=(DADOS.validacao||[]).map(v=>'<li></li>').join('');
+document.querySelectorAll('#val li').forEach((li,i)=>li.append(DADOS.validacao[i]));
+
+const pA=DADOS.percursos.find(p=>p.polo==='A')||DADOS.percursos[0];
+const pB=DADOS.percursos.find(p=>p.polo==='B')||DADOS.percursos[1]||{niveis:[]};
+
+function chips(lista,classe){
+  const d=document.createElement('div'); d.className='pilha';
+  (lista||[]).forEach(a=>{
+    const c=document.createElement('div');
+    c.className='alt'; c.tabIndex=0; c.textContent=a.termo;
+    c.dataset.info=JSON.stringify({t:a.termo,d:a.definicao,f:a.fonte,j:'Descartado — '+a.motivo,c:classe});
+    d.appendChild(c);
+  });
+  return d;
+}
+function coluna(item,classe,rotulo,ehPolo,ehCentro){
+  const col=document.createElement('div'); col.className='col';
+  const r=document.createElement('div'); r.className='rot'; r.textContent=rotulo; col.appendChild(r);
+  const cima=chips((item.alternativas||[]).slice(0,1),classe); col.appendChild(cima);
+  const no=document.createElement('div');
+  no.className='no'+(ehCentro?' centro':' '+classe)+(ehPolo?' polo':'');
+  no.tabIndex=0; no.textContent=item.termo;
+  no.dataset.info=JSON.stringify({t:item.termo,d:item.definicao,f:item.fonte,
+    j:item.justificativa||item.nota||'',c:ehCentro?'':classe});
+  col.appendChild(no); col.dataset.no='1';
+  col.appendChild(chips((item.alternativas||[]).slice(1),classe));
+  return col;
+}
+const colunas=[];
+[...pA.niveis].reverse().forEach((n,i,arr)=>{
+  const nivel=arr.length-i;
+  colunas.push(coluna(n,'pA',(nivel===arr.length?'polo A · nível '+nivel:'nível '+nivel),nivel===arr.length,false));
+});
+colunas.push(coluna(DADOS.centro,'','centro figurativo',false,true));
+(pB.niveis||[]).forEach((n,i,arr)=>{
+  colunas.push(coluna(n,'pB',(i===arr.length-1?'polo B · nível '+(i+1):'nível '+(i+1)),i===arr.length-1,false));
+});
+colunas.forEach(c=>trilha.appendChild(c));
+
+function info(el){
+  const o=JSON.parse(el.dataset.info);
+  dica.className=o.c||'';
+  dica.innerHTML='<div class="t"></div><div class="d"></div><div class="f"></div>'+(o.j?'<div class="j"></div>':'');
+  dica.querySelector('.t').textContent=o.t;
+  dica.querySelector('.d').textContent=o.d;
+  dica.querySelector('.f').textContent=o.f;
+  if(o.j) dica.querySelector('.j').textContent=o.j;
+  dica.style.display='block';
+}
+function posiciona(x,y){
+  const r=dica.getBoundingClientRect();
+  let l=x+16, t=y+16;
+  if(l+r.width>innerWidth-10) l=x-r.width-16;
+  if(t+r.height>innerHeight-10) t=Math.max(10,y-r.height-16);
+  dica.style.left=l+'px'; dica.style.top=t+'px';
+}
+document.addEventListener('mouseover',e=>{
+  const el=e.target.closest('[data-info]'); if(!el||fixado) return;
+  info(el); posiciona(e.clientX,e.clientY);
+});
+document.addEventListener('mousemove',e=>{ if(dica.style.display==='block'&&!fixado) posiciona(e.clientX,e.clientY); });
+document.addEventListener('mouseout',e=>{ if(!fixado&&e.target.closest('[data-info]')) dica.style.display='none'; });
+document.addEventListener('click',e=>{
+  const el=e.target.closest('[data-info]');
+  if(el){ fixado=null; info(el); const r=el.getBoundingClientRect(); posiciona(r.left+r.width/2,r.bottom-14); fixado=el; }
+  else { fixado=null; dica.style.display='none'; }
+});
+document.addEventListener('focusin',e=>{
+  const el=e.target.closest('[data-info]'); if(!el) return;
+  info(el); const r=el.getBoundingClientRect(); posiciona(r.left,r.bottom);
+});
+document.addEventListener('keydown',e=>{ if(e.key==='Escape'){fixado=null;dica.style.display='none';} });
+
+function linha(x1,y1,x2,y2,cor,traco,largura){
+  const p=document.createElementNS('http://www.w3.org/2000/svg','path');
+  const mx=(x1+x2)/2;
+  p.setAttribute('d',`M${x1},${y1} C${mx},${y1} ${mx},${y2} ${x2},${y2}`);
+  p.setAttribute('fill','none'); p.setAttribute('stroke',cor);
+  p.setAttribute('stroke-width',largura||1.4);
+  if(traco) p.setAttribute('stroke-dasharray',traco);
+  svg.appendChild(p);
+}
+function desenha(){
+  const base=document.getElementById('palco').getBoundingClientRect();
+  svg.setAttribute('width',base.width); svg.setAttribute('height',base.height);
+  svg.style.width=base.width+'px'; svg.style.height=base.height+'px';
+  svg.innerHTML='';
+  const est=getComputedStyle(document.documentElement);
+  const cA=est.getPropertyValue('--a').trim(), cB=est.getPropertyValue('--b').trim(),
+        cL=est.getPropertyValue('--linha').trim();
+  const R=el=>{const r=el.getBoundingClientRect();
+    return {x:r.left-base.left,y:r.top-base.top,w:r.width,h:r.height,
+            cx:r.left-base.left+r.width/2, cy:r.top-base.top+r.height/2};};
+  const vertical=innerWidth<=820;
+  const nos=colunas.map(c=>c.querySelector('.no'));
+  const iCentro=nos.findIndex(n=>n.classList.contains('centro'));
+  for(let i=0;i<nos.length-1;i++){
+    const a=R(nos[i]), b=R(nos[i+1]);
+    const cor=(i<iCentro)?cA:cB;
+    if(vertical) linha(a.cx,a.y+a.h,b.cx,b.y,cor,null,1.6);
+    else linha(a.x+a.w,a.cy,b.x,b.cy,cor,null,1.6);
+  }
+  colunas.forEach((col,i)=>{
+    const no=R(col.querySelector('.no'));
+    col.querySelectorAll('.alt').forEach(alt=>{
+      const a=R(alt);
+      if(vertical) linha(no.x,no.cy,a.x+a.w,a.cy,cL,'3 3',1);
+      else linha(no.cx,(a.cy<no.cy?no.y:no.y+no.h),a.cx,(a.cy<no.cy?a.y+a.h:a.y),cL,'3 3',1);
+    });
+  });
+  const polos=nos.filter(n=>n.classList.contains('polo'));
+  if(polos.length===2&&!vertical){
+    const a=R(polos[0]), b=R(polos[1]);
+    const p=document.createElementNS('http://www.w3.org/2000/svg','path');
+    const topo=Math.min(a.y,b.y)-20;
+    p.setAttribute('d',`M${a.cx},${a.y} C${a.cx},${topo} ${b.cx},${topo} ${b.cx},${b.y}`);
+    p.setAttribute('fill','none'); p.setAttribute('stroke',cA); p.setAttribute('stroke-width',1.2);
+    p.setAttribute('stroke-dasharray','6 4'); p.setAttribute('opacity','.55');
+    svg.appendChild(p);
+  }
+}
+addEventListener('resize',desenha);
+addEventListener('load',desenha);
+setTimeout(desenha,60);
+</script>
+</body>
+</html>
