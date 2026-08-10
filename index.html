@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>interfaces livres — oposições semânticas de base</title>
+<meta name="description" content="Análises de oposição semântica de base em mapas mentais interativos, e as skills usadas para produzi-las.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=Spectral:ital,wght@0,300;0,400;1,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --papel:#E6E4DC;
+    --papel-fundo:#DBD9D0;
+    --tinta:#1A1D1A;
+    --tinta-fraca:#6C706A;
+    --eixo:#3A34C4;
+    --linha:#C3C1B7;
+
+    --display:"Bricolage Grotesque",system-ui,sans-serif;
+    --corpo:"Spectral",Georgia,serif;
+    --mono:"Space Mono",ui-monospace,monospace;
+  }
+
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;
+    background:var(--papel);
+    color:var(--tinta);
+    font-family:var(--corpo);
+    font-weight:300;
+    font-size:clamp(1rem,0.96rem + 0.2vw,1.075rem);
+    line-height:1.6;
+  }
+  .wrap{
+    max-width:60rem;
+    margin:0 auto;
+    padding:0 clamp(1.25rem,5vw,3.5rem);
+  }
+  a{color:inherit}
+
+  /* ---------- capa ---------- */
+  .capa{padding:clamp(3.5rem,10vw,7rem) 0 clamp(2.5rem,6vw,4rem)}
+  .sobrescrito{
+    font-family:var(--mono);
+    font-size:.72rem;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    color:var(--tinta-fraca);
+    margin:0 0 clamp(1.5rem,4vw,2.5rem);
+  }
+  h1{
+    font-family:var(--display);
+    font-weight:800;
+    font-size:clamp(2.9rem,12vw,6.5rem);
+    line-height:.88;
+    letter-spacing:-.035em;
+    margin:0;
+  }
+  h1 .barra{color:var(--eixo);font-weight:400}
+  .lead{
+    max-width:34rem;
+    margin:clamp(1.5rem,4vw,2.25rem) 0 0;
+    font-size:clamp(1.075rem,1rem + 0.5vw,1.35rem);
+    line-height:1.5;
+  }
+  .lead em{font-style:italic;color:var(--tinta-fraca)}
+
+  /* ---------- seções ---------- */
+  section{padding:clamp(2.5rem,7vw,4.5rem) 0}
+  .cabeca{
+    display:flex;
+    align-items:baseline;
+    gap:1rem;
+    border-top:1px solid var(--tinta);
+    padding-top:.85rem;
+    margin-bottom:clamp(1.5rem,4vw,2.5rem);
+  }
+  h2{
+    font-family:var(--display);
+    font-weight:700;
+    font-size:1.15rem;
+    letter-spacing:-.01em;
+    margin:0;
+  }
+  .conta{
+    font-family:var(--mono);
+    font-size:.72rem;
+    color:var(--tinta-fraca);
+    margin-left:auto;
+  }
+  .nota{
+    max-width:34rem;
+    margin:-.75rem 0 clamp(1.75rem,4vw,2.5rem);
+    color:var(--tinta-fraca);
+    font-size:.95rem;
+  }
+
+  /* ---------- eixos (lista de análises) ---------- */
+  ol.eixos{list-style:none;margin:0;padding:0}
+  .eixo{
+    display:flex;
+    align-items:center;
+    gap:clamp(.75rem,2vw,1.5rem);
+    padding:1.15rem 0;
+    border-bottom:1px solid var(--linha);
+    text-decoration:none;
+    color:inherit;
+  }
+  .polo{
+    flex:none;
+    font-family:var(--mono);
+    font-size:.7rem;
+    color:var(--tinta-fraca);
+    transition:color .25s ease;
+  }
+  .titulo{
+    font-family:var(--display);
+    font-weight:600;
+    font-size:clamp(1.3rem,1.05rem + 1.1vw,2rem);
+    letter-spacing:-.02em;
+    line-height:1.1;
+    transition:color .25s ease;
+  }
+  .fio{
+    flex:1 1 1.5rem;
+    min-width:1rem;
+    height:1px;
+    background:var(--linha);
+    transition:background .25s ease;
+  }
+  .genero{
+    flex:none;
+    font-family:var(--mono);
+    font-size:.7rem;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--tinta-fraca);
+  }
+  .eixo:hover .fio,.eixo:focus-visible .fio{background:var(--eixo)}
+  .eixo:hover .polo,.eixo:focus-visible .polo{color:var(--eixo)}
+  .eixo:hover .titulo,.eixo:focus-visible .titulo{color:var(--eixo)}
+  .eixo:focus-visible{outline:2px solid var(--eixo);outline-offset:6px}
+
+  /* ---------- skills ---------- */
+  .grade{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));
+    gap:1px;
+    background:var(--linha);
+    border:1px solid var(--linha);
+  }
+  .cartao{
+    background:var(--papel-fundo);
+    padding:clamp(1.25rem,3vw,1.75rem);
+    display:flex;
+    flex-direction:column;
+    gap:.6rem;
+    text-decoration:none;
+    color:inherit;
+    transition:background .25s ease;
+  }
+  .cartao:hover,.cartao:focus-visible{background:var(--papel)}
+  .cartao:focus-visible{outline:2px solid var(--eixo);outline-offset:-2px}
+  .arquivo{
+    font-family:var(--mono);
+    font-size:.78rem;
+    font-weight:700;
+    letter-spacing:-.01em;
+    word-break:break-all;
+  }
+  .cartao p{margin:0;font-size:.95rem;color:var(--tinta-fraca);flex:1}
+  .baixar{
+    font-family:var(--mono);
+    font-size:.72rem;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:var(--eixo);
+    display:flex;
+    align-items:center;
+    gap:.4rem;
+  }
+  .baixar .peso{color:var(--tinta-fraca);letter-spacing:.04em}
+  .baixar .seta{transition:transform .25s ease;display:inline-block}
+  .cartao:hover .seta,.cartao:focus-visible .seta{transform:translateY(2px)}
+
+  /* ---------- rodapé ---------- */
+  footer{
+    border-top:1px solid var(--tinta);
+    padding:1.25rem 0 clamp(3rem,8vw,5rem);
+    font-family:var(--mono);
+    font-size:.72rem;
+    color:var(--tinta-fraca);
+    display:flex;
+    flex-wrap:wrap;
+    gap:.5rem 1.5rem;
+  }
+  footer a{color:var(--eixo);text-decoration:none}
+  footer a:hover{text-decoration:underline}
+
+  /* ---------- entrada ---------- */
+  @media (prefers-reduced-motion:no-preference){
+    .anima{animation:sobe .6s cubic-bezier(.2,.7,.3,1) backwards}
+    @keyframes sobe{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+  }
+
+  @media (max-width:34rem){
+    .eixo{flex-wrap:wrap;gap:.5rem .75rem}
+    .fio{order:3;flex-basis:100%}
+    .genero{order:2;margin-left:auto}
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header class="capa">
+    <p class="sobrescrito anima" style="animation-delay:.05s">Semiótica discursiva · nível fundamental</p>
+    <h1 class="anima" style="animation-delay:.1s">interfaces<br><span class="barra">/</span>livres<span class="barra">/</span></h1>
+    <p class="lead anima" style="animation-delay:.2s">Toda significação nasce de uma diferença. Aqui ficam análises que percorrem um texto até sua oposição semântica de base, um passo de abstração por vez, cada passo apoiado na definição de dicionário do termo anterior. <em>Cada análise abre como mapa mental interativo — passe o mouse sobre os nós para ver as definições.</em></p>
+  </header>
+
+  <main>
+
+    <section id="analises">
+      <div class="cabeca">
+        <h2>Análises</h2>
+        <span class="conta" id="conta-analises">05 mapas</span>
+      </div>
+
+      <!-- Lista de reserva: fica no ar se a API do GitHub não responder.
+           Quando a API responde, este conteúdo é substituído pela lista real do repositório. -->
+      <ol class="eixos" id="lista-analises">
+        <li>
+          <a class="eixo" href="oposicao-chapeuzinho-vermelho.html">
+            <span class="polo">s₁</span>
+            <span class="titulo">Chapeuzinho Vermelho</span>
+            <span class="fio"></span>
+            <span class="genero">conto popular</span>
+            <span class="polo">s₂</span>
+          </a>
+        </li>
+        <li>
+          <a class="eixo" href="oposicao-tres-porquinhos.html">
+            <span class="polo">s₁</span>
+            <span class="titulo">Os Três Porquinhos</span>
+            <span class="fio"></span>
+            <span class="genero">conto popular</span>
+            <span class="polo">s₂</span>
+          </a>
+        </li>
+        <li>
+          <a class="eixo" href="oposicao-coracao-de-estudante.html">
+            <span class="polo">s₁</span>
+            <span class="titulo">Coração de Estudante</span>
+            <span class="fio"></span>
+            <span class="genero">canção</span>
+            <span class="polo">s₂</span>
+          </a>
+        </li>
+        <li>
+          <a class="eixo" href="oposicao-de-povo-adentro.html">
+            <span class="polo">s₁</span>
+            <span class="titulo">De Povo Adentro</span>
+            <span class="fio"></span>
+            <span class="genero">texto</span>
+            <span class="polo">s₂</span>
+          </a>
+        </li>
+        <li>
+          <a class="eixo" href="oposicao-dizido-das-horas.html">
+            <span class="polo">s₁</span>
+            <span class="titulo">Dizido das Horas</span>
+            <span class="fio"></span>
+            <span class="genero">texto</span>
+            <span class="polo">s₂</span>
+          </a>
+        </li>
+      </ol>
+    </section>
+
+    <section id="skills">
+      <div class="cabeca">
+        <h2>Skills</h2>
+        <span class="conta" id="conta-skills">02 arquivos</span>
+      </div>
+      <p class="nota">Os procedimentos por trás das análises, empacotados como skills do Claude. Baixe o arquivo e adicione às suas skills para rodar o mesmo método no seu próprio corpus.</p>
+
+      <div class="grade" id="lista-skills">
+        <a class="cartao" href="oposicao-semantica-base.skill" download>
+          <span class="arquivo">oposicao-semantica-base.skill</span>
+          <p>Deriva a oposição semântica de base de um texto, frase ou tema por abstração progressiva, justificando cada etapa com a definição de dicionário do termo anterior, e devolve o percurso como mapa mental interativo.</p>
+          <span class="baixar"><span class="seta">↓</span> Baixar</span>
+        </a>
+        <a class="cartao" href="dadossemiotica.skill" download>
+          <span class="arquivo">dadossemiotica.skill</span>
+          <p>Conduz a análise de corpus com vários analistas: segmenta o texto em sentenças, gera as planilhas de anotação, consolida o que volta, calcula a concordância entre anotadores e lista as divergências para adjudicação.</p>
+          <span class="baixar"><span class="seta">↓</span> Baixar</span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <span>interfaces livres</span>
+    <span>Método aprendido com Ana Cristina Fricke Matte</span>
+    <a id="link-repo" href="https://github.com/">Repositório no GitHub</a>
+  </footer>
+
+</div>
+
+<script>
+/* ==========================================================================
+   LISTAGEM AUTOMÁTICA
+   A página pergunta ao GitHub quais arquivos existem no repositório e monta
+   as duas listas sozinha. Arquivo novo no repo = item novo aqui, sem editar
+   este index.
+
+   >>> PREENCHA AS TRÊS LINHAS ABAIXO <<<
+   ========================================================================== */
+const CONFIG = {
+  usuario: "SEU-USUARIO",      // ex.: paulohenrique
+  repositorio: "SEU-REPO",     // ex.: interfaceslivres
+  branch: "main"               // ou "master", conforme o repo
+};
+
+/* Títulos e rótulos caprichados. O que não estiver aqui ganha um título
+   gerado a partir do nome do arquivo — funciona, mas sem acento.
+   Para uma análise nova, basta acrescentar uma linha (opcional). */
+const TITULOS = {
+  "oposicao-chapeuzinho-vermelho.html": { titulo: "Chapeuzinho Vermelho", genero: "conto popular" },
+  "oposicao-tres-porquinhos.html":      { titulo: "Os Três Porquinhos",   genero: "conto popular" },
+  "oposicao-coracao-de-estudante.html": { titulo: "Coração de Estudante", genero: "canção" },
+  "oposicao-de-povo-adentro.html":      { titulo: "De Povo Adentro",      genero: "texto" },
+  "oposicao-dizido-das-horas.html":     { titulo: "Dizido das Horas",     genero: "texto" }
+};
+
+/* Descrições das skills. Sem entrada aqui, a skill aparece com um texto padrão. */
+const DESCRICOES = {
+  "oposicao-semantica-base.skill": "Deriva a oposição semântica de base de um texto, frase ou tema por abstração progressiva, justificando cada etapa com a definição de dicionário do termo anterior, e devolve o percurso como mapa mental interativo.",
+  "dadossemiotica.skill": "Conduz a análise de corpus com vários analistas: segmenta o texto em sentenças, gera as planilhas de anotação, consolida o que volta, calcula a concordância entre anotadores e lista as divergências para adjudicação."
+};
+
+/* Arquivos que nunca devem aparecer na lista de análises. */
+const IGNORAR = ["index.html", "404.html"];
+
+/* -------------------------------------------------------------------------- */
+
+const MINUSCULAS = ["de","da","das","do","dos","e","em","no","na","nos","nas","a","o","as","os","com","por","para","ao","aos"];
+
+function tituloDoArquivo(nome){
+  return nome
+    .replace(/\.html?$/i, "")
+    .replace(/^oposicao-/i, "")
+    .split("-")
+    .filter(Boolean)
+    .map((p, i) => (i > 0 && MINUSCULAS.includes(p)) ? p : p.charAt(0).toUpperCase() + p.slice(1))
+    .join(" ");
+}
+
+function doisDigitos(n){ return String(n).padStart(2, "0"); }
+
+function tamanho(bytes){
+  if (!bytes && bytes !== 0) return "";
+  return bytes < 1024 ? bytes + " B" : (bytes / 1024).toFixed(1).replace(".", ",") + " KB";
+}
+
+function montarAnalises(arquivos){
+  const lista = document.getElementById("lista-analises");
+  const conhecidos = Object.keys(TITULOS);
+  arquivos.sort((a, b) => {
+    const ia = conhecidos.indexOf(a.name), ib = conhecidos.indexOf(b.name);
+    if (ia !== -1 && ib !== -1) return ia - ib;
+    if (ia !== -1) return -1;
+    if (ib !== -1) return 1;
+    return a.name.localeCompare(b.name, "pt-BR");
+  });
+
+  lista.innerHTML = "";
+  arquivos.forEach(arq => {
+    const meta = TITULOS[arq.name] || {};
+    const li = document.createElement("li");
+    const a = document.createElement("a");
+    a.className = "eixo";
+    a.href = arq.name;
+
+    const p1 = document.createElement("span"); p1.className = "polo"; p1.textContent = "s₁";
+    const t  = document.createElement("span"); t.className = "titulo"; t.textContent = meta.titulo || tituloDoArquivo(arq.name);
+    const f  = document.createElement("span"); f.className = "fio";
+    const g  = document.createElement("span"); g.className = "genero"; g.textContent = meta.genero || "análise";
+    const p2 = document.createElement("span"); p2.className = "polo"; p2.textContent = "s₂";
+
+    a.append(p1, t, f, g, p2);
+    li.append(a);
+    lista.append(li);
+  });
+
+  document.getElementById("conta-analises").textContent =
+    doisDigitos(arquivos.length) + (arquivos.length === 1 ? " mapa" : " mapas");
+}
+
+function montarSkills(arquivos){
+  const grade = document.getElementById("lista-skills");
+  arquivos.sort((a, b) => a.name.localeCompare(b.name, "pt-BR"));
+
+  grade.innerHTML = "";
+  arquivos.forEach(arq => {
+    const a = document.createElement("a");
+    a.className = "cartao";
+    a.href = arq.name;
+    a.setAttribute("download", "");
+
+    const nome = document.createElement("span");
+    nome.className = "arquivo";
+    nome.textContent = arq.name;
+
+    const desc = document.createElement("p");
+    desc.textContent = DESCRICOES[arq.name] || "Skill do Claude publicada neste repositório.";
+
+    const baixar = document.createElement("span");
+    baixar.className = "baixar";
+    baixar.innerHTML = '<span class="seta">↓</span> Baixar';
+    if (arq.size){
+      const peso = document.createElement("span");
+      peso.className = "peso";
+      peso.textContent = "· " + tamanho(arq.size);
+      baixar.append(peso);
+    }
+
+    a.append(nome, desc, baixar);
+    grade.append(a);
+  });
+
+  document.getElementById("conta-skills").textContent =
+    doisDigitos(arquivos.length) + (arquivos.length === 1 ? " arquivo" : " arquivos");
+}
+
+(async function listar(){
+  const { usuario, repositorio, branch } = CONFIG;
+
+  const repo = document.getElementById("link-repo");
+  if (usuario !== "SEU-USUARIO") repo.href = "https://github.com/" + usuario + "/" + repositorio;
+
+  if (usuario === "SEU-USUARIO" || repositorio === "SEU-REPO") return; // segue com a lista de reserva
+
+  try {
+    const url = "https://api.github.com/repos/" + usuario + "/" + repositorio + "/contents/?ref=" + branch;
+    const resposta = await fetch(url, { headers: { "Accept": "application/vnd.github+json" } });
+    if (!resposta.ok) throw new Error("HTTP " + resposta.status);
+
+    const itens = await resposta.json();
+    if (!Array.isArray(itens)) throw new Error("resposta inesperada");
+
+    const arquivos = itens.filter(i => i.type === "file");
+
+    const paginas = arquivos.filter(i =>
+      /\.html?$/i.test(i.name) && !IGNORAR.includes(i.name.toLowerCase())
+    );
+    const skills = arquivos.filter(i => /\.skill$/i.test(i.name));
+
+    if (paginas.length) montarAnalises(paginas);
+    if (skills.length)  montarSkills(skills);
+  } catch (e) {
+    // API fora do ar ou limite de requisições atingido: a lista de reserva do HTML permanece.
+    console.warn("Listagem automática indisponível, usando a lista fixa.", e);
+  }
+})();
+</script>
+
+</body>
+</html>
