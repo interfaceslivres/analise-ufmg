@@ -132,10 +132,13 @@
   }
   .genero{
     flex:none;
+    max-width:11rem;
+    text-align:right;
     font-family:var(--mono);
     font-size:.7rem;
     letter-spacing:.08em;
     text-transform:uppercase;
+    line-height:1.3;
     color:var(--tinta-fraca);
   }
   .eixo:hover .fio,.eixo:focus-visible .fio{background:var(--eixo)}
@@ -208,7 +211,7 @@
   @media (max-width:34rem){
     .eixo{flex-wrap:wrap;gap:.5rem .75rem}
     .fio{order:3;flex-basis:100%}
-    .genero{order:2;margin-left:auto}
+    .genero{order:2;margin-left:auto;text-align:right}
   }
 </style>
 </head>
@@ -227,7 +230,7 @@
     <section id="analises">
       <div class="cabeca">
         <h2>Análises</h2>
-        <span class="conta" id="conta-analises">05 mapas</span>
+        <span class="conta" id="conta-analises">06 mapas</span>
       </div>
 
       <!-- Lista de reserva: fica no ar se a API do GitHub não responder.
@@ -278,6 +281,15 @@
             <span class="polo">s₂</span>
           </a>
         </li>
+        <li>
+          <a class="eixo" href="oposicao-homem-atado-soldados.html">
+            <span class="polo">s₁</span>
+            <span class="titulo">O homem atado entre soldados</span>
+            <span class="fio"></span>
+            <span class="genero">pintura devocional</span>
+            <span class="polo">s₂</span>
+          </a>
+        </li>
       </ol>
     </section>
 
@@ -307,7 +319,7 @@
   <footer>
     <span>interfaces livres</span>
     <span>Método aprendido com Ana Cristina Fricke Matte</span>
-    <a id="link-repo" href="https://github.com/">Repositório no GitHub</a>
+    <a id="link-repo" href="https://github.com/interfaceslivres/analise-ufmg">Repositório no GitHub</a>
   </footer>
 
 </div>
@@ -315,21 +327,23 @@
 <script>
 /* ==========================================================================
    LISTAGEM AUTOMÁTICA
-   A página pergunta ao GitHub quais arquivos existem no repositório e monta
-   as duas listas sozinha. Arquivo novo no repo = item novo aqui, sem editar
-   este index.
 
-   >>> PREENCHA AS TRÊS LINHAS ABAIXO <<<
+   A página pergunta ao GitHub quais arquivos existem no repositório e monta
+   as duas listas sozinha. Arquivo novo no repo = item novo aqui, sem mexer
+   neste index.
+
+   O título de cada análise é lido de dentro do próprio arquivo: o campo
+   "titulo" do bloco DADOS. Se o titulo tiver um travessão, o que vem antes
+   vira o nome do link e o que vem depois vira o rótulo à direita.
    ========================================================================== */
 const CONFIG = {
-  usuario: "SEU-USUARIO",      // ex.: paulohenrique
-  repositorio: "SEU-REPO",     // ex.: interfaceslivres
-  branch: "main"               // ou "master", conforme o repo
+  usuario: "interfaceslivres",
+  repositorio: "analise-ufmg",
+  branch: "main"
 };
 
-/* Títulos e rótulos caprichados. O que não estiver aqui ganha um título
-   gerado a partir do nome do arquivo — funciona, mas sem acento.
-   Para uma análise nova, basta acrescentar uma linha (opcional). */
+/* Sobrescreve o título lido do arquivo. Só use se quiser um nome diferente
+   do que está escrito dentro da análise — caso contrário, deixe em branco. */
 const TITULOS = {
   "oposicao-chapeuzinho-vermelho.html": { titulo: "Chapeuzinho Vermelho", genero: "conto popular" },
   "oposicao-tres-porquinhos.html":      { titulo: "Os Três Porquinhos",   genero: "conto popular" },
@@ -344,8 +358,11 @@ const DESCRICOES = {
   "dadossemiotica.skill": "Conduz a análise de corpus com vários analistas: segmenta o texto em sentenças, gera as planilhas de anotação, consolida o que volta, calcula a concordância entre anotadores e lista as divergências para adjudicação."
 };
 
-/* Arquivos que nunca devem aparecer na lista de análises. */
+/* Arquivos que nunca aparecem na lista de análises. */
 const IGNORAR = ["index.html", "404.html"];
+
+/* Teto de arquivos cujo título será lido de dentro do HTML, por carregamento. */
+const LIMITE_LEITURA = 20;
 
 /* -------------------------------------------------------------------------- */
 
@@ -368,9 +385,44 @@ function tamanho(bytes){
   return bytes < 1024 ? bytes + " B" : (bytes / 1024).toFixed(1).replace(".", ",") + " KB";
 }
 
+/* Lê o campo "titulo" do bloco DADOS dentro do arquivo da análise. */
+async function tituloInterno(nome){
+  const { usuario, repositorio, branch } = CONFIG;
+  const url = "https://raw.githubusercontent.com/" + usuario + "/" + repositorio + "/" + branch + "/" + encodeURIComponent(nome);
+  const r = await fetch(url);
+  if (!r.ok) throw new Error("HTTP " + r.status);
+  const texto = await r.text();
+
+  const achou = texto.match(/titulo\s*:\s*"([^"]+)"/) || texto.match(/titulo\s*:\s*'([^']+)'/);
+  if (!achou) throw new Error("sem campo titulo");
+
+  const bruto = achou[1].trim();
+  const partes = bruto.split(/\s+[—–]\s+/);
+  return { titulo: partes[0].trim(), genero: (partes[1] || "").trim() };
+}
+
+function criarEixo(nome, meta){
+  const li = document.createElement("li");
+  const a = document.createElement("a");
+  a.className = "eixo";
+  a.href = nome;
+  a.dataset.arquivo = nome;
+
+  const p1 = document.createElement("span"); p1.className = "polo"; p1.textContent = "s₁";
+  const t  = document.createElement("span"); t.className = "titulo"; t.textContent = meta.titulo;
+  const f  = document.createElement("span"); f.className = "fio";
+  const g  = document.createElement("span"); g.className = "genero"; g.textContent = meta.genero || "análise";
+  const p2 = document.createElement("span"); p2.className = "polo"; p2.textContent = "s₂";
+
+  a.append(p1, t, f, g, p2);
+  li.append(a);
+  return li;
+}
+
 function montarAnalises(arquivos){
   const lista = document.getElementById("lista-analises");
   const conhecidos = Object.keys(TITULOS);
+
   arquivos.sort((a, b) => {
     const ia = conhecidos.indexOf(a.name), ib = conhecidos.indexOf(b.name);
     if (ia !== -1 && ib !== -1) return ia - ib;
@@ -381,25 +433,28 @@ function montarAnalises(arquivos){
 
   lista.innerHTML = "";
   arquivos.forEach(arq => {
-    const meta = TITULOS[arq.name] || {};
-    const li = document.createElement("li");
-    const a = document.createElement("a");
-    a.className = "eixo";
-    a.href = arq.name;
-
-    const p1 = document.createElement("span"); p1.className = "polo"; p1.textContent = "s₁";
-    const t  = document.createElement("span"); t.className = "titulo"; t.textContent = meta.titulo || tituloDoArquivo(arq.name);
-    const f  = document.createElement("span"); f.className = "fio";
-    const g  = document.createElement("span"); g.className = "genero"; g.textContent = meta.genero || "análise";
-    const p2 = document.createElement("span"); p2.className = "polo"; p2.textContent = "s₂";
-
-    a.append(p1, t, f, g, p2);
-    li.append(a);
-    lista.append(li);
+    const meta = TITULOS[arq.name] || { titulo: tituloDoArquivo(arq.name), genero: "" };
+    lista.append(criarEixo(arq.name, meta));
   });
 
   document.getElementById("conta-analises").textContent =
     doisDigitos(arquivos.length) + (arquivos.length === 1 ? " mapa" : " mapas");
+
+  /* Segunda passada: para o que não está em TITULOS, busca o nome real dentro do arquivo. */
+  arquivos
+    .filter(arq => !TITULOS[arq.name])
+    .slice(0, LIMITE_LEITURA)
+    .forEach(async arq => {
+      try {
+        const meta = await tituloInterno(arq.name);
+        const alvo = lista.querySelector('[data-arquivo="' + arq.name + '"]');
+        if (!alvo || !meta.titulo) return;
+        alvo.querySelector(".titulo").textContent = meta.titulo;
+        if (meta.genero) alvo.querySelector(".genero").textContent = meta.genero;
+      } catch (e) {
+        /* mantém o título derivado do nome do arquivo */
+      }
+    });
 }
 
 function montarSkills(arquivos){
@@ -441,10 +496,8 @@ function montarSkills(arquivos){
 (async function listar(){
   const { usuario, repositorio, branch } = CONFIG;
 
-  const repo = document.getElementById("link-repo");
-  if (usuario !== "SEU-USUARIO") repo.href = "https://github.com/" + usuario + "/" + repositorio;
-
-  if (usuario === "SEU-USUARIO" || repositorio === "SEU-REPO") return; // segue com a lista de reserva
+  document.getElementById("link-repo").href =
+    "https://github.com/" + usuario + "/" + repositorio;
 
   try {
     const url = "https://api.github.com/repos/" + usuario + "/" + repositorio + "/contents/?ref=" + branch;
@@ -464,7 +517,8 @@ function montarSkills(arquivos){
     if (paginas.length) montarAnalises(paginas);
     if (skills.length)  montarSkills(skills);
   } catch (e) {
-    // API fora do ar ou limite de requisições atingido: a lista de reserva do HTML permanece.
+    /* API fora do ar ou limite de requisições atingido:
+       a lista de reserva escrita no HTML permanece no ar. */
     console.warn("Listagem automática indisponível, usando a lista fixa.", e);
   }
 })();
