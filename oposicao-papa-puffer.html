@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Oposição semântica de base</title>
+<script>
+/* =========================================================================
+   ÚNICA PARTE A SER EDITADA. Substitua pelos dados da análise.
+   ========================================================================= */
+const DADOS = {
+  titulo: "O papa de casaco puffer branco",
+  entrada: "Imagem fotorrealista: o papa, de solidéu branco, óculos escuros e cruz peitoral de metal, veste um volumoso casaco puffer branco de corte esportivo. Ao fundo, desfocados, a fachada de mármore de uma basílica e um transeunte de capuz escuro.",
+  centro: {
+    termo: "papa de casaco puffer",
+    definicao: "figura do sumo pontífice em que a veste litúrgica branca é substituída, sem mudança de cor, por uma jaqueta acolchoada de moda urbana, mantidos o solidéu e a cruz peitoral",
+    fonte: "descrição figurativa do material",
+    nota: "O núcleo tensivo não é o papa nem o casaco, mas a substituição que ocorre no mesmo lugar e na mesma cor: o branco que antes significava veste consagrada passa a significar peça da estação. Solidéu e cruz permanecem como índices do primeiro regime; o corte esportivo e os óculos escuros instalam o segundo. A imagem faz os dois coincidirem num corpo só."
+  },
+  percursos: [
+    {
+      polo: "A",
+      rotulo: "o corpo que foi reservado",
+      niveis: [
+        {
+          termo: "sacerdócio",
+          definicao: "estado e dignidade de sacerdote; o ofício do sacerdote; o poder espiritual representado pelos sacerdotes",
+          fonte: "Aulete Digital (s.v. sacerdócio)",
+          justificativa: "Aulete define papa como “chefe da Igreja Católica; sumo pontífice”, e sumo sacerdote como “o sacerdote de mais alta posição eclesiástica”: o gênero próximo do papa é o sacerdote. Retirado o ator individual, resta o estado que o define — o sacerdócio.",
+          alternativas: [
+            { termo: "tradição", definicao: "transmissão oral de cultura, costumes, história etc. de geração em geração; costume arraigado", fonte: "Aulete Digital", motivo: "Sai do eixo: desloca a análise para a duração no tempo. O solidéu e a cruz não significam na imagem antiguidade, e sim pertencimento a um regime de reserva." },
+            { termo: "paramento", definicao: "vestimentas e vestes que os sacerdotes usam nas cerimônias religiosas; ornato, adorno", fonte: "Aulete Digital", motivo: "Figurativo demais: nomeia o objeto da cena. Além disso é justamente o termo que a imagem apaga — não pode ser o que ela abstrai." }
+          ]
+        },
+        {
+          termo: "consagração",
+          definicao: "ato ou efeito de consagrar, isto é, de “tornar sagrado; reservar ou dedicar (algo, alguém) à divindade”",
+          fonte: "Aulete Digital (s.v. consagrar)",
+          justificativa: "Aulete define sacerdote como “homem ordenado para celebrar a missa” e como “aquele que oferecia vítimas às divindades”. O que converte um homem em sacerdote é o ato de o reservar à divindade: o gênero próximo do sacerdócio é a consagração.",
+          alternativas: [
+            { termo: "transcendência", definicao: "qualidade de Deus, aquilo que O distingue do mundo e dos seres por Ele criados", fonte: "Aulete Digital", motivo: "Nomeia a divindade, não o modo como homens e objetos se ligam a ela. Salta um degrau e perde o traço de separação, que é exatamente o que a imagem encena na roupa." },
+            { termo: "hierarquia", definicao: "ordenação de pessoas ou funções segundo graus de poder e subordinação", fonte: "definição lexicográfica (sem consulta on-line)", motivo: "Sinônimo lateral de um efeito do sacerdócio, não seu gênero: levaria ao eixo do poder, que a imagem não tematiza." }
+          ]
+        },
+        {
+          termo: "SACRALIDADE",
+          definicao: "qualidade do que é sagrado: “que foi alvo de consagração”, “que se refere às coisas divinas, aos cultos religiosos”, “que está acima das necessidades e dos valores terrenos”, “que não deve ser tocado, mexido”",
+          fonte: "Aulete Digital (s.v. sagrado)",
+          justificativa: "O gênero próximo está literalmente dentro do verbete: consagrar é “tornar sagrado”. Termo categorial — todas as acepções de sagrado só se sustentam por contraste (acima dos valores terrenos, que não deve ser tocado). Acima dele só há “qualidade”, que é vazio categorial.",
+          alternativas: [
+            { termo: "santidade", definicao: "qualidade ou estado de santo; perfeição atribuída a quem é objeto de veneração religiosa", fonte: "definição lexicográfica (sem consulta on-line)", motivo: "Hipônimo, não hiperônimo: a santidade é uma espécie de sacralidade atribuída a pessoas, e traz um traço avaliativo (mérito, virtude) ausente da imagem." }
+          ]
+        }
+      ]
+    },
+    {
+      polo: "B",
+      rotulo: "a veste da estação",
+      niveis: [
+        {
+          termo: "moda",
+          definicao: "maneira, estilo de viver, vestir, comportar-se etc. predominante numa determinada época ou lugar; uso ou prática corrente, generalizada",
+          fonte: "Aulete Digital",
+          justificativa: "O casaco puffer e os óculos escuros não são roupa qualquer: são a peça e o acessório reconhecíveis como “os do momento”. O gênero próximo de uma peça de grife é o vestuário regulado pelo estilo predominante numa época — a moda.",
+          alternativas: [
+            { termo: "vestuário", definicao: "roupas usadas por uma determinada pessoa ou grupo social; conjunto dos objetos necessários para se vestir", fonte: "Aulete Digital", motivo: "Abstrai cedo demais e para o lugar errado: abarca também o paramento litúrgico. É o que os dois polos têm em comum, portanto não pode ser o que os separa." },
+            { termo: "luxo", definicao: "ostentação pomposa de riqueza; prazer ou bem adquirido por alto preço", fonte: "Aulete Digital", motivo: "Retém o traço de preço, que a cena não tematiza: a jaqueta significa pela tendência que exibe, não pelo custo que teria." }
+          ]
+        },
+        {
+          termo: "mundanidade",
+          definicao: "qualidade do que é mundano: “ref. ao mundo, material e socialmente considerado; TERRENO”; diz-se de quem “só valoriza os bens materiais, a ostentação, a moda, a vida em sociedade”",
+          fonte: "Aulete Digital (s.v. mundano)",
+          justificativa: "O próprio verbete de mundano arrola a moda entre aquilo que o mundano valoriza: a moda é a espécie, o mundano é o gênero. Abstraída em substantivo de qualidade, a categoria é a mundanidade — o que é do mundo, material e socialmente considerado.",
+          alternativas: [
+            { termo: "efemeridade", definicao: "qualidade do que é efêmero, “que dura pouco; transitório”", fonte: "Aulete Digital (s.v. efêmero)", motivo: "Retém só o traço temporal da moda (“predominante numa determinada época”) e abre outro eixo — permanência × transitoriedade. A imagem o sustenta, mas em segundo plano: o que ela põe em cena é uma troca de regime da veste, não uma troca de duração." },
+            { termo: "simulacro", definicao: "coisa que é uma simulação, representação de outra; aparência enganosa", fonte: "Aulete Digital", motivo: "Pertinente à origem sintética da imagem, não às figuras nela dispostas. Exige um saber sobre a produção que a cena não manifesta — analisá-la por aí é sair do texto." }
+          ]
+        },
+        {
+          termo: "PROFANIDADE",
+          definicao: "qualidade do que é profano: “que não tem relação com a religião”; “que não pertence à religião”; “que é próprio do mundo material em oposição aos valores espirituais”",
+          fonte: "Aulete Digital (s.v. profano)",
+          justificativa: "Mundano é definido como “ref. ao mundo material” e remetido a terreno, cujo verbete acrescenta a relação: “ref. ao mundo material, em oposição ao espiritual”. Posto nessa oposição, o gênero próximo é o profano. Termo categorial — só se define pela negação do outro polo, o que fecha o percurso.",
+          alternativas: [
+            { termo: "materialidade", definicao: "qualidade do que é material, do que é constituído de matéria", fonte: "definição lexicográfica (sem consulta on-line)", motivo: "Abstrai para um eixo físico (matéria × espírito) que já não descreve a imagem: a batina também é matéria. O que separa as duas vestes não é serem matéria, é uma estar reservada e a outra não." }
+          ]
+        }
+      ]
+    }
+  ],
+  oposicao: {
+    termo_a: "SACRALIDADE",
+    termo_b: "PROFANIDADE",
+    eixo: "a reserva do que é dedicado à divindade, frente ao uso comum do mundo",
+    justificativa: "A imagem não coloca lado a lado um papa e um casaco: ela faz um ocupar o lugar do outro, no mesmo corpo e na mesma cor. O branco, que na veste papal é marca de consagração — daquilo que foi “reservado à divindade” e “não deve ser tocado” —, reaparece como branco de peça de estação, isto é, do que é “predominante numa determinada época” e por isso pertence ao uso corrente do mundo. Os índices do primeiro regime permanecem (solidéu, cruz peitoral) e é essa permanência que impede a leitura como simples troca de roupa: o que se vê é o mesmo suporte investido, ao mesmo tempo, pelos dois valores. A categoria fundamental que organiza o material é, portanto, sacralidade × profanidade, e o efeito cômico da imagem é o índice mais seguro de que ela está operando: só se ri porque os dois termos, que o eixo mantém separados, foram forçados a coincidir."
+  },
+  validacao: [
+    "Simetria de abstração: os dois polos são substantivos de qualidade derivados de adjetivos correlativos do mesmo campo (sagrado / profano), obtidos após três degraus em cada percurso.",
+    "Eixo comum: nomeável numa formulação única — a reserva ao divino em face do uso comum do mundo —, sem necessidade de conjunção que emende dois eixos distintos.",
+    "Não-figuratividade: nenhum dos polos evoca ator, tempo ou espaço. Papa, casaco, basílica e transeunte ficaram todos para trás no nível figurativo.",
+    "Reversibilidade: o verbete de sagrado define-o como o que “está acima dos valores terrenos”; o de profano, como o que “é próprio do mundo material em oposição aos valores espirituais”. Cada definição mobiliza o outro polo — é a marca da contrariedade, não da contradição (o contraditório seria “não-sagrado”).",
+    "Não-moralização: o percurso não passou por bem × mal nem por autêntico × falso. Profanidade aqui é categoria de regime, não juízo — e por isso descartaram-se luxo, vaidade e simulacro.",
+    "Pertinência ao texto: ambos os polos são recuperáveis nas figuras da própria imagem — solidéu e cruz peitoral manifestam A; corte esportivo, óculos escuros e o transeunte comum ao fundo manifestam B. O polo B não precisou ser reconstruído por ausência.",
+    "Observação analítica: o eixo secundário permanência × transitoriedade é sustentado pelo material (a veste litúrgica dura séculos, a peça de moda dura uma estação) e pode ser desdobrado, mas é derivado — decorre do traço temporal já contido em moda, não da tensão que estrutura a cena."
+  ]
+};
+/* ===================== FIM DA PARTE EDITÁVEL ============================= */
+</script>
+<style>
+  :root{
+    --papel:#f7f4ee; --papel2:#fffdf9; --tinta:#25211c; --tinta2:#6b6155;
+    --linha:#cfc6b8; --a:#b4552d; --a-bg:#fbeee6; --b:#2f6f6b; --b-bg:#e6f0ef;
+    --centro:#4a4036;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--papel);color:var(--tinta);
+    font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;}
+  .env{max-width:1180px;margin:0 auto;padding:28px 20px 60px}
+  header h1{font-size:1.5rem;margin:0 0 6px;letter-spacing:-.01em}
+  header .sub{font-size:.78rem;text-transform:uppercase;letter-spacing:.14em;color:var(--tinta2);margin-bottom:14px}
+  .entrada{background:var(--papel2);border:1px solid var(--linha);border-left:3px solid var(--centro);
+    padding:12px 16px;font-size:.94rem;line-height:1.55;color:var(--tinta2);border-radius:2px}
+  .entrada b{color:var(--tinta);font-weight:600}
+  h2{font-size:.78rem;text-transform:uppercase;letter-spacing:.14em;color:var(--tinta2);
+    font-weight:600;margin:34px 0 12px;border-bottom:1px solid var(--linha);padding-bottom:6px}
+  .dica{font-size:.8rem;color:var(--tinta2);font-style:italic;margin:-4px 0 14px}
+
+  #rolagem{overflow-x:auto;overflow-y:hidden;padding:8px 0 4px}
+  #palco{position:relative;display:inline-block;min-width:100%}
+  #svg{position:absolute;inset:0;pointer-events:none}
+  #trilha{position:relative;display:flex;align-items:center;gap:38px;padding:26px 8px}
+
+  .col{display:flex;flex-direction:column;align-items:center;gap:10px;flex:0 0 auto}
+  .rot{font-size:.6rem;text-transform:uppercase;letter-spacing:.12em;color:var(--tinta2);
+    height:14px;white-space:nowrap}
+  .no{position:relative;width:158px;min-height:56px;display:flex;align-items:center;justify-content:center;
+    text-align:center;padding:12px 10px;background:var(--papel2);border:1px solid var(--linha);
+    border-radius:3px;cursor:help;line-height:1.25;transition:transform .12s,box-shadow .12s;outline:none}
+  .no:hover,.no:focus{transform:translateY(-2px);box-shadow:0 4px 14px rgba(0,0,0,.10)}
+  .no.centro{width:186px;background:var(--centro);color:#f7f4ee;border-color:var(--centro);font-size:1.02rem}
+  .no.pA{border-color:var(--a);background:var(--a-bg)}
+  .no.pB{border-color:var(--b);background:var(--b-bg)}
+  .no.polo{font-weight:700;letter-spacing:.02em;font-size:1.02rem;box-shadow:0 0 0 4px rgba(0,0,0,.035)}
+  .no.polo.pA{background:var(--a);color:#fff8f4;border-color:var(--a)}
+  .no.polo.pB{background:var(--b);color:#f2fbfa;border-color:var(--b)}
+  .alt{width:132px;font-size:.76rem;padding:7px 8px;text-align:center;background:transparent;
+    border:1px dashed var(--linha);border-radius:3px;color:var(--tinta2);cursor:help;
+    text-decoration:line-through;text-decoration-color:rgba(0,0,0,.22);transition:opacity .12s;outline:none}
+  .alt:hover,.alt:focus{opacity:1;color:var(--tinta);border-color:var(--tinta2)}
+  .pilha{display:flex;flex-direction:column;gap:6px;align-items:center;min-height:1px}
+
+  #dica{position:fixed;z-index:50;max-width:330px;background:#fffdf9;border:1px solid var(--linha);
+    border-top:3px solid var(--centro);border-radius:3px;padding:12px 14px;
+    box-shadow:0 10px 30px rgba(0,0,0,.16);font-size:.86rem;line-height:1.5;display:none}
+  #dica.pA{border-top-color:var(--a)} #dica.pB{border-top-color:var(--b)}
+  #dica .t{font-weight:700;font-size:.98rem;margin-bottom:4px}
+  #dica .d{color:var(--tinta);margin-bottom:8px}
+  #dica .f{font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:var(--tinta2)}
+  #dica .j{margin-top:9px;padding-top:9px;border-top:1px solid var(--linha);font-size:.82rem;
+    color:var(--tinta2);font-style:italic}
+
+  .oposicao{margin-top:8px;background:var(--papel2);border:1px solid var(--linha);border-radius:3px;padding:22px}
+  .par{display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap;text-align:center}
+  .par .p{font-size:1.3rem;font-weight:700;letter-spacing:.02em}
+  .par .p.a{color:var(--a)} .par .p.b{color:var(--b)}
+  .par .vs{font-size:.8rem;color:var(--tinta2);letter-spacing:.16em;text-transform:uppercase}
+  .eixo{text-align:center;margin-top:12px;font-size:.9rem;color:var(--tinta2)}
+  .eixo b{color:var(--tinta)}
+  .justif{margin-top:16px;padding-top:14px;border-top:1px solid var(--linha);font-size:.94rem;line-height:1.6}
+  ul.val{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+  ul.val li{font-size:.9rem;line-height:1.5;padding-left:20px;position:relative;color:var(--tinta2)}
+  ul.val li::before{content:"✓";position:absolute;left:0;color:var(--b);font-weight:700}
+  footer{margin-top:40px;font-size:.75rem;color:var(--tinta2);text-align:center;line-height:1.6}
+
+  @media (max-width:820px){
+    #trilha{flex-direction:column;gap:26px}
+    .no{width:200px} .alt{width:170px}
+    .pilha{flex-direction:row;flex-wrap:wrap;justify-content:center}
+  }
+</style>
+</head>
+<body>
+<div class="env">
+  <header>
+    <div class="sub">Semiótica discursiva · nível fundamental</div>
+    <h1 id="titulo"></h1>
+  </header>
+  <div class="entrada"><b>Material analisado.</b> <span id="entrada"></span></div>
+
+  <h2>Percurso de abstração</h2>
+  <p class="dica">Passe o mouse (ou toque) sobre qualquer termo para ver a definição de dicionário e o motivo do passo. Os termos riscados foram considerados e descartados.</p>
+  <div id="rolagem"><div id="palco"><svg id="svg"></svg><div id="trilha"></div></div></div>
+
+  <h2>Oposição semântica de base</h2>
+  <div class="oposicao">
+    <div class="par">
+      <span class="p a" id="oa"></span><span class="vs">versus</span><span class="p b" id="ob"></span>
+    </div>
+    <div class="eixo">eixo semântico: <b id="oeixo"></b></div>
+    <div class="justif" id="ojust"></div>
+  </div>
+
+  <h2>Validação da categoria</h2>
+  <ul class="val" id="val"></ul>
+
+  <footer>Percurso gerativo do sentido · nível fundamental<br>cada passo de abstração é o gênero próximo da definição lexicográfica do termo anterior</footer>
+</div>
+<div id="dica" role="tooltip"></div>
+
+<script>
+const trilha=document.getElementById('trilha');
+const svg=document.getElementById('svg');
+const dica=document.getElementById('dica');
+let fixado=null;
+
+document.getElementById('titulo').textContent=DADOS.titulo;
+document.getElementById('entrada').textContent=DADOS.entrada;
+document.getElementById('oa').textContent=DADOS.oposicao.termo_a;
+document.getElementById('ob').textContent=DADOS.oposicao.termo_b;
+document.getElementById('oeixo').textContent=DADOS.oposicao.eixo;
+document.getElementById('ojust').textContent=DADOS.oposicao.justificativa;
+document.getElementById('val').innerHTML=(DADOS.validacao||[]).map(v=>'<li></li>').join('');
+document.querySelectorAll('#val li').forEach((li,i)=>li.append(DADOS.validacao[i]));
+
+const pA=DADOS.percursos.find(p=>p.polo==='A')||DADOS.percursos[0];
+const pB=DADOS.percursos.find(p=>p.polo==='B')||DADOS.percursos[1]||{niveis:[]};
+
+function chips(lista,classe){
+  const d=document.createElement('div'); d.className='pilha';
+  (lista||[]).forEach(a=>{
+    const c=document.createElement('div');
+    c.className='alt'; c.tabIndex=0; c.textContent=a.termo;
+    c.dataset.info=JSON.stringify({t:a.termo,d:a.definicao,f:a.fonte,j:'Descartado — '+a.motivo,c:classe});
+    d.appendChild(c);
+  });
+  return d;
+}
+function coluna(item,classe,rotulo,ehPolo,ehCentro){
+  const col=document.createElement('div'); col.className='col';
+  const r=document.createElement('div'); r.className='rot'; r.textContent=rotulo; col.appendChild(r);
+  const cima=chips((item.alternativas||[]).slice(0,1),classe); col.appendChild(cima);
+  const no=document.createElement('div');
+  no.className='no'+(ehCentro?' centro':' '+classe)+(ehPolo?' polo':'');
+  no.tabIndex=0; no.textContent=item.termo;
+  no.dataset.info=JSON.stringify({t:item.termo,d:item.definicao,f:item.fonte,
+    j:item.justificativa||item.nota||'',c:ehCentro?'':classe});
+  col.appendChild(no); col.dataset.no='1';
+  col.appendChild(chips((item.alternativas||[]).slice(1),classe));
+  return col;
+}
+const colunas=[];
+[...pA.niveis].reverse().forEach((n,i,arr)=>{
+  const nivel=arr.length-i;
+  colunas.push(coluna(n,'pA',(nivel===arr.length?'polo A · nível '+nivel:'nível '+nivel),nivel===arr.length,false));
+});
+colunas.push(coluna(DADOS.centro,'','centro figurativo',false,true));
+(pB.niveis||[]).forEach((n,i,arr)=>{
+  colunas.push(coluna(n,'pB',(i===arr.length-1?'polo B · nível '+(i+1):'nível '+(i+1)),i===arr.length-1,false));
+});
+colunas.forEach(c=>trilha.appendChild(c));
+
+function info(el){
+  const o=JSON.parse(el.dataset.info);
+  dica.className=o.c||'';
+  dica.innerHTML='<div class="t"></div><div class="d"></div><div class="f"></div>'+(o.j?'<div class="j"></div>':'');
+  dica.querySelector('.t').textContent=o.t;
+  dica.querySelector('.d').textContent=o.d;
+  dica.querySelector('.f').textContent=o.f;
+  if(o.j) dica.querySelector('.j').textContent=o.j;
+  dica.style.display='block';
+}
+function posiciona(x,y){
+  const r=dica.getBoundingClientRect();
+  let l=x+16, t=y+16;
+  if(l+r.width>innerWidth-10) l=x-r.width-16;
+  if(t+r.height>innerHeight-10) t=Math.max(10,y-r.height-16);
+  dica.style.left=l+'px'; dica.style.top=t+'px';
+}
+document.addEventListener('mouseover',e=>{
+  const el=e.target.closest('[data-info]'); if(!el||fixado) return;
+  info(el); posiciona(e.clientX,e.clientY);
+});
+document.addEventListener('mousemove',e=>{ if(dica.style.display==='block'&&!fixado) posiciona(e.clientX,e.clientY); });
+document.addEventListener('mouseout',e=>{ if(!fixado&&e.target.closest('[data-info]')) dica.style.display='none'; });
+document.addEventListener('click',e=>{
+  const el=e.target.closest('[data-info]');
+  if(el){ fixado=null; info(el); const r=el.getBoundingClientRect(); posiciona(r.left+r.width/2,r.bottom-14); fixado=el; }
+  else { fixado=null; dica.style.display='none'; }
+});
+document.addEventListener('focusin',e=>{
+  const el=e.target.closest('[data-info]'); if(!el) return;
+  info(el); const r=el.getBoundingClientRect(); posiciona(r.left,r.bottom);
+});
+document.addEventListener('keydown',e=>{ if(e.key==='Escape'){fixado=null;dica.style.display='none';} });
+
+function linha(x1,y1,x2,y2,cor,traco,largura){
+  const p=document.createElementNS('http://www.w3.org/2000/svg','path');
+  const mx=(x1+x2)/2;
+  p.setAttribute('d',`M${x1},${y1} C${mx},${y1} ${mx},${y2} ${x2},${y2}`);
+  p.setAttribute('fill','none'); p.setAttribute('stroke',cor);
+  p.setAttribute('stroke-width',largura||1.4);
+  if(traco) p.setAttribute('stroke-dasharray',traco);
+  svg.appendChild(p);
+}
+function desenha(){
+  const base=document.getElementById('palco').getBoundingClientRect();
+  svg.setAttribute('width',base.width); svg.setAttribute('height',base.height);
+  svg.style.width=base.width+'px'; svg.style.height=base.height+'px';
+  svg.innerHTML='';
+  const est=getComputedStyle(document.documentElement);
+  const cA=est.getPropertyValue('--a').trim(), cB=est.getPropertyValue('--b').trim(),
+        cL=est.getPropertyValue('--linha').trim();
+  const R=el=>{const r=el.getBoundingClientRect();
+    return {x:r.left-base.left,y:r.top-base.top,w:r.width,h:r.height,
+            cx:r.left-base.left+r.width/2, cy:r.top-base.top+r.height/2};};
+  const vertical=innerWidth<=820;
+  const nos=colunas.map(c=>c.querySelector('.no'));
+  const iCentro=nos.findIndex(n=>n.classList.contains('centro'));
+  for(let i=0;i<nos.length-1;i++){
+    const a=R(nos[i]), b=R(nos[i+1]);
+    const cor=(i<iCentro)?cA:cB;
+    if(vertical) linha(a.cx,a.y+a.h,b.cx,b.y,cor,null,1.6);
+    else linha(a.x+a.w,a.cy,b.x,b.cy,cor,null,1.6);
+  }
+  colunas.forEach((col,i)=>{
+    const no=R(col.querySelector('.no'));
+    col.querySelectorAll('.alt').forEach(alt=>{
+      const a=R(alt);
+      if(vertical) linha(no.x,no.cy,a.x+a.w,a.cy,cL,'3 3',1);
+      else linha(no.cx,(a.cy<no.cy?no.y:no.y+no.h),a.cx,(a.cy<no.cy?a.y+a.h:a.y),cL,'3 3',1);
+    });
+  });
+  const polos=nos.filter(n=>n.classList.contains('polo'));
+  if(polos.length===2&&!vertical){
+    const a=R(polos[0]), b=R(polos[1]);
+    const p=document.createElementNS('http://www.w3.org/2000/svg','path');
+    const topo=Math.min(a.y,b.y)-20;
+    p.setAttribute('d',`M${a.cx},${a.y} C${a.cx},${topo} ${b.cx},${topo} ${b.cx},${b.y}`);
+    p.setAttribute('fill','none'); p.setAttribute('stroke',cA); p.setAttribute('stroke-width',1.2);
+    p.setAttribute('stroke-dasharray','6 4'); p.setAttribute('opacity','.55');
+    svg.appendChild(p);
+  }
+}
+addEventListener('resize',desenha);
+addEventListener('load',desenha);
+setTimeout(desenha,60);
+</script>
+</body>
+</html>
