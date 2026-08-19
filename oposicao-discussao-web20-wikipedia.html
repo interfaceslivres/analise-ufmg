@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Oposição semântica de base</title>
+<script>
+/* =========================================================================
+   ÚNICA PARTE A SER EDITADA. Substitua pelos dados da análise.
+   ========================================================================= */
+const DADOS = {
+  titulo: "Discussão:Web 2.0 — página de discussão da Wikipédia lusófona (jun.–jul. 2006)",
+  entrada: "Página de discussão do artigo “Web 2.0”. Um editor novato (Alex Hubner) insere entre as ligações externas um post de seu próprio blog; editores e administradores mais antigos (OS2Warp, Agil, um IP anônimo, Luís Felipe Braga) removem o link e revertem suas edições, alegando “enciclopedicidade” e “spam”. Alex responde perguntando insistentemente qual é o critério, já que outros links igualmente opinativos permanecem, e exige “IMPARCIALIDADE, coerência e hegemonia de critérios”. Agil responde: “É claro que é o meu critério de interessante. De quem havia de ser? Do Papa?”. Alex: “Talvez o da comunidade, da coletividade... Não o teu nem o meu critério.”",
+  centro: {
+    termo: "guerra de edições",
+    definicao: "guerra: “conjunto de actos ou de trocas de palavras hostis entre grupos ou pessoas” (antagonismo, conflito, hostilidade)",
+    fonte: "Priberam",
+    nota: "A cena figurativa — apagar e repor um link, reverter versões, “agir em bando”, contar as edições do adversário — é nomeada pelo próprio texto (“evitando assim uma guerra de edições tal como já aconteceu a este artigo”). O que se troca de parte a parte não são argumentos sobre Web 2.0, mas invocações de um critério que o outro lado não reconhece: é aí que está a tensão, não no assunto do artigo."
+  },
+  percursos: [
+    {
+      polo: "A",
+      rotulo: "o critério de quem edita",
+      niveis: [
+        {
+          termo: "critério",
+          definicao: "faculdade de distinguir o verdadeiro do falso, o bom do mau; capacidade, autoridade para criticar",
+          fonte: "Priberam",
+          justificativa: "Gênero próximo do gesto figurativo (apagar, repor, reverter): todo apagamento supõe a faculdade de julgar que o autoriza. O texto o diz literalmente e sem cessar — “Qual é o critério que vocês usaram? Até agora ninguém me respondeu”.",
+          alternativas: [
+            { termo: "censura", definicao: "acto ou efeito de censurar; crítica severa, repreensão; exame oficial de certas obras ou escritos", fonte: "Priberam", motivo: "Nomeia o gesto de um só dos lados e já o condena; é avaliativo, não categorial." },
+            { termo: "autoritarismo", definicao: "carácter do que é autoritário; sistema autoritário, despotismo", fonte: "Priberam", motivo: "Avaliativo e fora do eixo: desloca a análise para o exercício do poder, quando o que está em disputa é a fonte do critério." }
+          ]
+        },
+        {
+          termo: "arbítrio",
+          definicao: "parecer, juízo, opinião, vontade, determinação que não dependem de regra, praxe ou lei, mas da prudência ou rectidão da pessoa",
+          fonte: "Priberam",
+          justificativa: "A definição de critério dá “faculdade de julgar”; o dicionário nomeia arbítrio a faculdade de julgar que não se apoia em regra e sim na pessoa. É exatamente a posição assumida por Agil: “É claro que é o meu critério de interessante. De quem havia de ser? Do Papa?”.",
+          alternativas: [
+            { termo: "opinião", definicao: "modo de ver pessoal; juízo que se forma de alguém ou de alguma coisa; adesão pessoal ao que se crê bom ou verdadeiro", fonte: "Priberam", motivo: "Co-hipônimo, não hiperônimo: “opinião” é um dos itens que a própria definição de arbítrio enumera — abstrair para ela seria andar de lado." },
+            { termo: "parcialidade", definicao: "preferência injusta; partido, bando, facção", fonte: "Priberam", motivo: "Avaliativo (“injusta”) na 1ª acepção e figurativo na 2ª (“bando” é figura literal do texto, não categoria)." }
+          ]
+        },
+        {
+          termo: "subjetividade",
+          definicao: "qualidade do que é subjetivo — do que depende do sujeito que julga, e não do objeto julgado",
+          fonte: "Priberam (verbete: “qualidade do que é subjectivo”)",
+          justificativa: "O traço decisivo da definição de arbítrio é a dependência “da pessoa”. Abstraído o ator concreto (o administrador, o novato), resta a qualidade do que depende do sujeito.",
+          alternativas: [
+            { termo: "individualidade", definicao: "o todo do indivíduo ou do ser; conjunto das qualidades individuais", fonte: "Priberam", motivo: "Sai do eixo: responde a “quem julga”, não a “até onde vale o julgamento”. Levaria a individualidade × coletividade, que é outra categoria." }
+          ]
+        },
+        {
+          termo: "PARTICULARIDADE",
+          definicao: "estado ou qualidade de particular; singularidade, especialidade, individualidade",
+          fonte: "Priberam",
+          justificativa: "O que depende do sujeito vale para esse sujeito e não para os demais: o gênero próximo da subjetividade, no eixo da validade, é a qualidade do que é particular. Termo categorial — “particular” só se define contra “universal” (na lógica, proposição particular × proposição universal) e não admite hiperônimo sem cair no vazio (“qualidade”, “estado”).",
+          alternativas: [
+            { termo: "singularidade", definicao: "qualidade do que é singular, único, só; o que é peculiar a um indivíduo e não aos demais", fonte: "Priberam", motivo: "Sinônimo, não hiperônimo: o próprio verbete de particularidade o dá como equivalente." }
+          ]
+        }
+      ]
+    },
+    {
+      polo: "B",
+      rotulo: "a regra que se invoca",
+      niveis: [
+        {
+          termo: "regra",
+          definicao: "norma, exemplo, prescrição ou modelo a seguir",
+          fonte: "Priberam",
+          justificativa: "O outro objeto invariável da guerra de edições. Os dois lados apelam a ele: “as regras de bom uso da Wikipedia”, “os manuais da wiki (que você não leu)”, “discuta primeiro, edite depois”, “poderia nos mostrar um manual onde se diz que...”.",
+          alternativas: [
+            { termo: "lei", definicao: "preceito ou regra estabelecida por direito; norma, obrigação", fonte: "Priberam", motivo: "Figurativo demais: convoca a instituição jurídica, ator ausente do material." }
+          ]
+        },
+        {
+          termo: "norma",
+          definicao: "critério, princípio ao qual se refere todo o juízo de valor; conjunto de preceitos que corresponde ao uso corrente numa comunidade",
+          fonte: "Priberam",
+          justificativa: "Gênero próximo dado pelo verbete de regra (“norma, prescrição, modelo a seguir”). Perde-se o traço material do modelo a copiar; resta o princípio a que o juízo se refere — o que Alex chama de “hegemonia de critérios”.",
+          alternativas: [
+            { termo: "coletividade", definicao: "reunião de indivíduos que formam uma unidade; corpo coletivo", fonte: "Priberam", motivo: "Sai do eixo pelo mesmo motivo que individualidade no polo A: nomeia o sujeito do julgamento, não a extensão de sua validade." },
+            { termo: "imparcialidade", definicao: "qualidade daquele ou daquilo que é imparcial", fonte: "Priberam", motivo: "Avaliativo: é a virtude reivindicada por um dos litigantes, não a categoria que organiza os dois." }
+          ]
+        },
+        {
+          termo: "generalidade",
+          definicao: "ideia ou princípio geral; a quase totalidade, a grande maioria",
+          fonte: "Priberam",
+          justificativa: "A norma define-se como princípio válido no uso corrente de uma comunidade; abstraída a comunidade concreta (a Wikipédia, seus administradores), resta o caráter de princípio geral.",
+          alternativas: [
+            { termo: "totalidade", definicao: "conjunto de todas as partes que formam um todo; soma total", fonte: "Priberam", motivo: "Perde o traço normativo: vira quantidade bruta, e não extensão de validade de um critério." },
+            { termo: "impessoalidade", definicao: "qualidade do que é impessoal", fonte: "Priberam", motivo: "Define-se pela negação do polo A (“não-pessoal”): é contraditório, não contrário — pertence à segunda linha do quadrado semiótico, não à oposição de base." }
+          ]
+        },
+        {
+          termo: "UNIVERSALIDADE",
+          definicao: "carácter do que é universal ou geral; em lógica, carácter de uma proposição universal",
+          fonte: "Priberam",
+          justificativa: "Gênero próximo de generalidade (“princípio geral”), depurado do “quase” que ainda a aproximava da maioria empírica: o que vale para todos os casos, sem exceção. É a exigência literal do texto — “O critério tem que ser válido para *todos*, sem excessão”. Termo categorial: em lógica, o universal só se recorta contra o particular.",
+          alternativas: [
+            { termo: "objetividade", definicao: "qualidade de objetivo; existência real da coisa que se concebeu no espírito", fonte: "Priberam", motivo: "Desloca o eixo para a relação entre juízo e objeto (a verdade), quando o que está em jogo é a extensão de validade do critério (o alcance)." }
+          ]
+        }
+      ]
+    }
+  ],
+  oposicao: {
+    termo_a: "PARTICULARIDADE",
+    termo_b: "UNIVERSALIDADE",
+    eixo: "extensão da validade do critério — se o que autoriza o juízo vale para um só ou para todos",
+    justificativa: "Toda a discussão se organiza por essa categoria, e os próprios participantes a enunciam quase sem mediação figurativa. Agil sustenta o polo A (“É claro que é o meu critério de interessante. De quem havia de ser? Do Papa?”); Alex sustenta o polo B (“O critério tem que ser válido para *todos*, sem excessão”; “Não o teu nem o meu critério”). Cada figura do texto se distribui entre os dois polos: o blog assinado, o “umbigo”, a contagem de edições, o gosto pessoal (“não me parece nada de interessante”) e o vínculo entre veteranos figurativizam a particularidade; os manuais, as “regras de bom uso”, o “enciclopédico”, a “comunidade”, a “imparcialidade” e a exigência de aplicar a mesma medida a todos os links figurativizam a universalidade. Note-se que a inversão irônica do debate — o defensor da regra universal é quem quer manter seu link pessoal, e o defensor do critério pessoal é quem fala em nome da enciclopédia — só é legível porque a categoria é a mesma para os dois."
+  },
+  validacao: [
+    "Simetria de abstração: os dois polos são substantivos abstratos de mesmo grau, obtidos em quatro passos de hiperonímia a partir da mesma cena figurativa; em lógica formam par consagrado (proposição particular × proposição universal).",
+    "Eixo comum: a extensão da validade do critério — nomeável sem coordenar dois eixos.",
+    "Não-figuratividade: nenhum dos polos evoca ator, tempo ou espaço; caíram “administrador”, “novato”, “2006”, “página de discussão”.",
+    "Reversibilidade: o verbete de particularidade remete a “particular”, que só significa por oposição a “geral/universal”; e o de universalidade define-se como “carácter do que é geral”, isto é, do que não é particular. Cada um mobiliza o outro.",
+    "Não-moralização: descartadas as leituras “justiça × perseguição” e “imparcialidade × parcialidade”, que axiologizam e adotam de saída o ponto de vista de um dos litigantes.",
+    "Pertinência ao texto: ambos os polos estão manifestos — nenhum precisou ser reconstruído a partir de figura ausente. A discussão inteira é a disputa sobre qual deles deve reger a edição do artigo.",
+    "Categorias concorrentes descartadas: individualidade × coletividade (responde a quem julga, não ao alcance do julgamento) e pertença × exclusão (o “novato” expulso para a Wikicities) — esta segunda é isotopia secundária, derivada: a antiguidade só funciona como argumento porque opera como critério particular."
+  ]
+};
+/* ===================== FIM DA PARTE EDITÁVEL ============================= */
+</script>
+<style>
+  :root{
+    --papel:#f7f4ee; --papel2:#fffdf9; --tinta:#25211c; --tinta2:#6b6155;
+    --linha:#cfc6b8; --a:#b4552d; --a-bg:#fbeee6; --b:#2f6f6b; --b-bg:#e6f0ef;
+    --centro:#4a4036;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--papel);color:var(--tinta);
+    font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;}
+  .env{max-width:1180px;margin:0 auto;padding:28px 20px 60px}
+  header h1{font-size:1.5rem;margin:0 0 6px;letter-spacing:-.01em}
+  header .sub{font-size:.78rem;text-transform:uppercase;letter-spacing:.14em;color:var(--tinta2);margin-bottom:14px}
+  .entrada{background:var(--papel2);border:1px solid var(--linha);border-left:3px solid var(--centro);
+    padding:12px 16px;font-size:.94rem;line-height:1.55;color:var(--tinta2);border-radius:2px}
+  .entrada b{color:var(--tinta);font-weight:600}
+  h2{font-size:.78rem;text-transform:uppercase;letter-spacing:.14em;color:var(--tinta2);
+    font-weight:600;margin:34px 0 12px;border-bottom:1px solid var(--linha);padding-bottom:6px}
+  .dica{font-size:.8rem;color:var(--tinta2);font-style:italic;margin:-4px 0 14px}
+
+  #rolagem{overflow-x:auto;overflow-y:hidden;padding:8px 0 4px}
+  #palco{position:relative;display:inline-block;min-width:100%}
+  #svg{position:absolute;inset:0;pointer-events:none}
+  #trilha{position:relative;display:flex;align-items:center;gap:38px;padding:26px 8px}
+
+  .col{display:flex;flex-direction:column;align-items:center;gap:10px;flex:0 0 auto}
+  .rot{font-size:.6rem;text-transform:uppercase;letter-spacing:.12em;color:var(--tinta2);
+    height:14px;white-space:nowrap}
+  .no{position:relative;width:158px;min-height:56px;display:flex;align-items:center;justify-content:center;
+    text-align:center;padding:12px 10px;background:var(--papel2);border:1px solid var(--linha);
+    border-radius:3px;cursor:help;line-height:1.25;transition:transform .12s,box-shadow .12s;outline:none}
+  .no:hover,.no:focus{transform:translateY(-2px);box-shadow:0 4px 14px rgba(0,0,0,.10)}
+  .no.centro{width:186px;background:var(--centro);color:#f7f4ee;border-color:var(--centro);font-size:1.02rem}
+  .no.pA{border-color:var(--a);background:var(--a-bg)}
+  .no.pB{border-color:var(--b);background:var(--b-bg)}
+  .no.polo{font-weight:700;letter-spacing:.02em;font-size:1.02rem;box-shadow:0 0 0 4px rgba(0,0,0,.035)}
+  .no.polo.pA{background:var(--a);color:#fff8f4;border-color:var(--a)}
+  .no.polo.pB{background:var(--b);color:#f2fbfa;border-color:var(--b)}
+  .alt{width:132px;font-size:.76rem;padding:7px 8px;text-align:center;background:transparent;
+    border:1px dashed var(--linha);border-radius:3px;color:var(--tinta2);cursor:help;
+    text-decoration:line-through;text-decoration-color:rgba(0,0,0,.22);transition:opacity .12s;outline:none}
+  .alt:hover,.alt:focus{opacity:1;color:var(--tinta);border-color:var(--tinta2)}
+  .pilha{display:flex;flex-direction:column;gap:6px;align-items:center;min-height:1px}
+
+  #dica{position:fixed;z-index:50;max-width:330px;background:#fffdf9;border:1px solid var(--linha);
+    border-top:3px solid var(--centro);border-radius:3px;padding:12px 14px;
+    box-shadow:0 10px 30px rgba(0,0,0,.16);font-size:.86rem;line-height:1.5;display:none}
+  #dica.pA{border-top-color:var(--a)} #dica.pB{border-top-color:var(--b)}
+  #dica .t{font-weight:700;font-size:.98rem;margin-bottom:4px}
+  #dica .d{color:var(--tinta);margin-bottom:8px}
+  #dica .f{font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:var(--tinta2)}
+  #dica .j{margin-top:9px;padding-top:9px;border-top:1px solid var(--linha);font-size:.82rem;
+    color:var(--tinta2);font-style:italic}
+
+  .oposicao{margin-top:8px;background:var(--papel2);border:1px solid var(--linha);border-radius:3px;padding:22px}
+  .par{display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap;text-align:center}
+  .par .p{font-size:1.3rem;font-weight:700;letter-spacing:.02em}
+  .par .p.a{color:var(--a)} .par .p.b{color:var(--b)}
+  .par .vs{font-size:.8rem;color:var(--tinta2);letter-spacing:.16em;text-transform:uppercase}
+  .eixo{text-align:center;margin-top:12px;font-size:.9rem;color:var(--tinta2)}
+  .eixo b{color:var(--tinta)}
+  .justif{margin-top:16px;padding-top:14px;border-top:1px solid var(--linha);font-size:.94rem;line-height:1.6}
+  ul.val{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+  ul.val li{font-size:.9rem;line-height:1.5;padding-left:20px;position:relative;color:var(--tinta2)}
+  ul.val li::before{content:"✓";position:absolute;left:0;color:var(--b);font-weight:700}
+  footer{margin-top:40px;font-size:.75rem;color:var(--tinta2);text-align:center;line-height:1.6}
+
+  @media (max-width:820px){
+    #trilha{flex-direction:column;gap:26px}
+    .no{width:200px} .alt{width:170px}
+    .pilha{flex-direction:row;flex-wrap:wrap;justify-content:center}
+  }
+</style>
+</head>
+<body>
+<div class="env">
+  <header>
+    <div class="sub">Semiótica discursiva · nível fundamental</div>
+    <h1 id="titulo"></h1>
+  </header>
+  <div class="entrada"><b>Material analisado.</b> <span id="entrada"></span></div>
+
+  <h2>Percurso de abstração</h2>
+  <p class="dica">Passe o mouse (ou toque) sobre qualquer termo para ver a definição de dicionário e o motivo do passo. Os termos riscados foram considerados e descartados.</p>
+  <div id="rolagem"><div id="palco"><svg id="svg"></svg><div id="trilha"></div></div></div>
+
+  <h2>Oposição semântica de base</h2>
+  <div class="oposicao">
+    <div class="par">
+      <span class="p a" id="oa"></span><span class="vs">versus</span><span class="p b" id="ob"></span>
+    </div>
+    <div class="eixo">eixo semântico: <b id="oeixo"></b></div>
+    <div class="justif" id="ojust"></div>
+  </div>
+
+  <h2>Validação da categoria</h2>
+  <ul class="val" id="val"></ul>
+
+  <footer>Percurso gerativo do sentido · nível fundamental<br>cada passo de abstração é o gênero próximo da definição lexicográfica do termo anterior</footer>
+</div>
+<div id="dica" role="tooltip"></div>
+
+<script>
+const trilha=document.getElementById('trilha');
+const svg=document.getElementById('svg');
+const dica=document.getElementById('dica');
+let fixado=null;
+
+document.getElementById('titulo').textContent=DADOS.titulo;
+document.getElementById('entrada').textContent=DADOS.entrada;
+document.getElementById('oa').textContent=DADOS.oposicao.termo_a;
+document.getElementById('ob').textContent=DADOS.oposicao.termo_b;
+document.getElementById('oeixo').textContent=DADOS.oposicao.eixo;
+document.getElementById('ojust').textContent=DADOS.oposicao.justificativa;
+document.getElementById('val').innerHTML=(DADOS.validacao||[]).map(v=>'<li></li>').join('');
+document.querySelectorAll('#val li').forEach((li,i)=>li.append(DADOS.validacao[i]));
+
+const pA=DADOS.percursos.find(p=>p.polo==='A')||DADOS.percursos[0];
+const pB=DADOS.percursos.find(p=>p.polo==='B')||DADOS.percursos[1]||{niveis:[]};
+
+function chips(lista,classe){
+  const d=document.createElement('div'); d.className='pilha';
+  (lista||[]).forEach(a=>{
+    const c=document.createElement('div');
+    c.className='alt'; c.tabIndex=0; c.textContent=a.termo;
+    c.dataset.info=JSON.stringify({t:a.termo,d:a.definicao,f:a.fonte,j:'Descartado — '+a.motivo,c:classe});
+    d.appendChild(c);
+  });
+  return d;
+}
+function coluna(item,classe,rotulo,ehPolo,ehCentro){
+  const col=document.createElement('div'); col.className='col';
+  const r=document.createElement('div'); r.className='rot'; r.textContent=rotulo; col.appendChild(r);
+  const cima=chips((item.alternativas||[]).slice(0,1),classe); col.appendChild(cima);
+  const no=document.createElement('div');
+  no.className='no'+(ehCentro?' centro':' '+classe)+(ehPolo?' polo':'');
+  no.tabIndex=0; no.textContent=item.termo;
+  no.dataset.info=JSON.stringify({t:item.termo,d:item.definicao,f:item.fonte,
+    j:item.justificativa||item.nota||'',c:ehCentro?'':classe});
+  col.appendChild(no); col.dataset.no='1';
+  col.appendChild(chips((item.alternativas||[]).slice(1),classe));
+  return col;
+}
+const colunas=[];
+[...pA.niveis].reverse().forEach((n,i,arr)=>{
+  const nivel=arr.length-i;
+  colunas.push(coluna(n,'pA',(nivel===arr.length?'polo A · nível '+nivel:'nível '+nivel),nivel===arr.length,false));
+});
+colunas.push(coluna(DADOS.centro,'','centro figurativo',false,true));
+(pB.niveis||[]).forEach((n,i,arr)=>{
+  colunas.push(coluna(n,'pB',(i===arr.length-1?'polo B · nível '+(i+1):'nível '+(i+1)),i===arr.length-1,false));
+});
+colunas.forEach(c=>trilha.appendChild(c));
+
+function info(el){
+  const o=JSON.parse(el.dataset.info);
+  dica.className=o.c||'';
+  dica.innerHTML='<div class="t"></div><div class="d"></div><div class="f"></div>'+(o.j?'<div class="j"></div>':'');
+  dica.querySelector('.t').textContent=o.t;
+  dica.querySelector('.d').textContent=o.d;
+  dica.querySelector('.f').textContent=o.f;
+  if(o.j) dica.querySelector('.j').textContent=o.j;
+  dica.style.display='block';
+}
+function posiciona(x,y){
+  const r=dica.getBoundingClientRect();
+  let l=x+16, t=y+16;
+  if(l+r.width>innerWidth-10) l=x-r.width-16;
+  if(t+r.height>innerHeight-10) t=Math.max(10,y-r.height-16);
+  dica.style.left=l+'px'; dica.style.top=t+'px';
+}
+document.addEventListener('mouseover',e=>{
+  const el=e.target.closest('[data-info]'); if(!el||fixado) return;
+  info(el); posiciona(e.clientX,e.clientY);
+});
+document.addEventListener('mousemove',e=>{ if(dica.style.display==='block'&&!fixado) posiciona(e.clientX,e.clientY); });
+document.addEventListener('mouseout',e=>{ if(!fixado&&e.target.closest('[data-info]')) dica.style.display='none'; });
+document.addEventListener('click',e=>{
+  const el=e.target.closest('[data-info]');
+  if(el){ fixado=null; info(el); const r=el.getBoundingClientRect(); posiciona(r.left+r.width/2,r.bottom-14); fixado=el; }
+  else { fixado=null; dica.style.display='none'; }
+});
+document.addEventListener('focusin',e=>{
+  const el=e.target.closest('[data-info]'); if(!el) return;
+  info(el); const r=el.getBoundingClientRect(); posiciona(r.left,r.bottom);
+});
+document.addEventListener('keydown',e=>{ if(e.key==='Escape'){fixado=null;dica.style.display='none';} });
+
+function linha(x1,y1,x2,y2,cor,traco,largura){
+  const p=document.createElementNS('http://www.w3.org/2000/svg','path');
+  const mx=(x1+x2)/2;
+  p.setAttribute('d',`M${x1},${y1} C${mx},${y1} ${mx},${y2} ${x2},${y2}`);
+  p.setAttribute('fill','none'); p.setAttribute('stroke',cor);
+  p.setAttribute('stroke-width',largura||1.4);
+  if(traco) p.setAttribute('stroke-dasharray',traco);
+  svg.appendChild(p);
+}
+function desenha(){
+  const base=document.getElementById('palco').getBoundingClientRect();
+  svg.setAttribute('width',base.width); svg.setAttribute('height',base.height);
+  svg.style.width=base.width+'px'; svg.style.height=base.height+'px';
+  svg.innerHTML='';
+  const est=getComputedStyle(document.documentElement);
+  const cA=est.getPropertyValue('--a').trim(), cB=est.getPropertyValue('--b').trim(),
+        cL=est.getPropertyValue('--linha').trim();
+  const R=el=>{const r=el.getBoundingClientRect();
+    return {x:r.left-base.left,y:r.top-base.top,w:r.width,h:r.height,
+            cx:r.left-base.left+r.width/2, cy:r.top-base.top+r.height/2};};
+  const vertical=innerWidth<=820;
+  const nos=colunas.map(c=>c.querySelector('.no'));
+  const iCentro=nos.findIndex(n=>n.classList.contains('centro'));
+  for(let i=0;i<nos.length-1;i++){
+    const a=R(nos[i]), b=R(nos[i+1]);
+    const cor=(i<iCentro)?cA:cB;
+    if(vertical) linha(a.cx,a.y+a.h,b.cx,b.y,cor,null,1.6);
+    else linha(a.x+a.w,a.cy,b.x,b.cy,cor,null,1.6);
+  }
+  colunas.forEach((col,i)=>{
+    const no=R(col.querySelector('.no'));
+    col.querySelectorAll('.alt').forEach(alt=>{
+      const a=R(alt);
+      if(vertical) linha(no.x,no.cy,a.x+a.w,a.cy,cL,'3 3',1);
+      else linha(no.cx,(a.cy<no.cy?no.y:no.y+no.h),a.cx,(a.cy<no.cy?a.y+a.h:a.y),cL,'3 3',1);
+    });
+  });
+  const polos=nos.filter(n=>n.classList.contains('polo'));
+  if(polos.length===2&&!vertical){
+    const a=R(polos[0]), b=R(polos[1]);
+    const p=document.createElementNS('http://www.w3.org/2000/svg','path');
+    const topo=Math.min(a.y,b.y)-20;
+    p.setAttribute('d',`M${a.cx},${a.y} C${a.cx},${topo} ${b.cx},${topo} ${b.cx},${b.y}`);
+    p.setAttribute('fill','none'); p.setAttribute('stroke',cA); p.setAttribute('stroke-width',1.2);
+    p.setAttribute('stroke-dasharray','6 4'); p.setAttribute('opacity','.55');
+    svg.appendChild(p);
+  }
+}
+addEventListener('resize',desenha);
+addEventListener('load',desenha);
+setTimeout(desenha,60);
+</script>
+</body>
+</html>
